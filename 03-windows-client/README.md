@@ -8,7 +8,7 @@ Client Windows integrat al domini `lab.local`.
 ## ⚙️ Sistema
 - Edició: Windows 10/11 Pro
 - Nom: CLIENT
-- IP: DHCP
+- IP: 192.168.53.10
 
 ---
 

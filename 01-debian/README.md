@@ -18,7 +18,7 @@ Implementar un sistema Debian mínim per a pràctiques de:
 
 ## 🌐 Xarxa
 - Tipus: NAT / Xarxa interna
-- IP: DHCP
+- IP fixa: 192.168.53.20
 
 ---
 
