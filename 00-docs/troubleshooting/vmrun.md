@@ -1,1 +1,5 @@
-# Troubleshooting — vmrun (VMware)
+
+# Troubleshooting vmrun
+```bash
+vmrun -T ws list
+```
