@@ -1,2 +1,30 @@
-all:
-	echo placeholder
+
+# Makefile per operar l'agent des del root del repo (sense tocar res més)
+
+VENV=.venv-agent
+AGENT_DIR=30-agent
+PY=$(VENV)/bin/python
+PIP=$(VENV)/bin/pip
+
+.PHONY: help init generate clean
+
+help:
+	@echo "Targets:"
+	@echo "  make init                 # crea venv i instal·la requisits per a 30-agent"
+	@echo "  make generate MONTH=YYYY-MM APUNTS=30-agent/apunts/... [SNAPSHOT=1] [PUSH=1]"
+	@echo "  make clean                # elimina entorn virtual de l'agent"
+
+init:
+	python3 -m venv $(VENV)
+	$(PIP) install -r $(AGENT_DIR)/requirements.txt
+	@echo "
+[OK] Entorn creat. Recorda configurar $(AGENT_DIR)/.env i $(AGENT_DIR)/config/lab-info.yaml."
+
+# Exemple: make generate MONTH=2026-02 APUNTS=30-agent/apunts/2026-S1/febrer SNAPSHOT=1 PUSH=1
+
+generate:
+	@if [ -z "$(APUNTS)" ]; then echo "Falta APUNTS=..."; exit 1; fi
+	@MONTH_OPT=""; 	if [ -n "$(MONTH)" ]; then MONTH_OPT="--mes $(MONTH)"; fi; 	SNAP_OPT=""; 	if [ "$(SNAPSHOT)" = "1" ]; then SNAP_OPT="--snapshot"; fi; 	PUSH_OPT=""; 	if [ "$(PUSH)" = "1" ]; then PUSH_OPT="--push"; fi; 	$(PY) $(AGENT_DIR)/run.py $$MONTH_OPT --apunts $(APUNTS) $$SNAP_OPT $$PUSH_OPT
+
+clean:
+	rm -rf $(VENV)

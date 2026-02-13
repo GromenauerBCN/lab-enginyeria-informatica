@@ -1,0 +1,19 @@
+
+domini:
+  nom_dns: lab.local
+  base_dn: DC=lab,DC=local
+  dns_server: 192.168.10.10
+  ad_host: serverlab.lab.local
+
+vmware:
+  vmx_paths:
+    serverlab: "/path/a/VMs/serverlab/serverlab.vmx"
+    clientlab: "/path/a/VMs/clientlab/clientlab.vmx"
+    debianlab: "/path/a/VMs/debianlab/debianlab.vmx"
+  vmrun_path: "/usr/bin/vmrun"
+
+credencials_guest:
+  windows_user_env: WIN_GUEST_USER
+  windows_pass_env: WIN_GUEST_PASS
+  linux_user_env: LINUX_GUEST_USER
+  linux_pass_env: LINUX_GUEST_PASS
