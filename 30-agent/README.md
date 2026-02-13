@@ -1,0 +1,1 @@
+Agent placeholder. (Regenerarem complet si cal.)

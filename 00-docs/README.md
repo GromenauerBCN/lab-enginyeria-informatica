@@ -1,0 +1,1 @@
+Documentació del LAB (placeholder).
