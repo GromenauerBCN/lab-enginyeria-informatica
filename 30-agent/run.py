@@ -6,14 +6,13 @@ import json
 from pathlib import Path
 
 from dotenv import load_dotenv
-
 from processador.extractor import extreu_texts
 from processador.neteja_text import neteja
 from integracions.lab_state import recull_estat_lab
 from generador.generador_exercicis import genera_exercicis
 
-BASE = Path(__file__).resolve().parent       # 30-agent
-REPO_ROOT = BASE.parent                      # lab-enginyeria-informatica
+BASE = Path(__file__).resolve().parent        # 30-agent
+REPO_ROOT = BASE.parent                       # lab-enginyeria-informatica
 
 
 def detecta_semestre(data: dt.date) -> str:
@@ -28,19 +27,19 @@ def nom_mes_ca(m: int) -> str:
 
 def main():
     parser = argparse.ArgumentParser(description="Agent del LAB – Generador d'exercicis (integrat)")
-    parser.add_argument('--mes', help='Mes en format YYYY-MM (si no, avui)')
-    parser.add_argument('--apunts', required=True, help='Directori amb apunts (PDF/MD/DOCX/TXT)')
-    parser.add_argument('--snapshot', action='store_true', help='Fer snapshot de les VMs abans de generar')
-    parser.add_argument('--push', action='store_true', help="Fer git push després d'escriure")
-    parser.add_argument('--dry-run', action='store_true', help='No escriure fitxers, només mostrar paths')
+    parser.add_argument("--mes", help="Mes en format YYYY-MM (si no, avui)")
+    parser.add_argument("--apunts", required=True, help="Directori amb apunts (PDF/MD/DOCX/TXT)")
+    parser.add_argument("--snapshot", action="store_true", help="Fer snapshot de les VMs abans de generar")
+    parser.add_argument("--push", action="store_true", help="Fer git push després d'escriure")
+    parser.add_argument("--dry-run", action="store_true", help="No escriure fitxers, només mostrar paths")
     args = parser.parse_args()
 
-    # Carrega secrets des de 30-agent/.env (no del root)
-    load_dotenv(BASE / '.env', override=True)
+    # Secrets des de 30-agent/.env
+    load_dotenv(BASE / ".env", override=True)
 
     # Data/semestre
     if args.mes:
-        any_, mes = map(int, args.mes.split('-'))
+        any_, mes = map(int, args.mes.split("-"))
         data = dt.date(any_, mes, 1)
     else:
         data = dt.date.today()
@@ -49,17 +48,17 @@ def main():
     mes_nom = nom_mes_ca(data.month)
     dest = REPO_ROOT / f"20-exercicis-semestrals/{semestre}/mes-{data.month:02d}-{mes_nom}"
 
-    # Validació apunts
+    # Apunts
     apunts_dir = Path(args.apunts)
     if not apunts_dir.exists() or not apunts_dir.is_dir():
         raise SystemExit(f"[ERROR] El directori d'apunts no existeix: {apunts_dir}")
 
     # Extracció + neteja
     texts = extreu_texts(apunts_dir)
-    corpus = neteja('\n'.join(texts))
+    corpus = neteja("\n".join(texts))
 
-    # --- Diagnosi i tall si el corpus és massa curt
-    mostra = corpus[:1000].replace('\n', ' ')
+    # Diagnosi corpus
+    mostra = corpus[:1000].replace("\n", " ")
     print(f"[INFO] Caràcters del corpus: {len(corpus)}")
     print(f"[INFO] Mostra de corpus (1.000 caràcters): {mostra!r}")
     if len(corpus) < 1000:
