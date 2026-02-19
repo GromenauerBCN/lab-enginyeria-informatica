@@ -1,0 +1,15 @@
+
+import os
+
+from providers.ollama import Ollama
+from providers.openai_client import OpenAIClient
+
+
+def get_model():
+    provider = os.getenv("MODEL_PROVIDER", "ollama").lower()
+
+    if provider == "openai":
+        return OpenAIClient()
+
+    # Per defecte, si no s’indica res → ollama
+    return Ollama()

@@ -17,8 +17,7 @@ help:
 init:
 	python3 -m venv $(VENV)
 	$(PIP) install -r $(AGENT_DIR)/requirements.txt
-	@echo "
-[OK] Entorn creat. Recorda configurar $(AGENT_DIR)/.env i $(AGENT_DIR)/config/lab-info.yaml."
+	@echo "[OK] Entorn creat. Recorda configurar $(AGENT_DIR)/.env i $(AGENT_DIR)/config/lab-info.yaml."
 
 # Exemple: make generate MONTH=2026-02 APUNTS=30-agent/apunts/2026-S1/febrer SNAPSHOT=1 PUSH=1
 

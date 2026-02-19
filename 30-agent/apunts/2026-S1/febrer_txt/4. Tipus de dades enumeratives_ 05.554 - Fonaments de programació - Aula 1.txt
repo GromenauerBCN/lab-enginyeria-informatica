@@ -1,0 +1,171 @@
+4. Tipus de dades enumeratives: 05.554 - Fonaments d...         https://aula.uoc.edu/courses/78741/pages/4-tipus-de-...
+
+
+
+
+         4. Tipus de dades enumeratives
+         1. Tipus enumeratius
+
+                 1.1. L’assignació de valors en els enumeratius de C
+
+         2. Operacions amb tipus enumeratius
+
+         Resum
+
+
+
+
+          1. Tipus enumeratius
+         La majoria dels llenguatges de programació permet deﬁnir nous tipus de dades combinant tipus
+         elementals.
+
+         Més endavant, veurem de manera generalitzada com es deﬁneixen aquests nous tipus, però n’hi ha
+         uns que s’utilitzen extensament i que presentarem a continuació: els tipus de
+         dades enumeratives.
+
+         Aquest tipus de dades s’aplica quan una variable només pot prendre un conjunt ﬁnit de valors, que
+         s’enumeren en la mateixa deﬁnició.
+
+         La sintaxi per deﬁnir-les és la següent:
+
+
+                           Pseudocodi                                               C
+                                                              typedef enum {MONDAY, TUESDAY, WE
+          type
+                                                              DNESDAY,
+            tDaysOfTheWeek = {MONDAY, TUESDAY,                    THURSDAY, FRIDAY, SATURDAY, S
+          WEDNESDAY,                                          UNDAY}
+                                                                  tDaysOfTheWeek;
+                 THURSDAY, FRIDAY, SATURDAY,
+          SUNDAY}                                             tDaysOfTheWeek firstDay;
+          end type                                            firstDay = MONDAY;
+
+          var
+
+
+1 de 4                                                                                                   19/2/26 18:41
+4. Tipus de dades enumeratives: 05.554 - Fonaments d...       https://aula.uoc.edu/courses/78741/pages/4-tipus-de-...
+
+
+
+
+            firstDay: tDaysOfTheWeek;
+         end var
+
+         firstDay := MONDAY;
+
+
+
+
+         Com podeu observar, els dies de la setmana només poden ser dilluns, dimarts, etc. En deﬁnir el
+         tipus de dades «dies de la setmana», s’enumeren les opcions en la mateixa deﬁnició.
+
+         Els valors dels elements d’un enumeratiu són constants:
+          • En pseudocodi, cada value es considera una constant a la qual no li associem una
+            correspondència numèrica determinada.
+          • En llenguatge C, cada value es representa internament amb un valor numèric creixent que,
+            per defecte, comença per 0. Aquest comportament es pot modiﬁcar.
+
+         La variable ﬁrstDay només pot tenir algun dels valors deﬁnits en el tipus enumeratiu.
+
+
+
+         1.1. L’assignació de valors en els enumeratius de C
+
+         A continuació es comenten diferents formes de modiﬁcar els valors numèrics assignats als
+         elements d’un enumeratiu. Aquesta modiﬁcació únicament es pot fer en llenguatge C, no en
+         pseudocodi.
+
+
+                          C                                            Descripció
+
+                                              Els valors numèrics assignats als elements de l’enumeratiu
+                                              tGender són els següents:
+
+                                               • MALE = 0
+          typedef enum {MALE, FEMA             • FEMALE = 1
+          LE} tGender;
+                                              Aquest és el comportament que per defecte té un
+                                              enumeratiu: al primer element se li assigna el valor 0, i la
+                                              resta d’elements incrementaran en +1 el seu valor respecte
+                                              de l’element anterior.
+
+
+2 de 4                                                                                                  19/2/26 18:41
+4. Tipus de dades enumeratives: 05.554 - Fonaments d...         https://aula.uoc.edu/courses/78741/pages/4-tipus-de-...
+
+
+
+
+                                                Els valors numèrics assignats als elements de l’enumeratiu
+                                                tDaysOfTheWeek són els següents:
+
+                                                 • MONDAY = 1
+                                                 • TUESDAY = 2
+                                                 • WEDNESDAY = 3
+          typedef enum {MONDAY=1,                • THURSDAY = 4
+          TUESDAY,
+              WEDNESDAY, THURSDAY,
+                                                 • FRIDAY = 5
+          FRIDAY,                                • SATURDAY = 6
+              SATURDAY, SUNDAY} tD
+          aysOfTheWeek;
+                                                 • SUNDAY = 7
+
+                                                En aquest cas s’ha modiﬁcat el comportament estàndard
+                                                dels enumeratius en C: el primer dels elements val 1 en
+                                                comptes de 0, perquè manualment li hem canviat el valor
+                                                assignat amb MONDAY = 1. La resta d’elements
+                                                incrementen en +1 el seu valor respecte de l’element que el
+                                                precedeix.
+
+
+                                                Els valors numèrics assignats als elements de l’enumeratiu
+                                                tVehicle són els següents:
+
+                                                 • MOTORCYCLE = 2
+                                                 • CAR = 4
+          typedef enum {MOTORCYCLE
+                                                 • VAN = 5
+          = 2,
+             CAR = 4, VAN, TRUCK}                • TRUCK = 6
+          tVehicle;
+                                                En aquest darrer cas, el primer dels elements de
+                                                l’enumeratiu val 2, perquè li assignem el valor amb
+                                                MOTORCYCLE = 2. L’element següent té un valor de 4,
+                                                ja que tenim CAR = 4. Els successius elements van
+                                                incrementant el seu valor en +1 a partir del valor 4.
+
+
+
+
+          2. Operacions amb tipus enumeratius
+         Els únics operadors que es poden aplicar als tipus enumeratius són els relacionals externs ( =, ≠, <,
+
+
+3 de 4                                                                                                   19/2/26 18:41
+4. Tipus de dades enumeratives: 05.554 - Fonaments d...           https://aula.uoc.edu/courses/78741/pages/4-tipus-de-...
+
+
+
+         >, ≤, ≥ ). L’ordre en què s’enumeren els valors és el que s’utilitzarà per establir les relacions de més
+         petit a més gran. Així doncs, seguint el mateix exemple MONDAY < TUESDAY, podríem escriure:
+         ﬁrstDay < SATURDAY.
+
+
+
+
+          Resum
+
+
+          • Les dades enumeratives s’usen quan una variable només pot prendre un conjunt ﬁnit de valors.
+          • La deﬁnició de dades enumeratives determina els valors que la variable pot prendre.
+          • L’ordre de la deﬁnició també imposa un ordre entre els valors que pot prendre la variable. Els
+            únics operadors que es poden usar entre dades enumeratives són els relacionals externs, tenint
+            en compte l’ordre que s’explicita en la deﬁnició.
+
+
+
+
+4 de 4                                                                                                      19/2/26 18:41
+

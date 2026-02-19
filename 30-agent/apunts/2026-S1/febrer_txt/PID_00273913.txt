@@ -1,0 +1,3198 @@
+Iniciació a les
+matemàtiques per
+a l’enginyeria
+PID_00273913
+
+
+
+
+Mireia Besalú
+Joana Villalonga
+© FUOC • PID_00273913                                                                             Iniciació a les matemàtiques per a l’enginyeria
+
+
+
+Mireia Besalú                                      Joana Villalonga
+
+Llicenciada en Matemàtiques per                   Llicenciada (2006) i Màster en Ma-
+la Universitat de Barcelona (2006)                temàtica Avançada i Professional
+i doctora en Matemàtiques per la                  (2007) per la Universitat de Barce-
+Universitat de Barcelona (2011). Ha               lona, Diploma en Matemàtiques
+sigut professora associada de la Uni-             per a Secundària (2009) per la Uni-
+versitat de Pompeu Fabra i professo-              versitat Pompeu Fabra i Doctora
+ra associada i actualment professora              en Educació (2017) per la Univer-
+lectora de la Universitat de Barcelo-             sitat Autònoma de Barcelona. Ha
+na. Professora col·laboradora de la               estat professora associada a la Uni-
+UOC des del curs 2014-15. Centra                  versitat Politècnica de Catalunya i
+la seva investigació en l’anàlisi esto-           és col·laboradora docent de la Uni-
+càstic i anàlisi de supervivència.                versitat Oberta de Catalunya des
+                                                  del 2011 com a consultora i edito-
+                                                  ra de materials per a l’assignatura
+                                                  d‘Iniciació a les matemàtiques per a
+                                                  l’enginyeria. La seva recerca es cen-
+                                                  tra en l'ensenyament i aprenentatge
+                                                  de les matemàtiques.
+
+
+
+
+Aquests apunts estan basats en un treball previ del Ramon Masià i el
+Marc Guinjoan.
+
+
+
+
+Tercera edició: febrer 2021
+© d’aquesta edició, Fundació Universitat Oberta de Catalunya (FUOC)
+Av. Tibidabo, 39-43, 08035 Barcelona
+Autoria: Mireia Besalú, Joana Villalonga
+Producció: FUOC
+Tots els drets reservats
+
+
+
+
+Cap part d'aquesta publicació, incloent-hi el disseny general i la coberta, no pot ser copiada,
+reproduïda, emmagatzemada o transmesa de cap manera ni per cap mitjà, tant si és elèctric com
+químic, mecànic, òptic, de gravació, de fotocòpia o per altres mètodes, sense l'autorització
+prèvia per escrit dels titulars dels drets.
+©   FUOC ● PID_00273913                                                                                                                               Iniciació a les matemàtiques per a l'enginyeria
+
+
+
+Índex
+
+
+
+
+Introducció . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .          9
+
+
+Objectius . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     10
+
+
+1. Nombres . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .          11
+       1.1. Nombres naturals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                  11
+                 1.1.1.        Denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   11
+                 1.1.2.        Operacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       12
+                 1.1.3.        Múltiples i divisors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .             13
+       1.2. Nombres enters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                16
+                 1.2.1.        Denició i exemples. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .               16
+                 1.2.2.        Operacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       18
+       1.3. Nombres racionals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                   20
+                 1.3.1.        Nombres fraccionaris . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                 20
+                 1.3.2.        Denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   23
+                 1.3.3.        Operacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       24
+                 1.3.4.        Forma decimal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .          27
+       1.4. Nombres reals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .             29
+                 1.4.1.        Potències . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    29
+                 1.4.2.        Nombres irracionals. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .               33
+                 1.4.3.        Denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   35
+                 1.4.4.        Operacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       36
+       1.5. Expressions numèriques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                        39
+                 1.5.1.        La recta numèrica . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .              39
+                 1.5.2.        Notació cientíca . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .            41
+                 1.5.3.        Igualtats notables. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .            42
+
+
+Resum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   44
+
+
+Exercicis resolts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .             50
+
+
+Exercicis per a practicar amb les solucions . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                 52
+
+
+2. Equacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .          53
+       2.1. Expressions algebraiques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                        53
+                 2.1.1.        Denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   53
+                 2.1.2.        Elements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     55
+                 2.1.3.        Manipulació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        56
+                 2.1.4.        Propietats . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     57
+       2.2. Equacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .         58
+                 2.2.1.        Denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   58
+©   FUOC ● PID_00273913                                                                                                                               Iniciació a les matemàtiques per a l'enginyeria
+
+
+
+
+                 2.2.2.        Solucions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    59
+                 2.2.3.        Equacions equivalents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                  59
+                 2.2.4.        Procés de resolució . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .              60
+       2.3. Equacions de primer grau . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                          63
+                 2.3.1.        Denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   63
+                 2.3.2.        Solucions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    64
+                 2.3.3.        Procés de resolució . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .              64
+       2.4. Equacions de segon grau . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                         67
+                 2.4.1.        Denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   67
+                 2.4.2.        Procés de resolució . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .              68
+                 2.4.3.        Solucions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    71
+                 2.4.4.        Equacions quadràtiques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                   72
+       2.5. Inequacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .           74
+                 2.5.1.        Denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   74
+                 2.5.2.        Solucions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    74
+                 2.5.3.        Procés de resolució . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .              75
+
+
+Resum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   80
+
+
+Exercicis resolts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .             87
+
+
+Exercicis per a practicar amb les solucions . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                 90
+
+
+3. Sistemes d'equacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                         91
+       3.1. Sistemes lineals de dues equacions i dues incògnites . . . . . . . . . . . . . . . . . .                                                  91
+                 3.1.1.        Denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   91
+                 3.1.2.        Solucions i tipus de sistemes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                      92
+                 3.1.3.        Mètodes de resolució . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                 92
+       3.2. Sistemes lineals de tres equacions i tres incògnites. . . . . . . . . . . . . . . . . . . .                                               95
+                 3.2.1.        Denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   95
+                 3.2.2.        Mètode de resolució . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                96
+       3.3. Sistemes lineals de m equacions i n incògnites . . . . . . . . . . . . . . . . . . . . . . . .                                            97
+                 3.3.1.        Denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   97
+                 3.3.2.        Mètode de Gauss . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .              98
+                 3.3.3.        Solucions i tipus de sistemes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                      99
+       3.4. Sistemes d'inequacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 101
+                 3.4.1.        Sistemes d'inequacions lineals amb una incògnita . . . . . . . . . . . . . 101
+                 3.4.2.        Sistemes d'inequacions de segon grau amb una incògnita. . . . . . 103
+
+
+Resum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 105
+
+Exercicis resolts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 108
+
+Exercicis per a practicar amb les solucions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 112
+
+4. Polinomis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 114
+       4.1. Denició i aspectes generals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 114
+©   FUOC ● PID_00273913                                                                                                                            Iniciació a les matemàtiques per a l'enginyeria
+
+
+
+
+                4.1.1.        Denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 114
+                4.1.2.        Elements i característiques d'un polinomi . . . . . . . . . . . . . . . . . . . . . 115
+                4.1.3.        Valor numèric d'un polinomi . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 116
+      4.2. Operacions i propietats bàsiques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 117
+                4.2.1.        Operacions bàsiques entre monomis . . . . . . . . . . . . . . . . . . . . . . . . . . . 117
+                4.2.2.        Operacions bàsiques entre polinomis . . . . . . . . . . . . . . . . . . . . . . . . . . 117
+                4.2.3.        Regla de Runi . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 126
+                4.2.4.        Productes notables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 127
+      4.3. Descomposició de polinomis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 128
+                4.3.1.        Teorema del residu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 128
+                4.3.2.        Arrels i descomposició d'un polinomi . . . . . . . . . . . . . . . . . . . . . . . . . 129
+
+
+Resum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 131
+
+Exercicis resolts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 134
+
+Exercicis per a practicar amb les solucions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 136
+
+5. Matrius . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 137
+      5.1. Matrius: tipus i elements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 137
+      5.2. Operacions bàsiques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
+      5.3. Determinant d'una matriu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 145
+                5.3.1.        Mètode de càlcul . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 146
+                5.3.2.        Propietats dels determinants . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+                5.3.3.        Matriu d'adjunts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+      5.4. Matriu inversa . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 150
+      5.5. Resolució de sistemes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 153
+                5.5.1.        Amb la matriu inversa . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 156
+                5.5.2.        Mètode de Gauss . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 158
+                5.5.3.        Regla de Cramer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 159
+
+
+Resum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 161
+
+Exercicis resolts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 165
+
+Exercicis per a practicar amb les solucions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 169
+
+6. Funcions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 171
+      6.1. Concepte de funció . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 171
+                6.1.1.        Correspondència entre conjunts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 171
+                6.1.2.        Aplicacions i funcions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 174
+      6.2. Representació d'una funció . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 175
+                6.2.1.        Taula d'una funció . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 175
+                6.2.2.        Expressió d'una funció . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 176
+                6.2.3.        Gràca d'una funció . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 178
+      6.3. Operacions entre funcions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 180
+                6.3.1.        Operacions bàsiques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 180
+©   FUOC ● PID_00273913                                                                                                                            Iniciació a les matemàtiques per a l'enginyeria
+
+
+
+
+                6.3.2.        Composició de funcions i funció inversa . . . . . . . . . . . . . . . . . . . . . . . 181
+      6.4. Característiques d'una funció . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 182
+      6.5. Funcions denides a trossos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 183
+
+
+Resum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 185
+
+Exercicis resolts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 189
+
+Exercicis per a practicar amb les solucions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 191
+
+7. Funcions polinòmiques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 192
+      7.1. Funcions lineals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 192
+                7.1.1.        Denició i exemples. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 192
+                7.1.2.        Representació gràca . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 193
+      7.2. Funcions ans . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 194
+                7.2.1.        Denició i exemples. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 194
+                7.2.2.        Representació gràca . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 195
+                7.2.3.        Propietats . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 197
+      7.3. Funcions quadràtiques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 198
+                7.3.1.        Denició i exemples. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 198
+                7.3.2.        Representació gràca . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 199
+      7.4. Funcions polinòmiques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 205
+                7.4.1.        Denició i exemples. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 205
+
+
+Resum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 209
+
+Exercicis resolts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 212
+
+Exercicis per a practicar amb les solucions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 216
+
+8. Funcions trigonomètriques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 218
+      8.1. Raons trigonomètriques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 218
+                8.1.1.        Raons principals d'un angle agut . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 218
+                8.1.2.        Raons principals d'un angle qualsevol . . . . . . . . . . . . . . . . . . . . . . . . . 220
+      8.2. Funcions sinus i cosinus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 223
+                8.2.1.        Denició i exemples. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 224
+                8.2.2.        Relació sinus i cosinus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 225
+                8.2.3.        Transformacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 226
+      8.3. Funcions tangent i cotangent . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 228
+                8.3.1.        Denició i exemples. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 228
+      8.4. Funcions secant i cosecant . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 230
+                8.4.1.        Denició i exemples. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 230
+      8.5. Funcions inverses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 231
+©   FUOC ● PID_00273913                                                                                                                            Iniciació a les matemàtiques per a l'enginyeria
+
+
+
+
+                8.5.1.        Denició i exemples. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 231
+
+
+Resum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 233
+
+Exercicis resolts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 237
+
+Exercicis per a practicar amb les solucions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 240
+
+9. Funcions exponencial i logarítmica . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 242
+      9.1. La funció exponencial . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 242
+                9.1.1.        Denició i exemple . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 242
+                9.1.2.        Gràca . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 242
+                9.1.3.        Propietats . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 243
+      9.2. El logaritme . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 245
+                9.2.1.        Denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 245
+                9.2.2.        Propietats . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 245
+      9.3. La funció logarítmica . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 246
+                9.3.1.        Denició i exemples. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 246
+                9.3.2.        Gràca . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 246
+                9.3.3.        Propietats . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 247
+      9.4. Relació entre les gràques exponencial i logarítmica . . . . . . . . . . . . . . . . . . 248
+      9.5. Equacions exponencial i logarítmica . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 249
+
+
+Resum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 253
+
+Exercicis resolts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 257
+
+Exercicis per a practicar amb les solucions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 260
+
+10. Continuïtat de funcions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 261
+      10.1. Límits de funcions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 261
+                10.1.1. Noció intuïtiva de límit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 261
+                10.1.2. Concepte i denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 263
+                10.1.3. Operacions amb límits . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 264
+                10.1.4. Límits laterals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 265
+                10.1.5. Límits a l'innit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 267
+                10.1.6. Regles bàsiques de càlcul de límits . . . . . . . . . . . . . . . . . . . . . . . . . . . . 269
+                10.1.7. Indeterminacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 270
+      10.2. Continuïtats . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 275
+                10.2.1. Funció contínua en un punt . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 275
+                10.2.2. Discontinuïtats d'una funció . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 276
+©   FUOC ● PID_00273913                                                                                                                            Iniciació a les matemàtiques per a l'enginyeria
+
+
+
+
+                10.2.3. Asímptotes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 278
+
+
+Resum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 281
+
+Exercicis resolts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 285
+
+Exercicis per a practicar amb les solucions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 289
+
+11. Derivació de funcions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 290
+      11.1. Derivada d'una funció en un punt . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 290
+                11.1.1. Denició i interpretació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 290
+                11.1.2. Càlcul . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 292
+      11.2. Derivada d'una funció . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 293
+                11.2.1. Denició i interpretació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 293
+                11.2.2. Regles de càlcul . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 296
+      11.3. Aplicacions de la derivada . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 298
+                11.3.1. Creixement i decreixement d'una funció . . . . . . . . . . . . . . . . . . . . . . 299
+                11.3.2. Màxims i mínims d'una funció . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 300
+                11.3.3. Concavitat i convexitat d'una funció . . . . . . . . . . . . . . . . . . . . . . . . . . 304
+                11.3.4. Representació gràca d'una funció . . . . . . . . . . . . . . . . . . . . . . . . . . . . 307
+
+
+Resum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 312
+
+Exercicis resolts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 317
+
+Exercicis per a practicar amb les solucions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 325
+
+12. Integració de funcions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 326
+      12.1. Integració d'una funció . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 326
+                12.1.1. Noció intuïtiva . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 326
+                12.1.2. Denició i interpretació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 327
+                12.1.3. Taula d'integrals immediates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 328
+                12.1.4. Regles de càlcul . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 328
+                12.1.5. Mètodes d'integració . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 329
+                12.1.6. Integral denida. Regla de Barrow. . . . . . . . . . . . . . . . . . . . . . . . . . . . 333
+      12.2. Aplicacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 338
+                12.2.1. Càlcul d'àrees . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 338
+                12.2.2. Càlcul de volums . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 343
+
+
+Resum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 347
+
+Exercicis resolts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 351
+
+Exercicis per a practicar amb les solucions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 353
+© FUOC ● PID_00273913                                          9                     Iniciació a les matemàtiques per a l'enginyeria
+
+Introducció
+
+
+
+
+                                                                                                    Utilitzarem aquestes caixetes per a
+                                                                                                    explicar algun fet històric relacionat
+Les matemàtiques són una de les eines imprescindibles per a cursar qualsevol grau                   amb les matemàtiques. Per
+                                                                                                    exemple, el text matemàtic més
+cientíc. De fet, tant important és el contingut matemàtic com la manera de treballar-              antic descobert ns ara és el papir
+                                                                                                    de Moscou, un manuscrit datat
+la en cada un dels camps en què s'aplica. Així, doncs, es fa necessari comprendre'n la              entre el 2000 i el 1800 aC.
+
+metodologia i conèixer-ne els continguts bàsics a l'hora d'afrontar qualsevol assigna-
+tura matemàtica d'un determinat grau.
+
+                                                                                                    Aquest tipus de caixetes responen
+Les matemàtiques construeixen un llenguatge propi que permet denir rigorosament                    algunes preguntes clau dels
+                                                                                                    diferents temes del curs. Per
+els conceptes i resultats que es presenten. D'aquesta manera, es poden expressar molts              exemple, sabies que en les
+                                                                                                    matemàtiques hi un símbol per a
+problemes d'una manera senzilla que en facilita no tan sols la resolució sinó també la              armar l'existència i un altre per a
+comprensió. Conèixer aquest llenguatge es fa imprescindible per entendre tècniques i                denotar l'expressió per a qualsevol ?
+                                                                                                    Doncs sí, normalment s'utilitza el
+conceptes matemàtics avançats.                                                                      símbol ∃ per a dir que un valor,
+                                                                                                    funció... existeix i el símbol ∀ per a
+                                                                                                    dir que és cert per a qualsevol
+                                                                                                    valor, funció...
+En aquest curs es proporcionen procediments i conceptes bàsics d'àlgebra lineal i anà-
+lisi matemàtica (moltes vegades ja tractats a secundaria i batxillerat) que es necessiten
+dominar abans d'afrontar els problemes habituals que ha de resoldre diàriament un
+enginyer. Aquests continguts es presentaran introduint tota la terminologia matemà-
+tica necessària per tal d'anar familiaritzant-nos amb la notació matemàtica.
+
+                                                                                                    Utilitzarem aquest tipus de caixetes
+Al nal de cada tema s'inclou un resum, una llista d'exercicis resolts pas a pas i una              per a remarcar aspectes o
+                                                                                                    conceptes matemàtics rellevants o
+llista d'exercicis per practicar amb les solucions. Els exemples que hi ha en l'explicació          clau. Per exemple: esperem que
+de cada tema els trobareu intercalats en l'explicació dins de zones de color gris.                  gaudeixis del curs i aprenguis molt!
+© FUOC ● PID_00273913                                          10                    Iniciació a les matemàtiques per a l'enginyeria
+
+Objectius
+
+
+
+
+Per a aquesta assignatura, es plantegen quatre objectius generals:
+
+
+
+  (a) Adquirir la terminologia, els conceptes i els procediments fonamentals de l'àlge-
+      bra i l'anàlisi matemàtica.
+
+ (b) Possibilitar l'ús pràctic dels continguts matemàtics estudiats.
+
+  (c) Familiaritzar-se amb el llenguatge matemàtic i el raonament abstracte, dos trets
+      característics de les matemàtiques.
+
+ (d) Saber aplicar els conceptes i procediments estudiats en el plantejament i anàlisi
+      de problemes pràctics.
+
+
+
+Pel que fa als continguts matemàtics que es pretenen treballar en aquest curs intro-
+ductori, els objectius a assolir són:
+
+
+
+ 1. Conèixer la teoria bàsica dels conjunts de nombres reals.
+ 2. Resoldre equacions i inequacions.
+ 3. Aprendre a manipular polinomis.
+ 4. Conèixer i manipular matrius i calcular determinants de matrius.
+ 5. Resoldre sistemes d'equacions lineals de dues i tres variables, en particular pel
+    mètode de Gauss.
+
+ 6. Comprendre el concepte de funció real de variable real.
+ 7. Conèixer les característiques de les funcions elementals: polinòmiques, trigonomè-
+    triques (sinus, cosinus, tangent), exponencials i logarítmiques.
+
+ 8. Comprendre el concepte de límit, les seves propietats i la seva aplicació en l'estudi
+    de la continuïtat de funcions.
+
+ 9. Comprendre el concepte de derivada i la seva interpretació geomètrica. Conèixer
+    les seves propietats i saber calcular derivades a partir de les seves regles de càlcul.
+
+10. Calcular primitives de les principals famílies de funcions.
+© FUOC ● PID_00273913                                                                                      11                                   Iniciació a les matemàtiques per a l'enginyeria
+
+
+1.   Nombres
+
+.
+
+
+
+
+Índex
+          1.1. Nombres naturals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                              11
+                 1.1.1. Denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .         11
+                 1.1.2. Operacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .             12
+                 1.1.3. Múltiples i divisors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                   13
+          1.2. Nombres enters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                          16
+                 1.2.1. Denició i exemples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                      16
+                 1.2.2. Operacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .             18
+          1.3. Nombres racionals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                             20
+                 1.3.1.       Nombres fraccionaris . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                 20
+                 1.3.2.       Denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   23
+                 1.3.3.       Operacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       24
+                 1.3.4.       Forma decimal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .          27
+          1.4. Nombres reals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                         29
+                 1.4.1.       Potències . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    29
+                 1.4.2.       Nombres irracionals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                33
+                 1.4.3.       Denició . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   35
+                 1.4.4.       Operacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       36
+          1.5. Expressions numèriques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                    39
+                 1.5.1. La recta numèrica . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                    39
+                 1.5.2. Notació cientíca . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                  41
+                 1.5.3. Igualtats notables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                   42
+
+
+
+
+1.1. Nombres naturals
+
+1.1.1. Denició
+
+Els nombres naturals són els que ens permeten comptar objectes. La llista dels
+nombres naturals s'inicia amb l'1 i no té : 1, 2, 3, 4, 5, 6, . . . Fixem-nos que aquesta
+llista no inclou el 0.
+
+Des de fa alguns segles els nombres naturals se solen representar amb les xifres de-
+cimals del 0 al 9. Aquestes xifres són d'origen hindú i es van introduir a Europa
+mitjançant textos àrabs. Un dels motius determinants per a usar aquestes xifres en
+lloc d'altres representacions és la facilitat per a calcular les operacions bàsiques que
+                                                                                                                                                               Fragment d'una pàgina del Codex
+ofereixen: suma, resta, multiplicació i divisió.                                                                                                               Virgilanus (s.X) on es poden observar
+                                                                                                                                                               les nou xifres en ordre invers.
+© FUOC ● PID_00273913                                         12                   Iniciació a les matemàtiques per a l'enginyeria
+
+
+1.1.2. Operacions
+
+Suma És una operació que es representa amb el signe + (es llegeix més) interposat
+entre els dos nombres que se sumen. Per indicar el resultat, s'afegeix el signe = i,
+nalment, el resultat de la suma. Per exemple, 12 + 19 = 31.
+Els nombres que se sumen es denominen sumands, i el resultat de l'operació rep el
+nom de suma. En l'exemple, el 12 i el 19 són els sumands, i el 31 és la suma.
+
+
+Resta (o diferència o subtracció) És una operació que es representa amb el signe −
+(es llegeix menys) interposat entre els dos nombres que es volen restar. Per exemple,
+14 − 6 = 8.
+El nombre anterior al signe − es denomina minuend, el nombre que segueix el signe
+− es denomina subtrahend i el resultat de la resta es denomina diferència. En
+l'exemple, el 14 és el minuend, el 6 és el subtrahend i el 8 és la diferència. La suma
+i la resta són operacions oposades. Aquest fet permet armar que en una resta la
+diferència més el subtrahend és igual al minuend. En l'exemple veiem que 8 + 6 = 14.
+
+
+Multiplicació (o producte) És una operació que es basa en la suma: la suma de
+diversos sumands iguals es transforma en una multiplicació del sumand pel nombre
+de cops que aquest se suma. El signe que es fa servir és ⋅ o bé × (es llegeix per).
+Nosaltres optarem pel primer dels dos signes. Per exemple: 6 + 6 + 6 + 6 + 6 = 5 ⋅ 6 = 30
+és a dir, la suma de 5 vegades el 6 és igual a 5 per 6.
+Els nombres multiplicats es denominen factors, o el resultat de la multiplicació es
+denomina producte. En l'exemple, els factors són 5 i 6, mentre que el producte és
+30.
+
+
+Divisió El signe que es fa servir és ∶ o bé /. Aquest signe es llegeix entre.
+El nombre dividit es denomina dividend, el nombre que divideix es denomina divisor
+i el resultat es denomina quocient. Així, per exemple, en la divisió 15 ∶ 3 = 5, el 15
+es denomina dividend, el 3 divisor, i el 5 quocient.
+Aquesta operació és oposada al producte i això ens permet trobar el resultat de
+qualsevol divisió. Per exemple, per conèixer el quocient de 72 entre 8, s'ha de trobar
+el nombre que, multiplicat pel divisor, proporciona el dividend, és a dir: 8 ⋅ ? = 72.
+Evidentment, el nombre buscat és 9, perquè 8 ⋅ 9 = 72. Així, doncs, 72 ∶ 8 = 9.
+
+
+
+Observacions per a la resta i divisió.          Hem de tenir en compte que la resta
+i la divisió de nombres naturals no sempre es poden fer per dos nombres naturals
+qualssevol.
+
+
+El primer problema el trobem quan volem restar d'un nombre un altre de més gran
+o igual. En aquest cas la resta pot donar com a resultat un nombre no natural:
+hauríem de denir un altre tipus de nombres, els nombres enters (tema que veurem
+a continuació), perquè aquesta operació fos possible.
+
+
+De manera similar, el quocient entre dos nombres naturals tampoc no és sempre un
+nombre natural. Per exemple, 13 ∶ 5 no pot ser igual a un nombre natural perquè no
+© FUOC ● PID_00273913                                                13                      Iniciació a les matemàtiques per a l'enginyeria
+
+
+hi ha cap nombre que multiplicat per 5 doni 13. En aquest cas, es pot descompondre
+la divisió anterior de la manera següent: 13 = 5 ⋅ 2 + 3, on el 3, denominat residu, és
+menor que el divisor 5. Per tant, la regla general per a la divisió s'enuncia així:
+
+      dividend = divisor ⋅ quocient + residu (forma abreujada: D = d ⋅ q + r)
+
+on D és el dividend, d el divisor, c el quocient, i r el residu. Sempre que el residu sigui
+0, es diu que la divisió és exacta.
+
+
+
+Ordre d'operacions.         De vegades se'ns presenta un grup d'operacions amb nombres
+naturals, que es denomina expressió numèrica. Per exemple:
+                                      4 ⋅ 5 − (5 ⋅ 3 + 8 ∶ 2)
+Per trobar el resultat d'aquesta expressió, s'ha de seguir l'ordre d'operacions següent:
+
+
+
+1) Operacions que es troben a l'interior dels parèntesis: del més extern al més intern.
+
+2) Multiplicacions i divisions: les divisions sempre abans que les multiplicacions.
+
+3) Sumes i restes: primer les restes i després les sumes.
+
+
+                                                                                                            L'ordre de les operacions és: primer
+.                                                                                                           els parèntesis, a continuació les
+                                                                                                            divisions i les multiplicacions, i,
+    Exemple. Ordre de les operacions.                                                                       nalment, les restes i sumes.
+    Resolguem l'exemple proposat
+    4 ⋅ 5 − (5 ⋅ 3 + 8 ∶ 2) = 4 ⋅ 5 − (5 ⋅ 3 + 4) = 4 ⋅ 5 − (15 + 4) = 4 ⋅ 5 − 19 = 20 − 19 = 1
+    Observem la importància dels parèntesis amb el mateix exemple sense parèn-
+    tesis:
+                    4 ⋅ 5 − 5 ⋅ 3 + 8 ∶ 2 = 4 ⋅ 5 − 5 ⋅ 3 + 4 = 20 − 15 + 4 = 9
+
+
+
+
+1.1.3. Múltiples i divisors
+
+Un nombre és múltiple d'un altre si es pot obtenir multiplicant aquest per algun
+altre nombre natural.
+
+
+Quan una divisió entre dos nombres naturals és exacta, per exemple, 15 : 3 = 5, es
+diu que 15 és divisible entre 3 (o per 3). En aquest cas, també es diu que 3 és un
+divisor de 15. Una notació habitual en aquesta situació és 3∣15.
+
+Per tant, es pot observar que els conceptes de múltiple, divisor i divisibilitat estan
+lligats estretament. Si un nombre és múltiple d'un altre, també es pot armar que el
+primer és divisible pel segon. De la mateixa manera, el segon ha de ser un divisor del
+primer. És a dir, si a és múltiple de b, llavors b és divisor de a i a és divisible per b.
+© FUOC ● PID_00273913                                               14                   Iniciació a les matemàtiques per a l'enginyeria
+
+.
+        Exemple. Múltiples i divisors.
+        36 és un múltiple de 2, 3, 6, 12 i 18. I, per tant, podem dir que 2, 3, 6, 12 i 18
+        són divisors de 36. A més, 36 és divisible per 2, 3, 6, 12 i 18.
+
+
+
+
+    Propietats
+
+       Qualsevol nombre natural és divisor (i múltiple) d'ell mateix: a∣a per qualsevol
+        nombre a. Aquesta és la propietat reexiva.
+
+       Si un nombre és divisor d'un altre i aquest és divisor d'un tercer, llavors el primer
+        nombre també és divisor del tercer (passa el mateix en el cas de ser múltiple), és a
+        dir, si a∣b i b∣c aleshores tindrem segur que a∣c. Aquesta és la propietat transitiva.
+
+       Si un nombre és divisor d'un altre i aquest ho és del primer, llavors ambdós
+        nombres són el mateix nombre (el mateix es pot dir en el cas de ser múltiple), és a
+        dir, si a∣b i b∣a, aleshores, per força, a = b. Aquesta és la propietat antisimètrica.
+
+
+
+Criteris de divisibilitat.           El concepte de divisibilitat ens permet establir alguns
+criteris per a detectar si un nombre és divisible per un altre sense haver de calcular
+la divisió. Alguns d'aquests criteris són els següents:
+
+
+
+    Divisible     Criteri de divisibilitat              Exemples
+    per
+
+    2             L'última xifra és parell.             548 és divisible per 2, ja que 8 ho
+                                                        és.
+
+    3             La suma de les seves xifres és        18.231 és divisible per 3, ja que 1 +
+                  divisible per 3.                      8 + 2 + 3 + 1 = 15 ho és.
+
+    4             El nombre format per les dues         828 és divisible per 4, ja que 28 ho
+                  últimes xifres és divisible per 4.    és.
+
+    5             L'última xifra és 0 o 5.              325 és divisible per 5, ja que 5 ho
+                                                        és.
+
+    9             La suma de les seves xifres és        94.833 és divisible per 9, ja que 9 +
+                  divisible per 9.                      4 + 8 + 3 + 3 = 27 ho és.
+
+    10            L'última xifra és 0.                  100 és divisible per 10, ja que acaba
+                                                        en 0.
+
+    11            La diferència entre la suma de        12.111 és divisible per 11, ja que
+                  les xifres de les posicions parells   la diferéncia entre 1 + 1 + 1 = 3 i
+                  i la suma de les xifres de les po-    2 + 1 = 3 és 0 ho és.
+                  sicions senars és múltiple d'11.
+
+
+
+Nombres primers.             Un nombre natural es diu que és un nombre primer quan
+els únics divisors que té són el mateix nombre i l'1. En contrapartida, anomenem
+© FUOC ● PID_00273913                                                 15                      Iniciació a les matemàtiques per a l'enginyeria
+
+
+nombres compostos els que no són primers. Observem que 1 és un nombre que no
+és primer ni compost.
+
+                                                                                                             El garbell o sedàs d'Eratòstenes és
+    Procediment Per saber si un nombre és primer, s'ha de dividir entre tots i cadascun                      un algoritme que serveix per a
+                                                                                                             buscar tots els nombres primers ns
+dels nombres primers menors que el nombre en qüestió, començant pel 2. Si cap                                a un nombre determinat N . Aquest
+                                                                                                             mètode consisteix a escriure tots els
+d'aquests nombres no és un divisor seu, llavors el nombre és primer.                                         nombres naturals menors que N i,
+                                                                                                             començant amb el primer nombre
+                                                                                                             primer, esborrar tots els seus
+Factorització.        Factoritzar un nombre és descompondre'l en factors primers. Això                       múltiples. Es continuen esborrant
+                                                                                                             tots els múltiples
+                                                                                                                           √ del segon nombre
+vol dir expressar-lo com a producte dels seus divisors primers, que podem detectar                           primer ns a N .
+
+amb els criteris de divisibilitat.
+
+
+    Passos per a la factorització
+
+1) Dividim el nostre valor pel nombre primer més petit que en sigui divisor. Aquest
+      serà el nombre primer factor.
+
+2) Fem la divisió i ens quedem amb el quocient. Repetim el procés ara amb el quocient
+      tantes vegades com siguin necessàries ns a obtenir l'1 de quocient. Ja tenim tots
+      els factors primers.
+
+3) Comprovem que el nombre inicial és igual al producte de tots els primers que hem
+      obtingut.
+
+
+Màxim comú divisor (MCD).                  El màxim comú divisor de dos (o més) nombres
+naturals és el nombre que compleix aquests dos requisits:
+                                                                                                            Exemple de factorització
+     És un divisor comú d'ambdós (o tots els) nombres.
+
+ És el més gran d'aquests divisors.
+Un dels mètodes per a trobar el MCD entre dos nombres consta d'aquests dos passos:
+
+
+1) Es descomponen els dos (o més) nombres en factors primers.
+2) Es multipliquen els nombres primers comuns a ambdues (o totes) descomposicions
+      fent servir el de menor exponent, i el resultat és l'MCD.
+.
+      Exemple. Càlcul dem màxim comú divisor.
+      Calculem el màxim comú divisor de 36 i 30. Per a fer-ho, podem escriure una
+      llista de tots els divisors de 36 i una altra amb els de 30:
+
+
+                  divisors de 36:     1    2    3    4    6    9     12    18    36
+
+                  divisors de 30:     1    2    3    5    6    10    15    30
+
+      Podem comprovar que de tots els divisors comuns (en lila) el més gran és el 6.
+      Per tant, MCD(30, 36) = 6.
+      Una altra manera de fer-ho és descompondre el dos nombres en factors primers:
+      36 = 1 ⋅ 22 ⋅ 32 , mentre que 30 = 1 ⋅ 2 ⋅ 3 ⋅ 5. Els primers comuns són 1, 2 i 3 i el seu
+      exponent ha de ser 1, perquè és el menor. Per tant, MCD(36, 30) = 1 ⋅ 2 ⋅ 3 = 6.
+© FUOC ● PID_00273913                                         16                     Iniciació a les matemàtiques per a l'enginyeria
+
+
+Amb la denició de MCD, diem que dos nombres són coprimers o primers entre
+ells si el seu MCD val 1 (o si no tenen factors primers comuns).
+
+
+Mínim comú múltiple (MCM).             El mínim comú múltiple de dos (o més) nombres
+és un nombre que:
+
+   És un múltiple de cadascun d'aquests dos (o més) nombres.
+
+   És el menor d'aquests múltiples.
+
+
+Un mètode per a trobar l'MCM de dos (o més) nombres consisteix a fer el següent:
+1) Es descomponen els dos (o més) nombres en factors primers.
+
+2) Es multipliquen els nombres primers de les descomposicions que siguin comuns als
+    dos (o més) nombres utilitzant els d'exponent més gran, i també els que no són
+    comuns amb l'exponent corresponent.
+
+.
+    Exemple: càlcul del mínim comú múltiple.
+    Calculem el mínim comú múltiple dels nombres 4 i 10. Comencem escrivint la
+    llista de múltiples d'aquests dos nombres:
+
+      múltiples de 4:      4     8     12   16     20    24   28    32    36    40
+
+      múltiples de 10:    10     20    30    40    50    60   70    80    90   100
+
+    Hem destacat (en verd) el múltiples comuns d'ambdós. Veiem que el menor
+    d'aquests múltiples comuns és el 20.
+    Una altra manera de fer-ho és descompondre els nombres 4 i 10 en nombres
+    primers: 4 = 1 ⋅ 22 i 10 = 1 ⋅ 2 ⋅ 5. Veiem que els primers comuns són l'1 i el 2,
+    aquest últim elevat al quadrat perquè és el d'exponent major. Pel que fa als
+    primers no comuns, només hi ha el 5. Així, doncs, mcm(4, 10) = 1 ⋅ 22 ⋅ 5 = 20.
+
+
+
+
+1.2. Nombres enters
+
+1.2.1. Denició i exemples
+
+Els nombres enters permeten comptar, entre moltes altres coses, tant allò que es
+té com allò que es deu. Més genèricament, els nombres enters permeten representar
+les situacions en les quals els objectes comptats es poden dividir en dos grups, un de
+                                                                                                    Els símbols + i - van aparèixer
+format pels objectes que es compten a partir d'un punt en endavant i l'altre format                 impresos per primera vegada en
+                                                                                                    Aritmètica Mercantil, de Johannes
+pels que es compten a partir d'aquest mateix punt cap enrere. Així, podem classicar                Widmann, publicada a Leipzig el
+                                                                                                    1489. L'autor va utilitzar aquests
+els nombres enters en tres grups:                                                                   símbols per a referir-se a guanys i
+                                                                                                    pèrdues en problemes comercials.
+
+   Enters positius. Són els que permeten comptar allò que es té. Compten a partir
+    d'un punt en endavant. Es poden associar als nombres naturals. De fet, es poden
+    escriure tal com s'escriuen els nombres naturals o bé precedits del signe +.
+© FUOC ● PID_00273913                                         17                  Iniciació a les matemàtiques per a l'enginyeria
+
+
+   Enters negatius. Són els que permeten comptar el que es deu. Compten a partir
+    d'un punt endarrere. Els enters negatius s'escriuen utilitzant un nombre natural
+    precedit d'un signe −. Així, un enter negatiu podria ser -6, que es llegeix menys
+    6.
+
+   El zero. És un enter ni positiu ni negatiu.
+
+
+
+Signes de desigualtat.        Donats dos nombres enters diferents qualssevol, un d'ells
+sempre és més gran que l'altre. Aquest fet tan senzill es pot expressar mitjançant els
+signes de desigualtat (< i >):
+
+
+   El signe > es llegeix major que, i indica que el nombre que està a l'esquerra del
+    signe és més gran que el que és a la dreta.
+
+
+
+
+          L'expressió 6 > 4 indica que el 6 és més gran que el 4.
+    .
+
+
+
+
+   El signe < es llegeix menor que i indica que el que és a l'esquerra del signe és
+    més petit que el que és a la dreta.
+
+
+
+
+          L'expressió 1 < 17 indica que l'1 és menor que el 17.
+    .
+
+
+
+
+Hem de tenir en compte que es poden encadenar diversos signes < o > en la mateixa
+expressió. Ara bé, només poden aparèixer signes < o > del mateix tipus. Per exemple,
+és correcte escriure 5 < 7 < 8. En canvi, és incorrecte escriure 8 > 1 < 2 (encara que
+ambdues parts de l'expressió siguin correctes per separat).
+
+
+Amb aquesta eina, es poden ordenar tots els nombres enters tenint en compte que:
+
+   Qualsevol nombre positiu sempre és més gran que qualsevol nombre negatiu. .
+
+
+          +3e és més gran que -9e; és a dir, es tenen més diners tenint 3e que devent
+          9e. Així, doncs, +3 > −9 (o bé, −9 < +3).
+
+
+
+   El 0 és més gran que qualsevol nombre negatiu i menor que qualsevol nombre
+    positiu. .
+
+
+          No tenir cap euro (0e) és tenir més que deure'n trenta (-30e) però és tenir
+          menys que quatre euros (+4e). Així, doncs, −30 < 0 < 4 (o bé, 4 > 0 > −30).
+
+
+
+   Entre dos enters negatius, el més gran és aquell que, sense signe (el nombre sense
+    signe l'anomenem valor absolut), és el menor.
+© FUOC ● PID_00273913                                            18               Iniciació a les matemàtiques per a l'enginyeria
+
+
+Valor Absolut.       El valor absolut d'un nombre enter és igual al mateix nombre enter
+sense el seu signe. És a dir, per trobar el valor absolut d'un nombre enter, n'hi ha
+prou amb treure-li el signe i convertir-lo en un nombre natural. Així, per exemple,
+el valor absolut del +6 és igual a 6, el valor absolut de −23 és igual a 23 i el valor
+absolut de 0 és 0.
+
+
+Per expressar el valor absolut d'un nombre, es fan servir dos petits segments verticals
+col.locats a banda i banda del nombre. Així, el valor absolut de +6 és ∣ + 6∣ = 6, el
+valor absolut de −23 ∣ − 23∣ = 23 i el valor absolut de 0 és ∣0∣ = 0.
+
+
+
+1.2.2. Operacions
+
+Les operacions entre nombres enters són les mateixes que entre els nombres naturals
+i compleixen, a més, les mateixes propietats. Ara bé, tenen certes regles de càlcul
+especíques per la distinció que hi ha entre enters positius i enters negatius. En tot
+cas, la denominació d'operacions i elements que formen part de cada operació es
+manté.
+
+
+Suma Les regles per sumar nombres enters són les següents:
+
+
+
+   Per sumar dos nombres que tenen el mateix signe, se sumen els seus valors absoluts
+    i al resultat s'hi afegeix el signe comú. .
+
+
+
+                                             +17 + (+12) = +29
+
+                                             −10 + (−6) = −16
+
+
+
+   Per sumar dos nombres amb signe diferent, s'han de restar els seus valors absoluts,
+    el més gran del més petit. Finalment, s'ha d'afegir el signe del nombre que té el
+    valor absolut més gran. .
+
+
+         +13 + (−11) = +2 (el valor absolut de +13 és més gran que el valor absolut de
+         −11, 11; per tant, el signe és +)
+         +6 + (−11) = −5 (el valor absolut de −11 és més gran que el valor absolut de
+         +6; per tant, el signe és −)
+
+
+
+
+                                                                                                 Sempre signiquen el mateix els
+Resta La diferència de dos nombres enters és igual a la suma del minuend amb                     signes + i - ? Els signes + i - poden
+                                                                                                 expressar tant una operació com el
+l'oposat del subtrahend.                                                                         signe d'un nombre (positiu o
+                                                                                                 negatiu). Cada vegada que es
+                                                                                                 detecta un signe d'aquest tipus en
+                                                                                                 una expressió numèrica, s'ha de
+                                                                                                 distingir quin és el seu sentit.
+© FUOC ● PID_00273913                                              19                Iniciació a les matemàtiques per a l'enginyeria
+
+.
+
+                                14 − (+3) = 14 + (−3) = 11
+
+                                −12 − (+16) = −12 + (−16) = −28
+      Un exemple una mica més llarg amb sumes i restes és:
+            −5 + (−8) − (−13) + (−2) − (+4) + (+6) = −5 − 8 + 13 − 2 − 4 + 6 = 0
+      Una manera ràpida d'obtenir el resultat nal és:
+
+
+         S'eliminen tots els parèntesis (substituïm per un + si tenim dos signes
+          consecutius iguals i per un - si els tenim diferents).
+
+         Se sumen tots els nombres positius; per altra banda, se sumen tots els
+          negatius.
+
+         Es fa la suma d'aquests dos valors tenint en compte que tenen signes dife-
+          rents.
+
+
+
+
+    Multiplicació Per fer una multiplicació amb dos nombres enters, en primer lloc s'obté
+el producte dels seus valors absoluts i després s'estableix el signe del resultat. Amb
+aquesta nalitat, només cal recordar la regla de signes següent:
+
+
+     Si ambdós nombres tenen el mateix signe, el seu producte és positiu.
+
+     Si els dos nombres tenen signe diferent, el seu producte és negatiu.
+
+
+Hem de tenir en compte que dins d'una expressió numèrica no hi pot haver dos signes
+consecutius. Si hi fossin, seria convenient usar parèntesis per obtenir una expressió
+correcta.
+
+    Divisió Les mateixes regles del producte són vàlides per a la divisió canviant el signe
+de multiplicar pel de dividir.
+
+
+En cas que la divisió sigui exacta, es diu, igual que amb els nombres naturals, que el
+dividend és un múltiple del divisor. Les regles i propietats de múltiples i divisors són
+també les mateixes utilitzant el valor absolut dels nombres.
+.
+      El -3 és un divisor del 12 (−3∣12) perquè |12| : |-3| = 4 és una divisió exacta.
+
+
+
+
+                                                                                                    Com afecten les operacions a l'ordre
+                                                                                                    dels nombres enters? En sumar o
+Les operacions i l'ordre.         És important conèixer la inuència que exerceixen les             restar un mateix nombre a dos
+                                                                                                    nombres enters, els resultats
+operacions en l'ordre dels nombres enters. En altres paraules, donats dos nombres                   mantenen la mateixa relació d'ordre
+                                                                                                    que els dos nombres originals; en
+enters qualssevol, com inueix l'operació (suma, resta, multiplicació o divisió) amb                canvi, en multiplicar o dividir dos
+                                                                                                    nombres per un mateix nombre
+un altre nombre en la seva ordenació? Es distingeixen dos casos:                                    enter, els resultats mantenen la
+                                                                                                    mateixa relació d'ordre només si
+                                                                                                    aquest últim nombre és positiu; si
+                                                                                                    no, es gira la relació.
+    Suma i resta Si se suma o resta un mateix nombre en els dos costats d'una desigual-
+© FUOC ● PID_00273913                                          20                   Iniciació a les matemàtiques per a l'enginyeria
+
+
+tat, la desigualtat es manté. També es pot dir que la suma i la resta mantenen l'ordre
+dels enters.
+.
+      Exemple. L'ordre i la suma i resta.
+      Tenim −4 < 8. Sumant 3 a banda i banda de la desigualtat, tenim −4 + 3 < 8 + 3,
+      d'on resulta −1 < 11, per la qual cosa es manté la desigualtat. Així, doncs, els
+      resultats mantenen el mateix ordre que els nombres inicials.
+      Si ara restem 4 a banda i banda de la desigualtat, −4 − 4 < 8 − 4, obtenim
+      −8 < 4 amb la qual cosa també es manté la desigualtat.
+
+
+
+
+    Multiplicació i divisió En canvi, quan es multipliquen o es divideixen ambdós costats
+d'una desigualtat per un mateix nombre, no passa sempre el mateix.
+
+
+
+     Es manté el mateix ordre si el nombre pel qual es multipliquen o divideixen és
+      positiu.
+
+     S'inverteix l'ordre si el nombre pel qual es multipliquen o divideixen és negatiu.
+
+
+
+.
+      Exemple. L'ordre i la multiplicació i divisió.
+      Multipliquem per +3 a banda i banda d'aquesta desigualtat:
+                                             −5 < 3
+      Aleshores el resultat és −5 ⋅ 3 < 3 ⋅ 3, és a dir, −15 < 9. L'ordre de resultat
+      continua essent el mateix.
+      En canvi, si es multiplica per un nombre negatiu, per exemple, −4, el resultat
+      és−5 ⋅ (−4) > 3 ⋅ (−4), és a dir, 20 > −12.
+      En aquest cas, l'ordre és exactament el contrari, com es pot observar, ja que
+      s'ha canviat el signe < pel signe >.
+      Ara provem-ho amb la divisió: −15 < 30. Si es divideixen ambdós costats entre
+      5, −15 ∶ 5 < 30 ∶ 5 s'obté −3 < 6, en canvi, si a −36 < −30 es divideixen ambdós
+      costats entre −2 −36 ∶ (−2) > −30 ∶ (−2) s'obté 18 > 15, com es podia preveure.
+
+
+
+
+1.3. Nombres racionals
+
+1.3.1. Nombres fraccionaris
+
+Sempre que se sumen, resten o multipliquen dos nombres enters, el resultat és un
+nombre enter. Però, en canvi, això no succeeix quan els nombres es divideixen.
+© FUOC ● PID_00273913                                        21                   Iniciació a les matemàtiques per a l'enginyeria
+
+.
+    Si dividim 12 entre 4, 12/4, el resultat és un nombre enter, el 3.
+    Si dividim 1 entre 2, 1/2, el resultat no és un nombre enter.
+
+
+
+
+En aquest últim cas sorgeix la qüestió del signicat d'aquesta última expressió, 1/2,
+i d'altres de similars.
+
+
+Aquest tipus d'expressions conformen els nombres fraccionaris i es poden associar,
+per exemple, al repartiment d'objectes entre diverses persones.
+.
+    Exemple. Nombres fraccionaris i la repartició d'objectes.
+    Si es volen repartir 8 pastissos iguals entre 2 persones, cadascuna d'elles ob-
+    tindrà 4 pastissos, ja que 8 ∶ 2 = 4.
+    Ara bé, si es vol repartir 1 pastís entre 2 persones, no hi ha cap nombre enter
+    que pugui representar el resultat d'aquesta operació. En aquest cas, a cada
+    persona no li correspon més que una part o fracció del pastís, en concret, la
+    meitat del pastís.
+    El nombre que expressa aquest repartiment és simplement la forma de la divisió
+    amb la barra, és a dir, 1/2. Aquest nombre és un nombre fraccionari.
+
+
+
+
+Un nombre fraccionari (fracció o trencat) s'expressa en forma de quocient de nom-
+bres enters amb una barra entre ambdós nombres, que pot ser horitzontal o inclinada.
+
+                              5 o també 12/5. En aquest cas, el 5 es denomina deno-
+Un exemple de fracció pot ser 12
+minador (marca en quantes parts hem de partir la unitat) i el 12 numerador (indica
+quantes parts es consideren). Tal com es pot observar, doncs, els elements d'un nom-
+bre fraccionari es denominen de manera especíca i diferenciada de la denominació
+dels elements d'una divisió entera.
+
+                                                                                                 Com llegim una fracció? Amb el
+Qualsevol nombre enter es pot convertir en un nombre fraccionari. Amb aquesta                    nom del nombre del numerador,
+                                                                                                 seguit del plural del nombre al
+nalitat, la fracció ha de tenir el numerador igual al nombre enter en qüestió i el              denominador (si el numerador és 1,
+denominador ha de ser 1. Així, doncs, per exemple, 8 = 81 . També, −3 = −13 . Aquest
+                                                                                                 s'utilitza el singular). Així, per
+                                                                                                 exemple, 12/5 es llegeix dotze
+                                                                                                 cinquens, 1/7 és un setè, 3/11 és
+fet ens mostra com els nombres enters són un subconjunt dels nombres fraccionaris                tres onzens, etc. Ara bé, de
+                                                                                                 vegades, si el denominador és molt
+o, dit d'una altra manera, qualsevol nombre enter és també un nombre fraccionari.                gran, s'utilitza simplement
+                                                                                                 l'expressió partit per, o bé,
+                                                                                                 entre, entre el numerador i el
+                                                                                                 denominador. Així, 12/25 és dotze
+                                                                                                 partit per vint-i-cinc o dotze entre
+Signe.      Tant el numerador com el denominador d'una fracció poden ser positius o              vint-i-cinc.
+
+negatius. Utilitzant la regla dels signes per a dividir nombres enters, es pot deduir el
+signe nal d'una fracció. Una fracció és positiva si numerador i denominador tenen
+el mateix signe, i una fracció és negativa si numerador i denominador tenen signe
+diferent.
+© FUOC ● PID_00273913                                        22                   Iniciació a les matemàtiques per a l'enginyeria
+
+.
+    +4 4        −6
+      =            =
+                     6
+                       són fraccions positives
+    +7 7        −11 11
+
+    −4 −4         +6   −6
+       =             =    són fraccions negatives
+    +7   7        −11 11
+
+
+
+
+Normalment, el signe de la fracció s'anteposa al numerador, mentre que el denomi-
+nador no va precedit de cap signe, però també es pot situar avantposat a la línia
+fraccionària, a la mateixa altura:
+                                       −4
+                                            =−
+                                                 4
+                                        7        7
+
+
+
+Fraccions equivalents.       Resulta fàcil observar que hi ha fraccions diferents que
+representen el mateix nombre. Per exemple, la fracció 12 representa el mateix valor
+que la fracció 24 . La comprovació d'aquest fet és que si es reparteix un pastís equita-
+tivament entre dues persones, a cadascuna li correspondrà la meitat del pastís, és a
+dir, 12 . Si es reparteixen equitativament 2 pastissos entre 4 persones, a cadascuna li
+correspondrà, evidentment, la mateixa quantitat de pastís que en el cas anterior; ara
+bé, en aquest cas, la seva porció és igual a 24 . Queda clar, doncs, que 12 = 42 . Quan
+dues fraccions expressen el mateix nombre, es diu que són fraccions equivalents.
+.
+
+                                   = = = =
+                                  1 2 3 4  5
+                                  2 4 6 8 10
+
+    són fraccions equivalents, és a dir, totes expressen el mateix valor.
+
+
+
+
+La manera més senzilla de trobar una fracció equivalent a una altra consisteix a
+multiplicar tant el numerador com el denominador d'aquesta per un mateix nombre.
+                                                      5
+Per exemple, per a construir una fracció equivalent a 11 , es pot multiplicar numerador
+i denominador per 3, amb la qual cosa s'obté 15
+                                             33 ; d'aquesta manera, es pot assegurar
+                                                  5
+que ambdues fraccions són equivalents, és a dir, 11 = 15
+                                                      33 . Evidentment, si es divideixen
+el numerador i el denominador d'una fracció pel mateix nombre, també s'obté una
+fracció equivalent.
+
+
+Hi ha una prova senzilla que permet saber quan dues fraccions són equivalents. Es
+tracta de multiplicar el numerador d'una pel denominador de l'altra, i viceversa. De
+vegades, aquest procés es denomina, per a abreujar, multiplicar en creu:
+© FUOC ● PID_00273913                                          23                 Iniciació a les matemàtiques per a l'enginyeria
+
+.
+    Exemple. Comprovació de fraccions equivalents.
+
+                                      6 Ð→ 10 ⋅ 6 = 60
+                                    ⨉
+                                  4
+                                 10   15 Ð→ 4 ⋅ 15 = 60
+
+                 4   6
+    Per tant,      i   són fraccions equivalents, i en canvi
+                10 15
+
+
+                                      7 Ð→ 6 ⋅ 7 = 42
+                                   ⨉
+                                 2
+                                 6   11 Ð→ 2 ⋅ 11 = 22
+
+    no són fraccions equivalents perquè 42 ≠ 22 (el símbol ≠ és el signe de desi-
+    gualtat, i se situa entre dues expressions amb resultats diferents).
+
+
+
+
+Fracció irreductible.       El fet que moltes fraccions puguin representar el mateix
+nombre en complica molt la manipulació. Per evitar-ho, se sol destacar una fracció
+del conjunt de totes les fraccions que són equivalents entre elles, la denominada frac-
+ció irreductible. Una fracció irreductible es caracteritza pel fet que numerador i
+denominador són primers entre ells, això és, són nombres l'MCD dels quals és 1.
+.
+
+       no és una fracció irreductible, ja que el MCD(8, 16) = 8. En canvi,
+     8                                                                     4
+                                                                             és
+    16                                                                     9
+    una fracció irreductible perquè el MCD(4, 9) = 1.
+
+
+
+
+                                                                                                 No és possible que dues fraccions
+El procés de cerca de la fracció irreductible equivalent a una altra es denomina simpli-         irreductibles diferents siguin
+                                                                                                 equivalents. Aquest fet permet
+cació de la fracció. Donada una fracció qualsevol, sempre es pot trobar una fracció             seleccionar, d'entre totes les
+                                                                                                 fraccions equivalents entre elles, la
+irreductible que en sigui equivalent. El mètode més senzill per a fer-ho consisteix a            fracció irreductible com a
+                                                                                                 representant de totes.
+dividir el numerador i el denominador entre el seu MCD.
+.
+                            18
+    Per a convertir la fracció en una fracció irreductible, cal dividir numerador
+                            12
+    i denominador entre el MCD(18, 12) = 6. La fracció resultant és
+
+
+                                       18 ∶ 6 3
+                                             = .
+                                       12 ∶ 6 2
+
+
+
+
+1.3.2. Denició
+
+Un nombre racional és aquell que es pot expressar com una fracció, o com qualsevol
+fracció de les equivalents a aquesta. Un mateix nombre racional es pot expressar de
+diferents maneres (fraccions).
+© FUOC ● PID_00273913                                           24                   Iniciació a les matemàtiques per a l'enginyeria
+
+.
+                                                                     1
+      El nombre racional que s'expressa com la fracció irreductible també es pot
+                                                                     3
+                               2                   7
+      expressar amb la fracció o amb la fracció      . En aquests casos, les fraccions
+                               6                  21
+      són diferents, però el nombre racional representat és el mateix.
+
+
+
+
+La millor manera d'expressar un nombre racional és mitjançant una fracció irreduc-
+tible perquè aquesta sempre serà la més senzilla. En l'exemple, la millor manera de
+                                          1
+representar el nombre racional anterior és , perquè és una fracció irreductible.
+                                          3
+
+De vegades, els termes nombre racional, nombre fraccionari, fracció o trencat se solen
+usar indistintament, encara que siguin conceptes lleugerament diferents, per a indicar
+el concepte de nombre racional tal com s'acaba de denir. Se solen usar aquests últims,
+fracció i trencat amb preferència, ja que són els més breus.
+
+
+
+
+1.3.3. Operacions
+
+    Suma és una operació que expressa la reunió de les parts expressades pels nombres
+sumats, i estableix un nombre fraccionari que expressa aquesta reunió. Per a calcular-
+ho, diferenciem dos casos, segons si el denominador és comú o no.
+
+
+                                                             1    3
+       Fraccions amb el mateix denominador La suma de          amb es pot representar
+                                                             6    6
+      amb la reunió d'aquests dos fragments acolorits:
+
+
+
+
+      És fàcil determinar que el resultat de la suma és 46 . Aquest fet es pot generalitzar
+      de la manera següent: la suma de dos nombres amb el mateix denominador és igual
+      a una fracció el numerador de la qual és la suma de numeradors i el denominador
+      de la qual és el mateix denominador comú. En l'exemple:
+
+                                       1 3 1+3 4
+                                        + =   = .
+                                       6 6  6  6
+
+       Fraccions amb diferent denominador En aquest cas s'ha de substituir cadascuna
+      per una altra fracció equivalent amb el mateix denominador. A continuació, se
+      sumen les dues fraccions resultants tal com s'ha explicat en l'apartat anterior.
+© FUOC ● PID_00273913                                       25                   Iniciació a les matemàtiques per a l'enginyeria
+
+
+
+   .
+       Exemple. Suma de fraccions.
+                           + , s'ha de buscar una fracció equivalent a cadascuna
+                         3    5
+       Per fer la suma
+                        18 12
+       que tingui el mateix denominador:
+
+
+                                          =   =   = ...
+                                        3   6   9
+                                       18 36 54
+
+
+                                       =   =  =   = ...
+                                     5   10 15 20
+                                    12 24 36 48
+                                               6   15
+       en aquest cas trobem que les fraccions 36 i 36 comparteixen el denominador.
+       D'aquesta manera, la suma es pot fer fàcilment així:
+
+
+                                       +   =   +   =
+                                     3   5   6   15 21
+                                    18 12 36 36 36
+
+
+
+
+   Ara bé, aquest mètode pot arribar a ser realment costós perquè es podria trigar
+   molt de temps a trobar dues fraccions amb el mateix denominador.
+
+   Hi ha dos mètodes que permeten fer el mateix de manera més ràpida:
+
+   1) La multiplicació de denominadors. Consisteix a multiplicar el numerador
+       i el denominador de les dues fraccions que se sumen pel denominador de l'altra.
+       Així s'aconsegueix que les fraccions resultants tinguin el mateix denominador
+       i siguin equivalents a les originals.
+       En l'exemple anterior,
+
+                             3 ⋅ 12   5 ⋅ 18
+                       +   =        +        =    +    =
+                     3   5                     36   90   126
+                    18 12 18 ⋅ 12 12 ⋅ 18 216 216 216
+   2) El càlcul de l'MCM dels denominadors. Aquest mètode es basa en el
+       càlcul de l'MCM dels denominadors per trobar el nou denominador comú. Els
+       passos a seguir són:
+
+       a) Calcular l'MCM dels denominadors involucrats en la suma. Aquest resultat
+          serà el denominador comú. En l'exemple, MCM(12, 18) = 36.
+       b) Multiplicar el numerador de cada fracció pel resultat de dividir l'MCM
+          entre el denominador de la fracció respectiva. Així, en l'exemple, el nume-
+                               3
+          rador de la fracció 18 , que és 3, s'ha de multiplicar pel resultat de 36 :
+                                                                    5
+          18 = 2; de la mateixa manera, el numerador de la fracció 12 , que és 5,
+          s'ha de multiplicar pel resultat de 36 : 12 = 3. Les fraccions resultants són
+          equivalents a les anteriors i tenen el denominador comú:
+
+                                        =            =
+                                      3    6      5    15
+                                     18 36       12 36
+       c) Finalment, cal sumar les fraccions amb el mateix denominador trobades en
+          l'apartat anterior. En l'exemple,
+
+                                        +   =   +   =
+                                      3   5   6   15 21
+                                      18 12 36 36 36
+   Es pot observar que en general el primer mètode té el desavantatge d'oferir re-
+   sultats amb nombres elevats, encara que evidentment es poden simplicar (això
+   sempre és recomanable quan es manipulen fraccions), però sovint és més ràpid.
+© FUOC ● PID_00273913                                           26                   Iniciació a les matemàtiques per a l'enginyeria
+
+
+      El segon mètode ofereix l'avantatge que el resultat es presenta de manera més
+      simplicada. Això és més fàcil d'observar si la suma involucra diverses fraccions.
+      Per tant, si no hi ha massa sumes i els nombres són petits, és possible utilitzar
+      el primer mètode, però si n'hi ha tres o més, és recomanable seguir el mètode del
+      càlcul de l'MCM.
+
+
+
+    Resta És l'operació oposada a la suma, igual que passa entre els nombres enters. La
+resta de fraccions es redueix a la suma amb la fracció oposada.
+.
+
+                                    −2  5 + (−2) 3
+                              − = +( )=         = .
+                             5 2 5
+                             8 8 8   8      8    8
+
+
+
+
+    Mutliplicació El resultat de multiplicar dues fraccions és una fracció el numerador
+de la qual és el producte dels numeradors i el denominador de la qual és el producte
+dels denominadors.
+.
+
+                                      2 3 2⋅3
+                                       ⋅ =     = .
+                                                 6
+                                      7 5 7 ⋅ 5 35
+
+
+
+
+                                                                                                    En molts casos, les fraccions que
+La multiplicació permet calcular la fracció d'un nombre (part que s'agafa d'un                      tenen per denominador 100
+                                                                                                    s'expressen en forma de
+nombre). Per exemple, per a trobar el triple de 39 es fa la multiplicació següent:                  percentatge amb el símbol %,
+3 ⋅ 39 = 117. De la mateixa manera, per a calcular una fracció d'un nombre s'ha de
+                                                                                                    denominat tant per cent. Així, la
+                                                                                                    fracció 23/100 es pot indicar també
+multiplicar la fracció pel nombre. Així, tres quarts de 120 és igual a 34 ⋅ 120 = 90.               com 23%, i es llegeix 23 per cent.
+                                                                                                    El càlcul de tants per cent es
+                                                                                                    redueix al càlcul amb fraccions.
+
+    Divisió La divisió de fraccions és el producte d'una fracció per la inversa de l'altra.
+La divisió de dues fraccions es pot indicar de dues maneres:
+
+                                                                                                    Quin és l'ordre en què s'han de fer
+.                                                                                                   les operacions elementals entre
+                                                                                                    fraccions? En una expressió en la
+                                                      2                                             qual s'encadenen diferents
+
+                                   ∶
+                                  2 7                 3                                             operacions entre fraccions, primer
+                                                                                                    s'han de resoldre els parèntesis, tot
+                                  3 11                7                                             seguit la divisió i la multiplicació i,
+                                                     11                                             nalment, la resta i la suma.
+
+
+
+
+En el segon cas, convé la barra de divisió respecte de les barres de fracció per a no
+deixar lloc a dubtes sobre quin és el numerador i quin el denominador. El resultat de
+la divisió de dues fraccions és igual al producte de la fracció que és en el numerador,
+multiplicada per la inversa de la fracció del denominador.
+.
+
+                                     ∶  = ⋅  =
+                                    2 7  2 11 22
+                                    3 11 3 7   21
+ © FUOC ● PID_00273913                                          27                Iniciació a les matemàtiques per a l'enginyeria
+
+➞Una❋❯❖❈    ①①①✴①①①①①✴①①①                                    ✷✸                  ■♥✐❝✐❛❝✐+ ❛ ❧❡. ▼❛0❡♠20✐3✉❡. ♣❡6 ❛ ❧✬❊♥❣✐♥②❡6✐❛
+      altra regla fàcil de recordar per fer una divisió és aquesta: es multipliquen en
+creu numeradors amb denominadors i els resultats també se situen en creu. En el cas
+❛♥"❡$✐♦$✿
+anterior:
+                                       2 ⋅ 11 22
+                              ∶     =         =
+                            2    7
+                              ❩
+                              ✚     ❩
+                                    ✚
+                            3 11        3⋅7     21
+
+❆ ♣❛$"✐$ ❞❡ ❧❛ ❞✐✈✐-✐. ❞❡ ♥♦♠❜$❡- ❡- ♣♦" ❡①♣$❡--❛$ ❧✬✐♥✈❡$% ❞✬✉♥ ♥♦♠❜$❡ $❛❝✐♦♥❛❧
+A partir de la divisió de nombres, es pot expressar l'invers d'un nombre racional
+❞✬✉♥❛ ❛❧"$❛ ♠❛♥❡$❛✿ ❝♦♠ ❛ ✶ ❞✐✈✐❞✐" ❡♥"$❡ ❡❧ ♥♦♠❜$❡✳ ❆✐①7✱ ♣❡$ ❡①❡♠♣❧❡✱ ❧✬✐♥✈❡$- ❞❡
+d'una altra manera: com a 1 dividit entre el nombre. Així, per exemple, l'invers de
+✹✴✼ <- 1 7 ✳
+4/7 és 4 = .
+       7
+            4
+
+
+✶✳✸✳✹✳    ❋♦$♠❛ ❞❡❝✐♠❛❧
+1.3.4. Forma decimal
+▲❛ ❢♦$♠❛ ❞❡❝✐♠❛❧ ❞✬✉♥❛ ❢$❛❝❝✐. <- ✉♥❛ ❡①♣$❡--✐. ♥✉♠?$✐❝❛ @✉❡ ❡-"A ❢♦$♠❛❞❛ ♣❡$
+La forma decimal d'una fracció és una expressió numèrica que està formada per
+✉♥❛ ♣❛$" ❡♥"❡$❛✱ ❛ ❧✬❡-@✉❡$$❛ ❞❡❧ ♣✉♥"✱ ✐ ✉♥❛ ♣❛$" ❞❡❝✐♠❛❧✱ ♦ -❡♥③✐❧❧❛♠❡♥"✱ ❞❡❝✐♠❛❧-✱
+una part entera, a l'esquerra del punt, i una part decimal o senzillament decimals,
+❛ ❧❛ ❞$❡"❛ ❞❡ ❡❧ ♣✉♥"✳ C❡$ ❛ ♦❜"❡♥✐$ ❧❛ ❢♦$♠❛ ❞❡❝✐♠❛❧ ❞✬✉♥❛ ❢$❛❝❝✐.✱ -✬❤❛ ❞❡ ❞✐✈✐❞✐$ ❡❧
+a la dreta del punt. Per obtenir la forma decimal d'una fracció, s'ha de dividir el
+♥✉♠❡$❛❞♦$ ❡♥"$❡ ❡❧ ❞❡♥♦♠✐♥❛❞♦$✱ ❝♦♠ ❡♥ ❧❛ ❞✐✈✐-✐. ❡♥"❡$❛✱ ♣❡$E -❡♥-❡ ❛"✉$❛$✲-❡ ✜♥-
+numerador entre el denominador, com en la divisió entera, però sense aturar-se ns
+@✉❡ ❧❛ $❡-"❛ -✐❣✉✐ ③❡$♦✱ ❛❢❡❣✐♥"✲❤✐ ❡❧- ❞❡❝✐♠❛❧- ❝♦$$❡-♣♦♥❡♥"-✳ C❡$ ❡①❡♠♣❧❡✱ ❧❛ ❢♦$♠❛
+que la resta sigui zero, afegint-hi els decimals corresponents. Per exemple, la forma
+❞❡❝✐♠❛❧ ❞❡ 12 <- ✷✳✹✱ <- ❛ ❞✐$✱ 12        ✭✐ ❡- ❧❧❡❣❡✐① ❝♦♠❛ ✮✳
+decimal de      és 2.4, és a dir,   = 2.4 (i es llegeix  2 coma 4).
+             5                    5
+❚✐♣✉- ❞❡ ❢♦$♠❡- ❞❡❝✐♠❛❧-✿
+Tipus de formes decimals:
+
+❼ ▲❛ ❢♦$♠❛ ❞❡❝✐♠❛❧ ❡- ❞❡♥♦♠✐♥❛ ❡%5$✐❝5❛ -✐ ❧❛ ❞✐✈✐-✐. ❞❡❧ ♥✉♠❡$❛❞♦$ ❡♥"$❡ ❡❧ ❞❡♥♦✲                 ❊♥ ❧❡$ ❢♦'♠❡$ ❞❡❝✐♠❛❧$ ❡$ ♣♦.
+ La forma decimal es denomina estricta si la divisió del numerador entre el deno-                 $❡♣❛'❛'  ❧❛ ♣❛'. decimals
+                                                                                                   En les formes     ❡♥.❡'❛ ❞❡es❧❛pot
+                                                                                                                                    ❞❡❝✐♠❛❧
+  ♠✐♥❛❞♦$ "< ✉♥ ♥♦♠❜$❡ ❞❡ ❞❡❝✐♠❛❧- ✜♥✐"✳ ❯♥ ❡①❡♠♣❧❡✿ 12           ✳                                ♣❡' ✉♥ ♣✉♥.✱    ✉♥❛  ❝♦♠❛de♦ la✉♥decimal
+                                                             = 2.4.
+                                                                                                   separar  la part  entera
+  minador té un nombre de decimals nit. Per exemple:                                              ❛♣1$.'♦❢✳  ◆♦$❛❧.'❡$
+                                                                                                   per un punt,           ✉.✐❧✐.③❛'❡♠
+                                                                                                                   una coma     o un ❡❧
+                                                           5                                       ♣✉♥.✱  ❧❛ ♠❛.❡✐①❛
+                                                                                                   apòstrof.  Nosaltres♥♦.❛❝✐6   7✉❡ ❡$el❢❛
+                                                                                                                          utilitzarem
+                                                                                                   $❡'✈✐'
+                                                                                                   punt, ❛❧
+                                                                                                          la ♠6♥   ❛♥❣❧♦$❛①6
+                                                                                                             mateixa   notació✐ que
+                                                                                                                                  ❡♥ ❧❛es fa
+                                                                                   =
+❼ ▲❛ ❢♦$♠❛ ❞❡❝✐♠❛❧ ❡- ❞❡♥♦♠✐♥❛ ♣❡$✐7❞✐❝❛ ❡♥ ❝❛- ❝♦♥"$❛$✐✳ C❡$ ❡①❡♠♣❧❡✱ 1
+ La forma decimal es denomina periòdica en cas contrari. Per exemple:                             ♠❛❥♦'✐❛
+                                                                                                   servir en❞❡el ❝❛❧❝✉❧❛❞♦'❡$✳
+                                                                                                                  món anglosaxó i en la
+
+                        ̂
+                                                                                                   majoria de calculadores.
+                         ✳ ❊❧ ❜❛$$❡" @✉❡ ♣♦-❡♠ -♦❜$❡ ❡❧ ✐♥❞✐❝❛ ❡❧ ♣❡$8♦❞❡ ✭❡❧- 3❞❡✲
+  0.333333333 . . . = 0.3. El barret que posem sobre el 3 indica el període (els de-
+  ❝✐♠❛❧- @✉❡ ❡- $❡♣❡"❡✐①❡♥ ✐♥✜♥✐"❡- ✈❡❣❛❞❡-✮✳ ❊- ♣♦" ♦❜-❡$✈❛$ @✉❡ ❧❛ ①✐❢$❛✱ ♦ ①✐❢$❡-✱
+  cimals que es repeteixen innites vegades). Es pot observar que la xifra o xifres
+  @✉❡ ❡- $❡♣❡"❡✐①❡♥✱ ❞✉❡♥ ❡❧ -7♠❜♦❧ ♣❡$✐E❞✐❝ ❡♥ ❧❛ ♣❛$" -✉♣❡$✐♦$✳ ❉✐❢❡$❡♥❝✐❡♠ "❛♠❜<
+  que es repeteixen duen el símbol periòdic en la part superior. Diferenciem també
+  ❛♠❜ ❞♦- "✐♣✉- ❞❡ ♥♦♠❜$❡- ♣❡$✐E❞✐❝-✿ -✐ ❡❧ ♣❡$7♦❞❡ ❝♦♠❡♥P❛ ❥✉-" ❞❡-♣$<- ❞❡ ❧❛ ❝♦♠❛
+  dos tipus de nombres periòdics: si el període comença just després de la coma,
+  ♣❛$❧❛$❡♠ ❞❡ ♥♦♠❜$❡ ❞❡❝✐♠❛❧ ♣❡$✐7❞✐❝ ♣✉$ ✭ ̂ ✮✱ ❡♥ ❝❛♥✈✐ -✐ ❝♦♠❡♥P❛ ❞❡-♣$<-
+  parlem de nombre decimal periòdic pur (0.13); en canvi, si comença després
+  ❞✬✉♥ ❣$✉♣ ❞❡ ①✐❢$❡- ❞❡❝✐♠❛❧- @✉❡ ♥♦ ❡- $❡♣❡"❡✐①❡♥ ♣❛$❧❡♠ ❞✬✉♥ ❞❡❝✐♠❛❧ ♣❡$✐7❞✐❝
+  d'un grup de xifres decimals que no es repeteixen, parlem d'un decimal periòdic
+  mixt (0.15̂2✮✳). ➱-
+  ♠✐①5 ✭              ❡✈✐❞❡♥" @✉❡ ❡❧ ❣$✉♣ ❞❡ ♥♦♠❜$❡- $❡♣❡"✐"- ♣♦" -❡$ -✉♣❡$✐♦$ ❛ ✉♥✳
+                   És evident que el grup de nombres repetits pot ser superior a un.
+  C❡$ ❡①❡♠♣❧❡✱
+  Per exemple:
+
+                                5627                          ̂
+                                     = 0.56838383 . . . = 0.5683
+                                9900
+
+
+C♦❞❡♠
+Podem "$❛♥-❢♦$♠❛$
+      transformar ❧❛
+                  la ❢♦$♠❛
+                     forma ❞❡❝✐♠❛❧
+                           decimal ❞✬✉♥
+                                   d'un ♥♦♠❜$❡
+                                        nombre ❡♥
+                                               en ❧❛
+                                                  la ❢♦$♠❛
+                                                     forma ❢$❛❝❝✐♦♥A$✐❛✿
+                                                           fraccionària:
+
+❼ ❙✐
+   Si ❧❛
+      la ❢♦$♠❛
+         forma ❞❡❝✐♠❛❧
+               decimal <-
+                       és ❡①❛❝"❛✱
+                          exacta, -✬❤❛
+                                  s'ha ❞✬❡❧✐♠✐♥❛$
+                                       d'eliminar ❧❛
+                                                  la ❝♦♠❛
+                                                     coma ❞❡❧
+                                                          del ♥♦♠❜$❡
+                                                              nombre ❞❡❝✐♠❛❧✳
+                                                                     decimal. ❊❧
+                                                                              El
+   nombre $❡-✉❧"❛♥"
+   ♥♦♠❜$❡ resultant -❡$A
+                    serà ❡❧
+                         el ♥✉♠❡$❛❞♦$
+                            numerador ❞❡
+                                      de ❧❛
+                                         la ❢$❛❝❝✐.✳
+                                            fracció. ❊❧
+                                                     El ❞❡♥♦♠✐♥❛❞♦$
+                                                        denominador ❤❛
+                                                                    ha ❞❡
+                                                                       de -❡$
+                                                                          ser ✉♥
+                                                                              un
+   ♥♦♠❜$❡ la ♣$✐♠❡$❛
+   nombre ❧❛ primera ①✐❢$❛
+                     xifra ❞❡❧
+                           del @✉❛❧
+                               qual -✐❣✉✐
+                                    sigui ✉♥
+                                          un ✶✱
+                                             1, ✐i ❛♠❜
+                                                   amb "❛♥"-
+                                                       tants ③❡$♦-
+                                                             zeros ❝♦♠
+                                                                   com ❞❡❝✐♠❛❧-
+                                                                       decimals "<
+                                                                                té ❡❧
+                                                                                   el
+   nombre ❞❡❝✐♠❛❧✳
+   ♥♦♠❜$❡ decimal. C❡$
+                   Per ❡①❡♠♣❧❡✱
+                       exemple, ❧❛
+                                la ❢♦$♠❛
+                                   forma ❢$❛❝❝✐♦♥A$✐❛
+                                         fraccionària ❞❡       és 3465
+                                                      de 3.465 <- 1000 ✳.
+
+❼ ❙✐
+   Si ❧❛
+      la ❢♦$♠❛
+         forma ❞❡❝✐♠❛❧
+               decimal <-
+                       és ♣❡$✐E❞✐❝❛✱
+                          periòdica, -✬❤❛♥
+                                     s'han ❞❡
+                                           de -❡❣✉✐$
+                                              seguir ❛@✉❡-"-
+                                                     aquests ♣❛--♦-✿
+                                                             passos:
+
+     ○ ❊❧
+       El ♥✉♠❡$❛❞♦$
+          numerador és
+                    <- igual
+                       ✐❣✉❛❧ a❛ la
+                                 ❧❛ diferència
+                                     ❞✐❢❡$?♥❝✐❛ entre el nombre
+                                                 ❞❡❧ ♥♦♠❜$❡     en qüestió,
+                                                            ❡♥ @T❡-"✐.✱     sense
+                                                                        -❡♥-❡     coma
+                                                                               ❝♦♠❛  ♥✐
+         ni símbol
+         -7♠❜♦❧    periòdic
+                ♣❡$✐E❞✐❝    (amb
+                         ✭❛♠❜   ❧❛ la@✉❛❧
+                                      qual❝♦-❛
+                                            cosa❡-es"$❛♥-❢♦$♠❛
+                                                      transforma ❡♥
+                                                                  en ✉♥
+                                                                     un ♥♦♠❜$❡
+                                                                         nombre enter),
+                                                                                ❡♥"❡$✮ ✐i ❡❧
+                                                                                          el
+         mateix ♥♦♠❜$❡✱
+         ♠❛"❡✐① nombre, -❡♥-❡
+                         sense ❝♦♠❛
+                               coma ♥✐ ni ①✐❢$❡-
+                                          xifres ❛a -♦"❛
+                                                    sota ❞❡❧
+                                                         del -7♠❜♦❧
+                                                             símbol ♣❡$✐E❞✐❝✳
+                                                                     periòdic.
+© FUOC ● PID_00273913                                          28                    Iniciació a les matemàtiques per a l'enginyeria
+
+
+     ○ El denominador ha de ser un enter amb tants 9 com xifres a sota del símbol
+       periòdic, i tants 0 com xifres de la secció decimal que no són dintre del símbol
+       periòdic. Per tant, la fracció que correspon al nombre periòdic és
+
+
+                                     ̂ =   23452 − 234 23218
+                                 23.452               =
+                                               990      990
+
+
+
+Aproximacions.       Per aproximar un nombre, distingim entre l'arrodoniment i el
+truncament.
+L'arrodoniment d'un nombre ns a una xifra determinada, l'anomenada xifra d'ar-
+rodoniment, consisteix a escriure el nombre decimal més proper al nombre donat, de
+
+manera que només tingui xifres decimals ns a la d'arrodoniment. Per exemple, l'ar-
+rodoniment d' 31 amb dos decimals consisteix a trobar el nombre decimal més proper
+a 13 que tingui només dos decimals. En aquest cas, és fàcil adonar-se que és 0.33. Per
+expressar que 31 és aproximadament igual a 0.33, s'utilitza el símbol ≈, que es llegeix
+aproximadament igual: 13 ≈ 0.33. En tot cas, no cal abusar de l'ús d'aquest símbol.
+Aquestes són les regles per a arrodonir un nombre ns a una xifra determinada:
+
+   Si la xifra següent a la de l'arrodoniment és inferior a 5, s'eliminen totes les xifres
+                                                                                                    Quan fem operacions amb fraccions
+    decimals posteriors a aquesta xifra. Així, per exemple, si es vol arrodonir el nombre           sempre és millor treballar amb les
+
+    32.543613 a dos decimals, podem dir que 32.543613 ≈ 32.54.
+                                                                                                    fraccions que amb les formes
+                                                                                                    decimals aproximades, perquè així
+                                                                                                    obtenim el valor exacte de
+                                                                                                    l'operació.
+   Si la xifra següent a la de l'arrodoniment és superior a 4, s'eliminen totes les
+    xifres decimals posteriors a la xifra d'arrodoniment, i se suma una unitat a la
+    xifra d'arrodoniment. Així, per exemple, si es vol arrodonir el nombre 32.5436134
+    a tres decimals queda 32.544.
+
+   Si la xifra d'arrodoniment és 9, s'actua de la mateixa manera que en una suma de
+    nombres decimals quan se suma 1 a una xifra 9. Per exemple, si es vol arrodonir
+    el nombre 2.749623 a tres decimals, com que la xifra del quart decimal és 6, més
+    gran que 4, s'ha de sumar una unitat a la tercera xifra decimal, 9, i per tant el
+    nombre arrodonit serà igual a 2.750. Fixeu-vos que, tot i que 2.75 és el mateix que
+    2.750, el 0 ens indica que és una aproximació i no el valor exacte.
+
+
+
+Podem considerar també el truncament (encara que no és tant habitual). El trun-
+cament és la reducció del número de dígits a la dreta del punt decimal, en la qual es
+descarten els menys signicatius. Per exemple, el truncament del nombre 2.56147215
+a 4 decimals és 2.5614.
+
+
+
+Ordenació.      La manera més senzilla d'ordenar dos nombres racionals és escriure'n
+l'expressió decimal, que mostra de manera immediata quin dels dos és més gran.
+
+
+Observem que els nombres racionals tenen una propietat important: entre dos nom-
+bres racionals diferents sempre en podem trobar un altre (de fet, se'n poden trobar
+moltíssims). Per a trobar un nombre que estigui entre dos altres nombres qualssevol,
+només cal sumar-los i dividir el resultat entre 2.
+© FUOC ● PID_00273913                                                                            29   Iniciació a les matemàtiques per a l'enginyeria
+
+.
+              3                        9
+    El nombre    és menor que el nombre , aleshores és fàcil comprovar que
+              4                        5
+        +
+      3 9
+      4 5 = 51 és entre tots dos nombres, és a dir, 3 < 51 < 9 .
+        2       40                                  4 40 5
+
+
+
+
+1.4. Nombres reals
+
+Tots els nombres que hem vist ns ara formen part del conjunt de nombres reals que
+denirem en aquest apartat.
+
+
+
+1.4.1. Potències
+
+Quan es té una expressió amb un grup de multiplicacions amb els mateixos factors,
+per abreujar-la es pot fer servir una potència. Per exemple:
+                                   7⋅7⋅7⋅7⋅7=7
+                                                                                             5
+                                   ´¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¸ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹¶
+                                                            5
+Es pot observar que la potència és formada per dos nombres:
+
+
+
+   La base de la potència, que és el nombre que es multiplica diverses vegades. En
+    l'exemple, la base és 7.
+
+   L'exponent de la potència, que indica el nombre de vegades que es repeteix la
+    base en la multiplicació. En l'exemple, l'exponent és 5.
+
+
+
+Per a designar una potència, s'usa l'expressió elevat a. En l'exemple, 75 es llegeix
+set elevat a cinc, o ns i tot set elevat a la cinquena potència. Hi ha dos casos
+particulars: si l'exponent és 2, s'utilitza l'expressió al quadrat (per exemple, 82
+es llegeix vuit al quadrat), i si l'exponent és 3, s'utilitza l'expressió al cub (per
+exemple, 53 es llegeix cinc al cub).
+
+
+Igual que en els nombres naturals, l'ús de potències en els nombres enters és una
+manera d'abreujar un producte reiterat d'un mateix nombre. Per exemple: (−3)⋅(−3)⋅
+(−3) ⋅ (−3) = (−3)4 . Ara bé, en aquest cas és imprescindible posar-hi els parèntesis
+perquè l'exponent afecta tant el nombre com el signe. En cas contrari, no s'estaria
+indicant la mateixa operació, és a dir, −34 = −3 ⋅ 3 ⋅ 3 ⋅ 3; per tant, l'exponent només
+afecta el nombre i no el signe. Per establir el signe de la potència d'un nombre enter,
+s'han de tenir en compte el signe del nombre i la potència:
+
+
+
+   Si el signe del nombre és positiu, el nombre resultant serà positiu. Per exemple,
+    (+2)3 = 23 .
+
+   Si el signe del nombre és negatiu, el nombre resultant:
+© FUOC ● PID_00273913                                                         30    Iniciació a les matemàtiques per a l'enginyeria
+
+
+     ○ serà positiu si l'exponent és parell. Per exemple, (−2)4 = 24 , ja que el producte
+       de 4 vegades un nombre negatiu és positiu.
+
+     ○ serà negatiu si l'exponent és senar. Per exemple, (−2)5 = −25 , ja que el pro-
+       ducte de 5 vegades un nombre negatiu és negatiu.
+
+
+
+La potència d'una fracció és igual a una altra fracció amb els mateixos numerador
+i denominador, però elevats a l'exponent de la potència. Així, per exemple:
+                                      7 3 73
+                                    ( ) = 3.
+                                      5     5
+
+A més, es pot denir una potència amb exponent negatiu, que és igual a l'invers de
+la mateixa potència amb exponent positiu. Per exemple:
+
+                                  −6
+                           ( )         =                                = .
+                             7                 1                   −1    1
+                                                     o         6
+                                           ( 79 )
+                             9                   6                       6
+
+
+
+Arrels.    De la mateixa manera que la diferència és l'operació oposada a la suma, i
+la divisió és l'operació oposada a la multiplicació, la radicació és l'operació oposada
+a la potenciació. Els tipus més importants de radicació són:
+
+
+
+   L'arrel quadrada. Es tracta de l'operació oposada a elevar al quadrat. S'usa el
+          √
+    signe    , o signe radical, amb el nombre a l'interior. Per exemple, com que 5 al
+    quadrat és 25, llavors, l'arrel quadrada de 25 és igual a 5,
+                                                √
+                                     5 = 25 Ð→ 25 = 5
+                                      2
+
+    i es llegeix l'arrel quadrada de 25 és 5 (o simplement l'arrel de 25). De la
+    mateixa manera,
+                                                     √
+                                        7 = 49 Ð→        49 = 7
+                                           2
+
+    El nombre que és a l'interior del signe radical s'anomena radicant, i el resultat
+    s'anomena de vegades arrel.
+                                                                                   √
+   L'arrel cúbica. És l'operació oposada a elevar al cub. Es fa servir el signe 3
+    amb el nombre a l'interior. En aquest cas, es diu que el 3 (que és a la part superior
+    del signe) és l'índex de l'arrel. (Observem que en el cas de l'arrel quadrada no hi
+    tenim l'índex.) Per exemple, com que 5 al cub és igual a 125, llavors l'arrel cúbica
+    de 125 ha de ser igual a 5:
+                                                         √
+                                       5 = 125 Ð→            125 = 5
+                                       3                 3
+
+
+
+    i es llegeix l'arrel cúbica de 125 és 5. De la mateixa manera,
+                                                  √
+                                      2 = 8 Ð→ 8 = 2
+                                        3          3
+
+
+
+
+   Altres arrels. De manera similar a l'arrel cúbica, es poden fer arrels de diferents
+    índexs. Així, per exemple:
+                                                    √
+    L'arrel d'índex 4, l'arrel quarta, de 625 és 5 ( 4 625 = 5), ja que 54 = 625.
+                                                      √
+    L'arrel d'índex 5, l'arrel cinquena, de 32 és 2 ( 5 32 = 2), ja que 25 = 32.
+
+
+
+En el cas dels nombres negatius, s'ha de tenir en compte que no és possible calcular
+                                                √
+l'arrel d'índex parell. Per exemple, l'expressió −4 és incorrecta perquè no hi ha cap
+nombre enter el quadrat del qual sigui −4; en general, no hi ha cap nombre el quadrat
+© FUOC ● PID_00273913                                                       31                    Iniciació a les matemàtiques per a l'enginyeria
+
+
+del qual sigui un nombre negatiu. En el cas dels nombres fraccionaris, la seva arrel es
+calcula:
+                           √
+                                  =                           ( ) =
+                                                                      2
+                                16 4                           4           16
+                                                   ja que                     .
+                                25 5                           5           25
+
+En tot cas, l'arrel d'una fracció sempre es pot expressar com una fracció d'arrels. Per
+exemple:                              √                   √
+                                                  = √      =
+                                                     3
+                                          3    27       27   3
+                                              125   3
+                                                       125 5
+
+Tota arrel es pot expressar també com una potència amb exponent un nombre frac-
+cionari igual a l'invers de l'índex. Per exemple:
+
+                          √                                    √
+                             16 = 16 2                                27 = 27 3
+                                      1                                       1
+                                                   o també
+                                                               3
+
+
+
+D'aquesta manera, es pot expressar conjuntament l'arrel d'una potència. Per exem-
+    √
+ple: 272 = 27 3 . És a dir, l'arrel d'una potència és igual a una potència l'exponent
+    3         2
+
+
+
+de la qual és una fracció de numerador igual al de la potència i de denominador igual
+a l'índex de l'arrel. Un altre exemple:
+                                      √
+                                                  16 −3  16 − 4
+                                                                  3
+
+                                              (      ) =( )
+                                      4
+
+                                                  81     81
+
+
+
+Propietats potències i arrels.                Per simplicar els càlculs amb potències i arrels
+(recordem que una arrel es pot expressar en forma de potència d'exponent fraccionari),
+és útil fer servir aquestes propietats:
+
+
+
+   Potència d'exponent 1. El resultat d'una potència d'exponent 1 és igual a la
+    base a1 = a .
+
+
+       51 = 5 o bé (−3)1 = −3
+
+
+
+
+   Producte de potències de la mateixa base. Per a multiplicar potències amb
+    la mateixa base, n'hi ha prou de sumar els exponents deixant la base sense modi-
+    cacions ap ⋅ aq = ap+q .
+
+
+       34 ⋅ 32 = 34+2 = 36 , ja que 34 ⋅ 32 = (3 ⋅ 3 ⋅ 3 ⋅ 3) ⋅ (3 ⋅ 3) = 3 ⋅ 3 ⋅ 3 ⋅ 3 ⋅ 3 ⋅ 3 = 36 .
+
+                                               8 2+ 4
+                                      5              11       5       11          21
+
+                              (      ) ⋅( ) =( )      =( )
+                                  8 2     8 4           8 4
+                                  81     81   81        81
+
+
+
+
+   Quocient de potències de la mateixa base. Per a dividir potències amb la
+    mateixa base, n'hi ha prou de restar els exponents deixant la base sense modi-
+    cacions. ap ∶ aq = ap−q .
+© FUOC ● PID_00273913                                                           32                 Iniciació a les matemàtiques per a l’enginyeria
+
+
+
+
+    .
+        76 ∶ 74 = 72 , ja que 76 ∶ 74 = (7 ⋅ 7 ⋅ 7 ⋅ 7 ⋅ 7 ⋅ 7) ∶ (7 ⋅ 7 ⋅ 7 ⋅ 7) = 7 ⋅ 7 = 72
+
+                                                   8 2− 4
+                                             5               11      5   11               −1
+
+                                  (      ) ∶( ) =( )      =( )
+                                       8 2    8 4           8 4
+                                      81     81   81        81
+
+
+
+
+•   Potència d’exponent 0. Qualsevol potència (amb base diferent del 0) d’expo-
+    nent 0 resulta sempre igual a 1 a0 = 1 .
+
+
+        90 = 1, ja que 93−3 = 93 ∶ 93 = 1
+
+
+
+
+•   Potència d’una potència. El resultat d’elevar una potència qualsevol a un altre
+    exponent és igual a una potència que té per base la base de la potència, i l’exponent
+    de la qual és el producte d’exponents (ap )q = ap⋅q .
+
+
+
+        (54 )3 = 54⋅3 = 512 , ja que (54 )3 = 54 ⋅ 54 ⋅ 54 = 54+4+4 = 512 .
+
+                                                     3
+                                                     64 3 ⋅ 2
+                                                 7                7 3                21
+
+                                      ((     ) ) =(     )     =(     ) .
+                                          64 3 2                  64 6
+                                         729        729          729
+
+
+
+
+•   Producte de potències amb el mateix exponent. El resultat de multiplicar
+    diverses potències amb el mateix exponent és igual a una potència la base de la qual
+    és el producte de bases i l’exponent de la qual és l’exponent comú. ap ⋅ bp = (a ⋅ b)p
+    .
+
+
+        83 ⋅53 = (8⋅5)3 = 403 , ja que 83 ⋅53 = 8⋅8⋅8⋅5⋅5⋅5 = (8⋅5)⋅(8⋅5)⋅(8⋅5) = (8⋅5)3 = 403
+
+                                          5              5               5                 5
+
+                                  (      ) ⋅( ) =( ⋅ ) =(     )
+                                       8 2   25 2 8 25 2  200 2
+                                      81      4   81 4    324
+
+
+
+
+•   Quocient de potències amb el mateix exponent. El resultat de dividir dues
+    potències amb el mateix exponent és igual a una potència la base de la qual és el
+    quocient de bases i l’exponent de la qual és l’exponent comú. ap ∶ bp = (a ∶ b)p .
+
+
+
+        125 ∶ 35 = (12 ∶ 3)5 = 45, ja que 125 ∶ 35 = (12 ⋅ 12 ⋅ 12 ⋅ 12 ⋅ 12) ∶ (3 ⋅ 3 ⋅ 3 ⋅ 3 ⋅ 3) =
+        (4 ⋅ 3 ⋅ 4 ⋅ 3 ⋅ 4 ⋅ 3 ⋅ 4 ⋅ 3 ⋅ 4 ⋅ 3) ∶ (3 ⋅ 3 ⋅ 3 ⋅ 3 ⋅ 3) = 4 ⋅ 4 ⋅ 4 ⋅ 4 ⋅ 4 = 45
+                                         5               5               5                     5
+
+                                 (      ) ∶( ) =( ∶ ) =(      )
+                                      8 2   25 2  8 25 2  32 2
+                                     81      4   81 4    2025
+© FUOC ● PID_00273913                                                33                     Iniciació a les matemàtiques per a l'enginyeria
+
+
+
+
+                                                                                                           No és el mateix dir que el producte
+S'ha de tenir en compte que aquestes propietats són correctes sempre que a, b, p, q                        de potències és igual a la potència
+                                                                                                           de la suma, que la suma de
+siguin nombres racionals correctes per a l'operació que s'ha de fer. Per exemple, en el                    potències és igual a la potència del
+                                                                                                           producte (això últim és fals). És a
+cas de la potència d'exponent 0, la base no pot ser 0; en el cas dels exponents, sabem                     dir, no és cert que: ap + aq = ap⋅q
+que no poden tenir el denominador parell si la base és negativa (perquè no existeix
+l'arrel d'índex parell d'un nombre negatiu).
+
+
+
+1.4.2. Nombres irracionals
+
+Després d'estudiar els nombres racionals ens podem preguntar si hi ha nombres que
+no són racionals. Recordem que un nombre racional s'ha de poder expressar en forma
+de fracció de nombres enters o, el que és el mateix, en forma de nombre decimal exacte
+o periòdic. Però hi ha nombres que no es poden expressar d'aquesta manera, ja que
+per molts decimals que es calculin, no apareixen repeticions constants de xifres. Per
+exemple:
+                  √
+                     2 = 1.41421356237309504880168872420969808 . . .
+                  √
+                     3 = 1.73205080756887729352744634150587237 . . .
+
+Aquest tipus de nombres es denominen nombres irracionals.
+Dit d'una altra manera, els nombres irracionals són aquells que no es poden expressar
+en forma d'una fracció de nombres enters, és a dir, són que no són racionals (de fet,
+el nom irracional ja fa referència a aquesta característica de no ser racional).
+
+                                                √       √
+No és fàcil demostrar que un nombre, com           2o       3, és irracional, ja que ningú no pot
+assegurar que en xifres decimals més avançades no es pugui trobar la part periòdica
+del nombre, i tampoc no és senzill demostrar que un nombre no es pot expressar com
+una fracció de nombres enters.
+                                               √
+Vegem com es faria per a comprovar que             2 és un nombre irracional.
+
+                                       √                                                                   Què és una demostració per
+      Demostració:
+                √ La prova que          2 és irracional es fa per reducció a l'absurd, és a                reducció a l'absurd? Es comença
+  dir, suposem que 2 és un nombre racional i veurem que aquesta suposició és absurda.                      assumint com a veritat el contrari
+      Així, doncs, comencem suposant que aquest nombre és          √ racional: dit d'una altra
+                                                                                                           del que es vol demostrar i s'acaba
+                                                                                                           arribant a una contradicció perquè
+  manera, que es pot expressar com una fracció irreductible 2 = ab de manera que a, b                      el que s'ha assumit no és cert.
+  són nombres naturals i tals que MCD(a, b) = 1.
+                                                               2
+      Si fem el quadrat de la igualtat, tenim que 2 = ab2 i si es multipliquen ambdós
+  costats d'aquesta igualtat per b2 , obtenim que 2 ⋅ b2 = a2 .
+      Si ara descomponem el nombre 2 ⋅ b2 , obtindrem com a mínim un 2 (si no més).
+  Per tant, com que a2 ha de ser igual a 2 ⋅ b2 , també la descomposició de a2 haurà de
+  tenir com a mínim un 2. En altres paraules, hi ha d'haver un nombre a′ de manera que
+  a = 2 ⋅ a′ . Per tant, a2 = (2 ⋅ a′ )2 = 4 ⋅ a′2 .
+      Recopilem aquestes dues informacions: 2 ⋅ b2 = a2 = 4 ⋅ a′2 i per tant 2 ⋅ b2 = 4 ⋅ a′2 ,
+  simplicant, b2 = 2 ⋅ a′2 .
+      De manera similar a com ho acabem de fer per a a, podem dir que hi ha un
+  nombre b′ que compleix que b = 2 ⋅ b′ . Així, doncs, de la mateixa manera que abans,
+  b2 = (2 ⋅ b′ )2 = 4 ⋅ b′2 .
+      Per tant, podem arribar a la conclusió que, d'una banda, a = 2 ⋅ a′ i, de l'altra,
+  b = 2 ⋅ b′ llavors, a i b tenen un divisor comú: el 2. Però aquest fet no és possible: havíem
+  armat que a i b havien de ser primers entre ells, el MCD(a, b) = 1.
+                                              √
+      En denitiva, és absurd suposar que      2 = ab , essent a i b primers entre ells, ja que
+  aquesta suposició ens duu a la conclusió que a i b mai no poden ser primers entre ells.
+                              √
+  Aquest fet demostra que      2 no pot ser un nombre racional. Per tant, ha de ser un
+  nombre irracional.
+© FUOC ● PID_00273913                                           34                  Iniciació a les matemàtiques per a l’enginyeria
+
+
+Es podria generalitzar aquest fet a qualsevol arrel quadrada d’un nombre primer, és
+                                                                               √
+a dir, es podria demostrar de manera semblant que tot nombre de la forma           p, amb
+p un nombre natural primer, és irracional.
+
+
+La major part de les arrels (de qualsevol índex) de qualsevol nombre racional són
+nombres irracionals, però no tots els nombres irracionals són arrels perquè hi ha una
+multitud de nombres irracionals que tampoc no es poden expressar com una arrel
+d’un nombre racional.
+
+
+Entre aquests nombres hi ha el denominat pi, que prové de la lletra de l’alfabet grec
+que el representa, π. El nombre π indica quantes vegades més gran és la longitud de
+la circumferència (2πr, on r és el radi de la circumferència) en relació amb el seu
+diàmetre, i la seva forma decimal és:
+                π = 3.1415926535897932384626433832795028841972...
+
+
+Un altre nombre irracional molt important és el denominat nombre e, el valor del
+qual és:
+                    e = 2.7182818284590452353602874713526624...
+                                                                                                   Leonardo da Vinci, en el dibuix
+                                                                                                   L’home de Vitrubi, que representa
+Es pot observar que els nombres irracionals coneguts, a part de les arrels, es designen            un home dintre d’un cercle i un
+                                                                                                   quadrat, ha volgut representar la
+amb una lletra (amb una expressió alfabètica, el nom del descobridor o el nom que la               secció àuria: el quocient entre
+                                                                                                   l’altura total de l’home (b) i l’altura
+comunitat científica ha decidit); això és així perquè aquests nombres no es poden ex-              fins al melic (a) és,
+                                                                                                   aproximadament la raó àuria, un
+pressar de manera exacta de cap altra manera coneguda: ni mitjançant una expressió                 nombre irracional.
+
+decimal (ni fraccionària) ni com a arrel.
+
+
+Altres exemples:
+
+
+
+•   Secció àuria o divina proporció (ϕ). És el nombre conegut des de l’antiguitat
+    per a expressar diferents relacions entre elements de certes figures geomètriques.
+    Per exemple, la relació entre la diagonal d’un pentàgon regular i un dels seus
+    costats és igual a la secció àuria. L’arquitectura grega és plena de temples que
+    semblen tenir relació amb la secció àuria: el quocient entre el costat més llarg i el
+    més curt de la base se sol acostar moltíssim a aquest nombre. Numèricament, la
+                                                         √
+    raó àuria es pot calcular de manera senzilla: ϕ = 1+2 5 .
+
+•   Constant de Brun. És la suma dels inversos dels nombres primers de les formes
+    p i p + 2 (anomenats primers bessons). Es tracta de trobar aquesta suma:
+                  B =( + )+( + )+(              + ) + ( + )...
+                        1 1       1 1         1    1        1   1
+                        3 5       5 7        11 13         17 19
+    El 1919 Brun va demostrar que la suma de tots els primers bessons és un nombre,
+    encara que no es pot assegurar amb total certesa que sigui un nombre irracional.
+
+•   Constant de Catalan (cognom del matemàtic belga del segle XIX Eu-
+    gène Catalan). És la suma o resta alternada de la inversa de tots els nombres
+    senars elevats al quadrat:
+
+
+                          G=         − 2 + 2 − 2 + 2 − 2 ...
+                                 1     1   1   1   1   1
+                                 1 2  3   5   7   9   11
+© FUOC ● PID_00273913                                                35              Iniciació a les matemàtiques per a l'enginyeria
+
+
+Hi ha matemàtics que s'han dedicat a buscar el màxim nombre de xifres decimals
+possibles d'alguns d'aquests nombres irracionals amb l'ajut d'ordinadors i programes
+potents.
+
+
+Aquests són alguns dels nombres irracionals més famosos amb els seus primers dí-
+gits decimals (en molts casos no s'ha demostrat encara que es tracta de nombres
+irracionals, tot i que s'intueix que sí).
+
+
+
+
+Font: http://numbers.computation.free.fr/Constants/constants.html. Dades del 2010.
+
+
+
+A la pràctica, se sol utilitzar una aproximació decimal (per arrodoniment) de qualsevol
+nombre irracional, amb el nombre sucient de decimals segons la situació real en la
+qual estem.
+
+
+
+1.4.3. Denició
+
+Tots els nombres, racionals o irracionals, formen part del denominat conjunt de nom-
+bres reals. El nombre 31 és un nombre real que és racional, mentre que el nombre π
+és un nombre real que és irracional.
+
+
+El conjunt de tots els nombres reals se simbolitza amb R. A més, cadascun dels
+conjunts numèrics estudiats també es designa amb un símbol:
+
+
+
+    N designa el conjunt de nombres naturals.
+
+    Z designa el conjunt de nombres enters.
+
+    Q designa el conjunt de nombres racionals.
+
+    R ∖ Q designa el conjunt de nombres irracionals.
+© FUOC ● PID_00273913                                           36                  Iniciació a les matemàtiques per a l'enginyeria
+
+
+Els diferents conjunts de nombres (naturals, enters, racionals i reals) mantenen re-
+lacions d'inclusió d'acord amb el que hem vist: el conjunt dels nombres naturals és
+inclòs en el conjunt dels nombres enters; aquest, al seu torn, és inclòs en el conjunt
+de nombres racionals; nalment, aquest és inclòs en el conjunt de nombres reals.
+
+
+Per a assenyalar relacions d'inclusió, es fa servir el símbol ⊂, que indica que el conjunt
+que se situa a l'esquerra és inclòs en el conjunt que se situa a la dreta. Així, doncs:
+                                     N⊂Z⊂Q⊂R
+Gràcament:
+
+
+
+
+Racionalització.     No és usual deixar una fracció amb arrels en el denominador. Per
+això, és habitual eliminar-les sempre que sigui possible. Aquest procés s'anomena ra-
+cionalització de la fracció. Per a aconseguir-ho, és molt comú multiplicar numerador
+i denominador per alguna expressió que permeti eliminar les arrels del denominador.
+.
+    Exemple. Racionalització.     √    √   √
+                                     1⋅
+                            √ =√ √ = √ 2 =
+                             1      3   3   3
+                                3 ⋅ 3 ( 3)
+                                              .
+                             3             3
+
+
+
+
+En molts casos, també podem trobar una suma o resta d'arrels en el denominador.
+En aquests casos, s'ha de multiplicar el denominador i el numerador per l'operació
+oposada del denominador (el conjugat del denominador ).
+.
+    Exemple. Racionalització.
+                          √   √                    √     √
+                          4( 3 +      5)        4( 3 +     5)          √   √
+        √      √ = √   √    √   √ =                             = − 2 ( 3 + 5) .
+             4
+            3 − 5 ( 3 − 5) ( 3 + 5)                  3−5
+
+                         √   √      √   √      √ 2    √ 2
+    Això és així perquè ( 3 − 5) ⋅ ( 3 + 5) = ( 3) − ( 5) = 3 − 5 = −2.
+
+
+
+
+1.4.4. Operacions
+
+Les operacions bàsiques entre nombres reals són la suma i la multiplicació. La resta i
+la divisió es deneixen a partir de la suma i de la multiplicació. Amb aquesta nalitat,
+cal denir uns elements especials:
+© FUOC ● PID_00273913                                              37                   Iniciació a les matemàtiques per a l'enginyeria
+
+
+   L'element neutre de la suma és el 0, la propietat principal del qual és: si a és
+    un nombre real, a + 0 = 0 + a = a.
+
+   L'element neutre de la multiplicació és l'1, la propietat principal del qual és:
+    si a és un nombre real, a ⋅ 1 = 1 ⋅ a = a.
+
+
+
+A partir d'aquests elements, es poden denir:
+
+
+   L'oposat d'un nombre real a, que és −a i que compleix: a + (−a) = (−a) + a = 0.
+
+   L'invers d'un nombre real a (excepte el 0), que és a1 i que compleix: a ⋅ a1 = a1 ⋅ a = 1.
+
+
+
+A partir d'aquests elements, es poden denir:
+
+
+   La resta de dos nombres, que és igual a la suma amb l'oposat. És a dir, si a, b
+    són nombres reals, a − b = a + (−b).
+
+   La divisió de dos nombres, que és igual a la multiplicació amb l'invers. És a dir,
+    si a, b són nombres reals, i b ≠ 0, ab = a ⋅ 1b .
+
+   La potenciació de nombres reals, que és, sempre que sigui possible, si a és un
+    nombre real, n i m són nombres enters (tots diferents de zero):
+
+                                                               √
+                                       =                an =
+                                  −n        1            m     n
+                                  a                            am
+                                           an
+
+
+
+Propietats de les operacions.              Les propietats de la suma de nombres reals (que
+també es compleixen per a nombres naturals, enters i racionals) són les següents:
+
+
+   Propietat commutativa. L'ordre dels sumands en una suma de dos o més nom-
+    bres no n'altera el resultat: a + b = b + a .
+
+
+
+                                           7 + (−2) = −2 + (+7) = 5
+
+
+                                           − +    = + (− ) = −
+                                             3   2 2    3      1
+                                             6   6 6    6      6
+
+
+
+
+   Propietat associativa. El resultat d'una expressió amb dues o més sumes de
+    nombres enters no depèn de l'ordre com s'agrupen las diferents sumes: a + b + c =
+    (a + b) + c = a + (b + c) .
+
+
+
+                  −3 + (+2) + (−5) = (−3 + (+2)) + (−5) = −3 + ((+2) + (−5)) = −6
+
+
+                   + + (− ) = ( + ) + (− ) = + ( + (− )) =
+                  1 5    2     1 5      2   1   5    2     4
+                  3 3    3     3 3      3   3   3    3     3
+© FUOC ● PID_00273913                                                 38                Iniciació a les matemàtiques per a l'enginyeria
+
+
+   Element neutre de la suma de nombres igual a 0 és aquell que, sumat a
+    qualsevol altre, no el modica: a + 0 = 0 + a = a. Els nombres naturals no en tenen,
+    ja que 0 no és un nombre natural.
+
+   Element oposat d'un nombre és un altre nombre que, sumat a l'anterior, és
+    igual a l'element neutre de la suma, és a dir, igual a 0. Observem que, per a
+    calcular l'oposat d'un nombre, únicament s'ha de canviar el seu signe; l'element
+    oposat de a és −a, i compleix: a + (−a) = (−a) + a = 0. Tot nombre té un únic
+    oposat i tots dos nombres tenen el mateix valor absolut. Els nombres naturals no
+    tenen oposat, ja que en aquest conjunt no tenim nombres negatius. .
+
+
+
+        L'oposat de +5 és −5, perquè +5 + (−5) = 0, o l'oposat d' és − ja que
+                                                                 1    1
+                                                                 3    3
+          + (− ) = 0.
+        1     1
+        3     3
+
+
+
+
+Igualment, també tenim les propietats del producte de nombres reals (això vol
+dir que també es compleixen per a nombres naturals, enters i racionals), que són les
+següents:
+
+
+
+   Propietat commutativa. L'ordre dels factors d'un producte de dos o més nom-
+    bres racionals no n'altera el resultat: a ⋅ b = b ⋅ a .
+
+
+
+                                      3 ⋅ (−4) = (−4) ⋅ 3 = −12
+
+
+                                      − ⋅  = ⋅ (− ) = − = −
+                                        3 2 2    3      6   1
+                                        6 6 6    6     36   6
+
+
+
+
+   Propietat associativa. El producte de més de dos factors no depèn de l'ordre
+    com es fan las multiplicacions: a ⋅ b ⋅ c = (a ⋅ b) ⋅ c = a ⋅ (b ⋅ c) .
+
+
+
+                     −3 ⋅ (+2) ⋅ (−4) = (−3 ⋅ (+2)) ⋅ (−4) = −3 ⋅ ((+2) ⋅ (−4)) = 24.
+
+
+                      ⋅ ⋅ =( ⋅ )⋅ = ⋅( ⋅ )=   =
+                     1 5 2  1 5  2 1  5 2   10 2
+                     3 3 5  3 3  5 3  3 5   45 9
+
+
+
+
+   Propietat distributiva del producte respecte de la suma. El producte d'un
+    nombre per la suma de dos nombres és igual a la suma dels productes del primer
+    nombre per cadascun dels altres dos:
+                               a ⋅ (b + c) = (b + c) ⋅ a = a ⋅ b + a ⋅ c.
+    .
+© FUOC ● PID_00273913                                               39                 Iniciació a les matemàtiques per a l’enginyeria
+
+
+
+
+    .
+                                  −5 ⋅ (4 + (−3)) = −5 ⋅ 4 + (−5) ⋅ (−3)
+
+
+                                    ⋅( + )= ⋅ + ⋅ =
+                                  2   1 4  2 1 2 4 18
+                                  3   5 7  3 5 3 7 35
+
+
+
+
+•   Element neutre del producte. És aquell que, multiplicat per qualsevol altre,
+    no el modifica. L’element neutre de la multiplicació de l’1 és: a ⋅ 1 = 1 ⋅ a = a.
+
+•       L’invers d’un nombre. És el nombre que compleix que el producte d’ambdós
+    és igual a l’element neutre del producte, és a dir, és igual a 1. L’invers del nombre
+    a és a1 , i compleix: a ⋅ a1 = a1 ⋅ a = 1. Els nombres naturals i enters no tenen invers;
+    en canvi, tot nombre real, excepte el 0, té un invers. Per exemple, l’invers de 25 és
+
+    2 , ja que 5 ⋅ 2 = 1.
+    5          2 5
+
+
+
+
+1.5.      Expressions numèriques
+
+
+1.5.1.     La recta numèrica
+
+
+Una de les maneres habituals de representar els nombres és en una recta, que rep el
+nom de recta numèrica.
+Comencem amb els nombres enters, que per les seves característiques es representen
+com a infinits punts equidistants (punts que són a la mateixa distància) en una recta.
+Aquestes característiques són:
+
+
+•   No hi ha cap nombre enter que sigui el primer ni tampoc l’últim. És a dir, donat
+    un nombre enter qualsevol, sempre es pot trobar un nombre que és menor i un
+    altre nombre que és major. Aquest fet no es compleix amb els nombres naturals,
+    amb els quals el menor sempre és 1.
+
+•   Un nombre enter i el següent sempre es diferencien per una unitat. (Aquesta ca-
+    racterística és comuna amb els nombres naturals.)
+
+•   Els nombres enters es poden llistar ordenats d’esquerra a dreta i, evidentment,
+    aquesta llista sempre és incompleta.
+                   . . . − 7, −6, −5, −4, −3, −2, −1, 0, 1, 2, 3, 4, 5, 6, 7 . . .
+
+
+
+Així, doncs, una representació possible dels nombres enters pot ser aquesta:
+
+
+
+
+També és possible representar nombres enters no consecutius, encara que la diferència
+entre un i el següent sempre ha de ser habitualment la mateixa.
+© FUOC ● PID_00273913                                          40                    Iniciació a les matemàtiques per a l'enginyeria
+
+
+El 0 no cal que sigui al centre de la representació; ns i tot pot no ser entre els nombres
+representats.
+.
+
+
+
+
+Pel que fa als nombres racionals, recordem que entre dos nombres racionals diferents
+sempre en podem trobar un altre. Aquesta circumstància permet preveure que els
+nombres racionals poden cobrir molts més punts de la recta en la qual es representen,
+i sempre podrem ampliar una secció qualsevol d'aquesta recta perquè sempre trobarem
+més nombres racionals
+
+
+
+
+Els nombres reals (igual que els anteriors) són ordenats de més petit a més gran. Així,
+es poden representar els nombres reals en una recta, que anomenarem recta real. El
+fet que hi hagi molts més nombres irracionals que racionals dona una idea dels buits
+que hi ha en la representació dels nombres racionals en una recta. Això no passa amb
+els nombres reals: la recta real és completament plena de nombres reals; és a dir, cada
+punt de la recta es correspon amb un nombre real.
+© FUOC ● PID_00273913                                         41                   Iniciació a les matemàtiques per a l’enginyeria
+
+
+Intervals.   Un interval és el conjunt de tots els nombres més petits (o iguals) que
+un nombre donat i més grans (o iguals) que un altre. Aquests dos nombres són els
+extrems de l’interval. Per exemple, els nombres compresos entre el -5 i el 6 formen un
+interval, els extrems del qual són el -5 i el 6. Aquest interval es pot representar en
+la recta real d’aquesta manera:
+
+
+
+
+En cada interval s’ha d’indicar si algun dels extrems és inclòs en l’interval en qüestió:
+si un extrem pertany a l’interval, es denomina interval tancat per aquest extrem
+(i es denota amb un claudàtor); si un extrem no pertany a l’interval, es denomina
+interval obert per aquest extrem (i es denota amb un parèntesi). Per exemple, l’interval
+obert per l’esquerra i tancat per la dreta, d’extrems -5 i 6, s’escriu (−5, 6], i la seva
+representació és la següent (el punt ple indica que aquest valor pertany a l’interval,
+el punt blanc indica que el valor no hi pertany):
+
+
+
+
+De vegades, s’ha de representar un interval que té un extrem però no l’altre; es fa
+servir el símbol ∞ (amb signe + o -), que es llegeix “infinit”. Per exemple, tots els
+nombres reals fins al 5, el 5 inclòs, conformen l’interval (−∞, 5]; tots els nombres més
+grans que -3, el -3 no inclòs, es representen amb l’interval (−3, +∞). La fletxa indica
+tots els valors fins a −∞ o +∞ respectivament.
+
+
+
+
+1.5.2.   Notació científica
+
+
+Moltes ciències requereixen nombres molt grans o inusualment petits. L’astronomia,
+per exemple, necessita treballar amb nombres grans perquè les distàncies amb què
+treballa són immenses; en canvi, la física de partícules, com que investiga ens diminuts,
+utilitza nombres molt petits.
+Per a evitar nombres com, per exemple:
+               1403400000000000000000000000000000000000000,              o bé,
+               0.000000000000000000000000000000000874,
+es requereix una notació més compacta i eficient: la notació científica.
+Els nombres anteriors s’escriurien amb notació científica de la manera següent:
+                                        1.4034 ⋅ 10
+                                                      42
+
+
+                                        8.74 ⋅ 10
+                                                    −34
+© FUOC ● PID_00273913                                                                                42   Iniciació a les matemàtiques per a l'enginyeria
+
+
+Es pot observar que l'expressió es descompon en dues parts:
+
+
+
+(1) Un nombre decimal el valor absolut del qual és més gran que 1 o igual, i menor
+    que 10, denominat mantissa.
+
+(2) Una potència de deu, anomenada simplement exponent.
+
+
+
+El producte d'ambdós nombres ha de coincidir amb el nombre en qüestió. Es pot ob-
+servar que aquesta manera d'escriure un nombre simplica l'escriptura, i la informació
+de quants 0 s'han de posar és en l'exponent. Així, doncs:
+
+
+   Per a expressar un nombre que està en notació decimal en notació cientíca, s'ha
+    de trobar la primera xifra diferent de zero per l'esquerra del nombre.
+
+     ○ La mantissa és igual a un nombre la xifra de les unitats del qual és precisa-
+       ment aquesta xifra diferent de zero i les següents del qual formen la seva secció
+       decimal (evitant escriure zeros innecessaris). .
+
+
+                 La mantissa del nombre 0.000000000000323 és 3.23 i la mantissa del nombre
+                 180200000000000 és 1.802.
+
+
+
+     ○ L'exponent de la potència de 10 és igual al nombre de xifres del nombre menys
+       un si el nombre no té decimals (el nombre és molt gran). En canvi, si es tracta
+       d'un nombre amb decimals (el nombre és molt petit), l'exponent és negatiu i
+       és igual, en valor absolut, al nombre de zeros del nombre. .
+
+
+                 180200000000000 = 1.802 ⋅ 1014 o bé 0.000000000000323 = 3.23 ⋅ 10−13
+
+
+
+       En tot cas, l'exponent compleix les regles habituals de potenciació.
+
+   El pas de la notació cientíca a la usual segueix les indicacions següents:
+
+     ○ Si l'exponent és negatiu, s'ha de desplaçar la coma decimal de la mantissa
+       cap a l'esquerra tantes posicions com indiqui el nombre de l'exponent (sen-
+       se signe), afegint-hi tants 0 com sigui necessari. Per exemple, 1.032 ⋅ 10−9 =
+       0. 000000001 032.
+           ´¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¸ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¶
+            9 posicions
+     ○ Si l'exponent és positiu, s'ha de desplaçar la coma decimal de la mantissa cap
+       a la dreta tantes posicions com indiqui l'exponent, afegint-hi els 0 que calgui.
+       Per exemple: 5.201 ⋅ 1011 = 5 20100000000.
+                                     ´¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹¸¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹ ¹¶
+                                                                       11 posicions
+
+
+
+
+1.5.3. Igualtats notables
+
+Alguns càlculs acostumen a aparèixer recurrentment en diversos contextos matemà-
+tics. Aquest és un bon motiu per a conèixer quin és el seu desenvolupament i les pos-
+© FUOC ● PID_00273913                                                        43                       Iniciació a les matemàtiques per a l'enginyeria
+
+
+sibles equivalències amb altres expressions més útils o simples. Normalment, aquestes
+expressions acostumen a enunciar-se en forma de producte d'altres expressions, i per
+això es coneixen com a igualtats notables. Alguns d'aquests productes notables i
+els seus resultats són els següents (també es dona l'expressió amb la qual s'acostuma
+a denominar-los):
+
+
+
+   Productes de 2 expressions:
+           (a + b)2 = a2 + 2 ⋅ a ⋅ b + b2             el quadrat d'una suma
+
+           (a − b)2 = a2 − 2 ⋅ a ⋅ b + b2             la diferència de quadrats
+
+           (a + b) ⋅ (a − b) = a2 − b2        suma per diferència és igual a diferència de quadrats
+
+           (a − b) ⋅ (a3 + a2 ⋅ b + a ⋅ b2 + b3 ) = a4 − b4
+
+           (a − b) ⋅ (a4 + a3 ⋅ b + a2 ⋅ b2 + a ⋅ b3 + b4 ) = a5 − b5
+
+           (a + b + c)2 = a2 + b2 + c2 + 2 ⋅ a ⋅ b + 2 ⋅ a ⋅ c + 2 ⋅ b ⋅ c
+
+
+
+   Producte de 3 expressions:
+           (a + b) ⋅ (a + b) ⋅ (a + b) = (a + b)3 = a3 + 3 ⋅ a2 ⋅ b + 3 ⋅ a ⋅ b2 + b3           cub d'una suma
+
+           (a − b) ⋅ (a − b) ⋅ (a − b) = (a − b)3 = a3 − 3 ⋅ a2 ⋅ b + 3 ⋅ a ⋅ b2 − b3           cub d'una diferència
+
+
+
+
+Seguint les propietats esmentades amb anterioritat, es poden demostrar totes aquestes
+igualtats. Vegem-ne alguns exemples:
+
+
+El quadrat de la suma: (a + b)2 = a2 + 2 ⋅ a ⋅ b + b2
+
+
+
+        Demostració: Desenvolupem (a + b)2 = (a + b) ⋅ (a + b) S'hi aplica la propietat
+    distributiva dues vegades, amb la qual cosa:
+                    (a + b) ⋅ (a + b) = (a + b) ⋅ a + (a + b) ⋅ b = a2 + a ⋅ b + b ⋅ a + b2
+        Per la propietat commutativa del producte b⋅a = a⋅b , de manera que b⋅a+a⋅b = 2⋅a⋅b.
+    Per tant, l'expressió anterior és igual a a2 + 2 ⋅ a ⋅ b + b2 , tal com s'ha enunciat al principi.
+
+
+
+
+El quadrat de la diferència es troba de manera similar, tenint en compte que es tracta
+d'una resta.
+
+
+La suma per la diferència: (a + b) ⋅ (a − b) = a2 − b2
+
+
+        Demostració: En aquest cas, també s'ha d'aplicar dues vegades la propietat
+    distributiva:
+              (a + b) ⋅ (a − b) = (a + b) ⋅ a − (a + b) ⋅ b = a2 + b ⋅ a − a ⋅ b − b2 = a2 − b2 ,
+    tal com es deia al principi.
+© FUOC ● PID_00273913                                                    44      Iniciació a les matemàtiques per a l'enginyeria
+
+Resum
+
+
+
+
+Els nombres naturals
+
+
+
+Els nombres naturals són aquells que serveixen per a comptar: 1, 2, 3, . . .
+
+
+L'ordre de prioritat de les operacions és:
+
+
+
+    (1r) Parèntesis.
+
+    (2n) Divisió entera.
+
+    (3r) Producte.
+
+    (4t) Sumes i restes.
+
+
+
+Important!
+
+
+
+    La resta ha de sortir positiva perquè estigui ben denida.
+
+    La divisió:
+
+        Pot ser exacta. Per exemple, 15 ∶ 3 = 5; en aquest cas diem que 15 és múltiple
+        de 3, i que 3 és divisor de 15.
+
+        Pot ser no exacta. Per exemple, 17 ∶ 3 no dóna exacte; en aquest cas anomenem
+                                  17       =     3   ⋅       5    +     2
+                                 ´¸¶           ´¸¶       ´¸¶          ´¸¶
+                                divident       divisor quocient       residu
+
+
+
+Un nombre es diu primer quan no té cap altre divisor que no sigui l'1 i ell mateix.
+Per exemple, 11 és primer, però 12 no ho és. Diem que 12 és un nombre compost.
+
+
+Qualsevol nombre natural es pot escriure com a producte de nombres primers, que és
+el que anomenem descomposició en factors primers. Per exemple, 24 = 23 ⋅ 3.
+
+
+La descomposició en factors primers es pot fer servir per a calcular el mínim comú
+múltiple (MCM) i el màxim comú disor (MCD). Per exemple, calculem la
+descomposició de 24 i 90 i tenim que 24 = 23 ⋅ 3 i 90 = 2 ⋅ 32 ⋅ 5.
+
+
+    Per a calcular l'MCM, hem d'agafar els factors primers no comuns i després els
+     comuns als dos nombres amb l'exponent més gran dels dos.
+
+
+                               mcm(24, 90) = 2 ⋅ 3 ⋅ 5 = 360.
+                                                     3   2
+© FUOC ● PID_00273913                                              45                     Iniciació a les matemàtiques per a l'enginyeria
+
+
+       Per a calcular l'MCD, hem d'agafar només els factors primers comuns als dos
+        nombres amb l'exponent menor.
+                                       MCD(24, 90) = 2 ⋅ 3 = 6.
+
+
+
+Dos nombres es diuen coprimers o primers entre ells si el seu MCD val 1 (de
+manera equivalent, si no tenen factors primers comuns).
+
+
+ Els nombres enters
+
+
+    Es tracta d'una generalització dels nombres naturals, inclosos el 0 i els negatius
+    (que precedim del signe −, mentre que podem precedir els positius del signe + o
+    no posar-los cap signe).
+
+
+El valor absolut d'un nombre enter és el mateix nombre sense signe. Per exemple,
+∣ − 4∣ = ∣4∣ = 4.
+
+
+Les divisions i productes es calculen com si fossin nombres naturals però tenint en
+compte la regla dels signes següent:
+
+
+       Si els dos nombres que multipliquem o dividim tenen el mateix signe, el resultat
+        tindrà signe positiu. Per exemple, 2 ⋅ 3 = 6, i (−4) ⋅ (−1) = 4.
+
+       Si els dos nombres que multipliquem o dividim tenen signes diferents, el resultat
+        tindrà signe negatiu. Per exemple, (−2) ⋅ 3 = −6, i 4 ⋅ (−1) = −4.
+
+
+
+    Ordenació de nombres enters
+    Signes
+
+
+          > signica major que : 58 > 12
+
+          < signica menor que : −3 < 12
+
+
+    Caracterització
+
+
+        Qualsevol nombre positiu sempre és major que qualsevol nombre negatiu.
+        El 0 és major que qualsevol nombre negatiu i menor que qualsevol nombre positiu.
+        Entre dos enters negatius, el major és aquell que és menor sense signe.
+
+    Operacions i desigualtats
+
+
+        Suma o resta d'un mateix nombre amb dos nombres: es manté la mateixa relació
+         d'ordre que en els dos nombres originals.
+        Multiplicació o divisió de dos nombres per un mateix nombre enter: es manté la
+         mateixa relació d'ordre només si aquest últim nombre és positiu, i la inverteix si és
+         negatiu.
+© FUOC ● PID_00273913                                              46               Iniciació a les matemàtiques per a l'enginyeria
+
+
+Els nombres racionals
+
+
+
+
+ Forma decimal d'un nombre racional
+
+ La forma decimal d'un nombre racional és formada per una part entera, a l'esquerra del
+ punt, i una part decimal, a la dreta del punt.
+
+
+
+    La forma decimal s'anomena estricta si té una quantitat nita de decimals.
+    La forma decimal s'anomena periòdica en cas contrari. En aquest cas, les xifres que
+     es repeteixen s'indiquen mitjançant el símbol periòdic (barret) a la part superior
+
+                     12                  5627                            ̂
+                        = 2.4                 = 0.5683838383 . . . = 0.5683
+                     5                   9900
+
+
+ De la forma fraccionària a la forma decimal
+                                                    12
+ S'ha de dividir el numerador pel denominador:         = 2.4
+                                                    5
+
+ De la forma decimal a la forma fraccionària
+
+
+                                                3465
+    Si la forma decimal és estricta: 3.465 =        .
+                                                1000
+    Si la forma decimal és periòdica:
+                                     ̂ =    23452 − 234 23218
+                                 23.452                =
+                                               990       990
+© FUOC ● PID_00273913                                                      47                     Iniciació a les matemàtiques per a l'enginyeria
+
+
+                             Les operacions amb nombres fraccionaris
+                                                  La suma
+  Denominadors iguals             Se sumen els numeradors i es manté el mateix denominador:
+                                                          3 2 3+2 5
+                                                           + =   =
+                                                          4 4  4   4
+
+
+                                  Es busquen fraccions equivalents amb el mateix denominador
+                                  (normalment, l'MCM dels dos denominadors) i se sumen se-
+                                  guint el procediment anterior:
+ Denominadors diferents
+                                                         5 2 15   4   19
+                                                          + =   +   =
+                                                         6 9 18 18 18
+
+
+                                  Mètodes per a trobar el mateix denominador
+                                  Multiplicar  els
+                                  denominadors                5 2 5 ⋅ 9 2 ⋅ 6 45 12 57
+                                                               + =     +     =  +  =
+                                                              6 9 6 ⋅ 9 9 ⋅ 6 54 54 54
+
+                                  Calcular l'MCM
+                                  dels denomina-
+                                  dors                    5 2                    5 ⋅ 3 + 2 ⋅ 2 15 + 4 19
+                                                           +           =                      =      =
+                                                          6 9          ↓              18        18     18
+                                                                 MCM(6,9)=18
+                                                                     18/6=3
+                                                                     18/9=2
+
+
+
+                                                  La resta
+ Suma amb l'oposat:
+                                      4 2 4  −2
+                                       − = +( )
+                                      7 3 7  3
+
+                                              La multiplicació
+ Es multipliquen els numeradors entre ells per obtenir el nou numerador, i els
+ denominadors entre ells per obtenir el nou denominador:
+                                  2   −2  2 ⋅ (−2) −4
+                                    ⋅( )=         =
+                                  3    7    3⋅7     21
+
+                                                         2        2 125 250
+ La fracció d'un nombre           dos terços de 125 és     ⋅ 125 = ⋅   =
+                                                         3        3 1    3
+                                   3                7
+  L'invers d'un nombre               és l'invers de
+                                   7                3
+
+                                                 La divisió
+ És el producte del numerador per l'invers del denominador
+                              3
+                                      3 5 3 6 3 ⋅ 6 18
+                              4
+                                  =    ∶ = ⋅ =     =
+                              5
+                              6
+                                      4 6 4 5 4 ⋅ 5 20
+
+
+
+
+Potències i arrels
+
+
+
+Potència i arrel són dues operacions inverses.
+
+
+                                              ←ÐÐÐÐÐÐÐÐÐÐ→
+                                               operacions inverses
+                                  Potència                             Arrel
+
+               Exponent                                                Índex
+                      ↑                                                    ↑ √
+                     3
+                          = 7 ⋅ 7 ⋅ 7 = 343    ÐÐÐÐÐÐÐÐÐ→                       343 = 7
+                                                                           3
+                7
+                ↓                                                                  ↖
+               base                                                               base
+© FUOC ● PID_00273913                                              48                       Iniciació a les matemàtiques per a l'enginyeria
+
+
+Per a unicar les dues operacions, s'introdueix la potència d'exponent fraccionari:
+
+                              √                         √
+                                  a = ac         ac =
+                                        1          b    c
+                              c
+                                                            ab .
+
+
+Característiques de les arrels segons els tipus de nombres
+
+
+
+                                     Potències                          Arrels
+       Nombres naturals     Base i exponent són nom-        Índex i base són nombres
+                            bres naturals                   naturals
+                            Base i exponent són nom-        Índex i base són nombres
+        Nombres enters      bres enters                     enters
+                                                            Si l'índex és parell, la base
+                                                            ha de ser positiva
+                            Base i exponent són nombres racionals
+      Nombres racionals     Índex i exponent són inversos
+                            La base ha de ser positiva si el denominador de l'ex-
+                            ponent és parell
+
+
+
+
+Propietats de les potències i les arrels.         Suposem a, b, p, q nombres racionals.
+
+
+
+   La potència d'exponent 1 és igual a la base: a1 = a.
+
+   El producte de potències amb la mateixa base és la potència amb la mateixa base
+    i la suma d'exponents: an ⋅ am = an+m .
+
+   El quocient de potències amb la mateixa base és la potència amb la mateixa base
+    i la resta d'exponents: aam = an−m .
+                              n
+
+
+
+
+   La potència d'exponent 0 (amb base diferent de 0) val 1: a0 = 1.
+
+   La potència d'una potència resulta ser una potència amb la mateixa base i pro-
+    ducte d'exponents: (ap ) = ap⋅q .
+                             q
+
+
+   El producte de potències amb el mateix exponent és una potència amb el mateix
+    exponent i el producte de les bases: ap ⋅ bp = (a ⋅ b)p .
+
+   El quocient de potències amb el mateix exponent és una potència amb el mateix
+                                        ap
+    exponent i el quocient de les bases: p = ( ) .
+                                              a p
+                                         b    b
+
+
+
+Els nombres reals
+
+
+
+Els nombres reals inclouen els nombres racionals, que alhora inclouen els nom-
+bres enters, els quals inclouen els nombres naturals:
+                                      N ⊂ Z ⊂ Q ⊂ R.
+
+
+Els nombres irracionals (R ∖ Q) són tots aquells nombres reals que no són nombres
+racionals, és a dir, que no es poden expressar com una fracció d'enters.
+© FUOC ● PID_00273913                                     49                Iniciació a les matemàtiques per a l'enginyeria
+
+
+
+
+Notació cientíca.    Consisteix a escriure un nombre com a producte d'un decimal
+amb una única xifra no decimal el valor absolut de la qual és major o igual a 1 i
+menor que 10 (mantissa ), i una potència de 10 (exponent ):
+
+                                            Exponent
+                                               ↑
+                                  1.352 ⋅ 10
+                                               36
+                                     ↓
+                                 Mantissa
+© FUOC ● PID_00273913                                                 50                  Iniciació a les matemàtiques per a l'enginyeria
+
+
+Exercicis resolts
+
+
+1. Simpliqueu l'expressió següent:
+                                          25 ⋅ 8 ⋅ 77 ⋅ 54
+                                      35 ⋅ 252 ⋅ (−5)3 ⋅ 493
+
+Solució
+Per a simplicar qualsevol expressió, s'han d'aplicar les propietats de les potències, amb la
+nalitat d'agrupar les potències amb la mateixa base, i simplicar posteriorment les potències
+repetides tant en el numerador com en el denominador.
+El procediment és:
+   1) Descompondre cadascun dels factors tant del numerador com del denominador.
+   2) Ordenar els factors i agrupar els que tenen la base comuna:
+
+                                        25    =    5 ⋅ 5 = 52
+                                         8    =    2 ⋅ 2 ⋅ 2 = 23
+                                         7    =    7⋅1
+                                         5    =    5⋅1
+                                         3    =    3⋅1
+                                        49    =    7 ⋅ 7 = 72
+
+
+  3) Simplicar els factors comuns al numerador i al denominador:
+
+                      25 ⋅ 8 ⋅ 77 ⋅ 54        52 ⋅ 23 ⋅ 77 ⋅ 54       52 ⋅ 23 ⋅ 77 ⋅ 54
+                                         =− 5                       =− 5 4 3 6
+                  35 ⋅ 252 ⋅ (−5)3 ⋅ 493   3 ⋅ (52 )2 ⋅ 53 ⋅ (72 )3   3 ⋅5 ⋅5 ⋅7
+
+                    23 ⋅ 77 ⋅ 56 23 ⋅ 7
+                  =− 5 7 6 =− 5         = −23 ⋅ 7 ⋅ 3−5 ⋅ 5−1 .
+                    3 ⋅5 ⋅7      3 ⋅5
+
+2. Simpliqueu l'expressió següent:
+                                             ¿√
+                                             Á
+                                             3
+                                             Á
+                                             À
+                                             4 4 8
+                                                 27
+
+Solució
+Per a simplicar una expressió amb arrels i potències, s'han de descompondre els nombres
+de la base i aplicar les propietats de les potències per a arribar a l'expressió més senzilla
+possible.
+Els passos que seguim són:
+   1) Descompondre la base.
+   2) Transformar les arrels en potències de fraccions.
+   3) Operar els exponents seguint les propietats de les potències:
+             ¿√       ¿√
+             Á        Á
+                      3            1⋅4        1        1     3
+                      Á
+                      À
+             3             3
+             Á
+             À
+             4   8    4 4 2    23 4 3     23 3     2 3 3   2 3 2
+                    =        =( 3)     = ( 3 ) = (( ) ) = ( ) =
+               4
+
+                 27       33   3          3        3       3    3
+
+3. Racionalitzeu l'expressió següent:
+                                               4
+                                             √   √
+                                              3− 5
+
+Solució
+Racionalitzar una fracció consisteix a eliminar les arrels del denominador per obtenir una
+fracció equivalent:
+Començarem multiplicant el numerador i el denominador pel conjugat del denominador
+√     √                     √   √      √   √      √ 2      √ 2
+  3 + 5, i utilitzarem que ( 3 + 5) ⋅ ( 3 − 5) = ( 3) − ( 5) = 3 − 5 = −2. Amb
+tot això tenim:
+                    √   √            √   √        √   √
+        4      4 ⋅ ( 3 + 5)     4 ⋅ ( 3 + 5) 4 ⋅ ( 3 + 5)         √   √
+    √   √ = √    √      √   √ =             =             = −2 ⋅ ( 3 + 5)
+     3 − 5 ( 3 + 5) ⋅ ( 3 − 5)       3−5           −2
+© FUOC ● PID_00273913                                         51                    Iniciació a les matemàtiques per a l'enginyeria
+
+4. Racionalitzeu l'expressió següent:
+                                           5
+                                        √
+                                        3    √
+                                          1+ 2
+
+Solució
+Comencem per eliminar l'arrel cúbica del denominador multiplicant numerador i denomina-
+         √   √ 2
+dor per ( 1 + 2)
+         3
+
+
+                                  √
+                                  3    √ 2          √
+                                                    3   √ 2
+                             5 ⋅ ( 1 + 2)      5 ⋅ ( 1 + 2)
+                         √
+                         3      √    √
+                                     3   √ 2 =         √
+                                                    1+ 2
+                           1 + 2 ⋅ ( 1 + 2)
+
+Ara procedim com en l'exemple anterior multiplicant i dividint amb el conjugat del denomi-
+nador i, aplicant la igualtat notable d'una suma per una diferència, obtenim:
+          √  √ 2       √        √   √ 2       √
+    5⋅(
+          3                     3
+          1 + 2) ⋅ (1 − 2) 5 ⋅ ( 1 + 2) ⋅ (1 − 2)         √   √ 2       √
+                                                          3
+            √        √    =                       = −5 ⋅ ( 1 + 2) ⋅ (1 − 2)
+       (1 + 2) ⋅ (1 − 2)            1−2
+© FUOC ● PID_00273913                                  52                  Iniciació a les matemàtiques per a l'enginyeria
+
+
+Exercicis per a practicar amb les solucions
+
+
+5. Simpliqueu les expressions següents expressant com una sola potència, arrel,
+etc. segons cada expressió:
+           √ √
+   (a) x    x x
+                      √
+   (b) 72 ⋅ 34 ⋅       72 ⋅ 33
+         √√
+   (c)
+         3 4
+             57
+           √          √          √   √
+   (d) x 3 + y 5 − 4x 3 + 6y 5
+         √         √    √
+   (e)       2⋅
+                   4    3
+                     4 ⋅ 22
+         √
+                 1
+   (f) 3       √
+               3
+                 −27
+         √      √   √
+          180 + 45 − 405
+   (g)            √
+               3− 5
+
+6. Racionalitzeu les expressions següents:
+        √    √
+       3 5+7 2
+   (a)  √   √
+         5+ 2
+          √
+       4+ 5
+   (b) √
+        6 3
+           √
+       5−3 3
+   (c)     √
+       5+3 3
+
+
+Solucions
+
+               7
+ 5. (a) x 4
+                      11
+     (b) 73 ⋅ 3 2
+                  7
+     (c) 5 12
+              √    √
+     (d) −3x 3 + 7y 5
+               5
+     (e) 2 3
+     (f) (−3)− 3
+                       1
+
+
+     (g) 0
+              √
+         1 + 4 10
+ 6. (a)
+             3
+          √     √
+         4 3 + 15
+     (b)
+              18
+           √
+     (c) 15 3 − 26
+

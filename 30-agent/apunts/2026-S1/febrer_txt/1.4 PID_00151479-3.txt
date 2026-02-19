@@ -1,0 +1,824 @@
+Bit 15
+PID_00151479
+
+
+
+
+Santiago Codolà Vilahur
+
+
+
+
+Temps mínim de dedicació recomanat: 2 hores
+© FUOC • PID_00151479                                                                                Bit 15
+
+
+
+
+  Santiago Codolà Vilahur
+
+
+
+
+La revisió d’aquest recurs d’aprenentatge UOC ha estat coordinada
+pel professor: Josep Cobarsí Morales (2019)
+
+
+
+
+Tercera edició: febrer 2019
+ Santiago Codolà Vilahur
+Tots els drets reservats
+d’aquesta edició, FUOC, 2019
+Av. Tibidabo, 39-43, 08035 Barcelona
+Disseny: Manel Andreu
+Realització editorial: Oberta UOC Publishing, SL
+Dipòsit legal: B-3.766-2019
+
+
+Cap part d’aquesta publicació, incloent-hi el disseny general i de la coberta, no pot ser copiada,
+reproduïda, emmagatzemada o transmesa de cap manera ni per cap mitjà, tant si és elèctric, com
+químic, mecànic, òptic, de gravació, de fotocòpia, o per altres mètodes, sense l’autorització
+prèvia per escrit dels titulars del copyright.
+© FUOC • PID_00151479                                    3                           Bit 15
+
+
+
+1. Què és un projecte i quins són els seus participants
+
+
+
+
+    “Un projecte és un esforç fet per a proporcionar un producte o servei
+    únic.”
+
+
+
+Aquesta és la definició de projecte de l’edició de l’any 2000 del llibre The guide
+to the project management body of knowledge (PMBOK®), publicat pel Project Ma-
+nagement Institute (PMI®).
+
+Els projectes són diferents del treball de producció perquè tots els projectes te-
+nen un inici i un final. El treball de producció generalment està en marxa per
+llargs períodes de temps i no té un començament i un final definits. A causa
+del fet que els projectes han de proporcionar un producte o servei que d’algu-
+na manera són únics, han de tenir necessàriament un principi i un final. Po-
+dem, doncs, ampliar o concretar la definició.
+
+
+    “Un projecte és un esforç temporal fet per a proporcionar un producte
+    o servei únic.”
+
+
+
+Totes dues formes de treball, el treball de producció i els projectes, consumei-
+xen recursos i produeixen productes i/o serveis. Totes dues formes costen tam-
+bé diners i requereixen una planificació per a arribar a bon port.
+
+Els projectes poden ser de, literalment, qualsevol mida. Un projecte es pot
+plantejar per a fer alguna cosa a molt petita escala, com fer una obra ràpida de
+reparació d’una canonada, o bé un projecte pot ser enorme i involucrar milers
+de persones i milions d’euros. Els projectes poden tenir lloc en qualsevol orga-
+nització i a tots els nivells d’una organització i poden involucrar algunes per-
+sones de l’organització o incloure tots els treballadors d’una empresa gran i
+multinacional. La quantitat de temps entre l’inici i el final del projecte (és a
+dir, la seva durada) pot ser també, gairebé, qualsevol: des de poques hores o
+dies fins a molts anys.
+
+Aquesta ràpida visió del que és un projecte ens serveix per a abordar els objec-
+tius d’aquest mòdul. Una altra idea important que hem de remarcar en aquest
+moment és la següent: el concepte de participant o part interessada en el pro-
+jecte.
+
+
+    Qui són els participants o parts interessades d’un projecte? Doncs, es
+    pot dir que és qualsevol persona que tingui alguna cosa a guanyar o per-
+    dre com a resultat del projecte.
+© FUOC • PID_00151479                                        4                                                           Bit 15
+
+
+
+Aquesta seria la interpretació més àmplia del terme. Adoneu-vos que, amb
+aquesta interpretació, podria ser que algú que creiem que no és part interessa-
+da sí que ho és realment. Per exemple, ho són l’equip de treball, els proveïdors
+que contractem durant el projecte, el nostre client, els nostres caps i la direcció
+de la companyia i literalment qualsevol que hi tingui algun interès, que hi tin-
+gui alguna cosa a veure.
+
+
+És molt important per al projecte el fet de reconèixer totes les parts interessa-
+                                                                                          Stakeholder
+des (stakeholders). Si no ho fem, no serà possible que atenguem les seves peti-
+                                                                                           El terme anglès stakeholder
+cions, les seves necessitats, i això duria al fet que l’abast del projecte o fins i tot    s’utilitza normalment en la lite-
+                                                                                           ratura per a anomenar la part
+el seu èxit se’n ressentirien. Generalment, les parts interessades que no hem              interessada o participants.
+identificat com a tals faran acte de presència cap a la fi del projecte quan vegin
+que realment les seves necessitats no s’han incorporat. En aquell moment,
+doncs, aquestes necessitats poden esdevenir nous requisits que no s’havien
+pressupostat ni planificat. Veiem, doncs, que es tracta d’un greu perill que cal
+evitar de bon principi.
+
+
+
+
+1.1. Grups de parts interessades o participants d’un projecte
+
+
+Les parts interessades d’un projecte es poden reconèixer en qualsevol
+d’aquests grups:
+
+
+• Aquells que estan directament relacionats amb el projecte, per exemple els
+    proveïdors, els consumidors (o clients) i els gestors del procés o processos
+    que han de tenir lloc durant el projecte.
+
+
+• Aquells que tenen influència sobre condicions físiques, estructurals, tecno-
+    lògiques, comercials/financeres/socioeconòmiques, o condicions legals i
+    polítiques.
+
+
+• Aquells que tenen una relació jeràrquica amb el projecte, com poden ser les
+    autoritats o administracions locals, regionals o nacionals o internacionals.
+
+
+• Aquells individus, grups o associacions que han concedit interessos, sovint
+    no relacionats amb el projecte, però que el veuen com una oportunitat per
+    a assolir els seus propis objectius.
+
+
+
+
+1.2. Categories de parts interessades
+
+
+Un cop identificades les diferents parts interessades, cadascuna d’elles es pot
+assignar a una categoria. En aquest subapartat descrivim les categories de parts
+interessades d’acord amb la seva capacitat relativa de tenir influència sobre el
+projecte. Entre les parts interessades podem trobar tres categories:
+© FUOC • PID_00151479                                      5                          Bit 15
+
+
+
+1) Aquells que són controlables: estan dins de l’àmbit del projecte i poden ser
+controlats o dirigits per a assolir els objectius del projecte.
+
+
+2) Aquells que es poden influenciar: no estan directament sota el nostre con-
+trol, però sí que podem prendre accions per influenciar-los a favor del nostre
+projecte.
+
+
+3) Aquells que cal apreciar: no entren en les dues categories anteriors, però
+són parts interessades que cal que escoltem, que observem, perquè poden tenir
+impacte sobre el projecte en un sentit o en un altre.
+
+
+Dins de cada categoria, cada part interessada es pot classificar, un altre cop se-
+gons el seu grau d’importància, d’acord amb la seva capacitat d’influenciar el
+projecte. Aleshores, cadascun dels membres de l’equip de projecte pot priorit-
+zar els seus esforços per tal de mantenir les relacions necessàries amb la part
+interessada, i d’aquesta manera augmentar les opcions d’èxit del projecte.
+
+
+Si el projecte és força gran, o preveiem que les relacions amb els interessats se-
+ran força intenses, podem formar un petit grup de persones dins del projecte
+que es dediqui únicament a les relacions amb les parts interessades. Aquesta
+és una bona pràctica en aquests casos, tot i la inversió de personal que suposa,
+per a assegurar-nos que aquest aspecte tan important (la relació amb les parts
+interessades) queda ben cobert.
+
+
+A més d’aquestes categories, hi ha molts altres noms per als participants o
+parts interessades d’un projecte:
+
+
+• interns o externs
+• propietaris de l’empresa o inversors externs
+• membres del projecte i fins i tot les seves famílies
+• administracions públiques i mitjans de comunicació
+• ciutadans individuals
+• etc.
+
+
+Fins i tot la societat en general pot estar interessada en els resultats del nostre
+projecte.
+
+
+El nom del grup o classificació és simplement una ajuda per a identificar qui-
+nes persones o organitzacions són parts interessades en les activitats d’un
+projecte en concret i, de fet, els diferents rols o responsabilitats de cada par-
+ticipant sovint poden coincidir, encara que sigui parcialment.
+© FUOC • PID_00151479                                     6                                                           Bit 15
+
+
+
+2. Per què les empreses adopten una organització
+   basada en projectes?
+
+
+
+
+Ja hem donat una definició d’allò que és un projecte, i també hem comentat
+                                                                                      Vegeu també
+quins tipus de participants té un projecte. Ara que hem establert aquesta base,
+                                                                                       La definició i els tipus de parti-
+cal que ens orientem ja a l’entorn de l’empresa, que és el nostre marc de refe-        cipants d’un projecte es trac-
+rència i en el qual es duen a terme els projectes.                                     ten en l’apartat 1 d’aquest
+                                                                                       mòdul.
+
+
+Per què les organitzacions fan projectes? Aquesta sembla una pregunta senzi-
+lla. Podríeu dir “La meva empresa fa projectes perquè el seu negoci és fer pro-
+jectes” i seria una resposta fins a cert punt correcta.
+
+
+En l’apartat anterior hem donat la definició de projecte següent: “un esforç
+temporal fet per a proporcionar un producte o servei únic”. Això és una bona
+definició de què és el negoci per a moltes organitzacions que treballen, per
+exemple, en tecnologies de la informació. Aquesta manera d’organitzar el ne-
+goci d’una empresa permet gestionar els recursos de manera raonable i, encara
+més important, mantenir l’atenció en el client del producte o servei, cosa que
+al cap i a la fi incrementa la capacitat de l’empresa per a assolir fites amb èxit.
+Com veieu, doncs, estem parlant d’estratègia de l’empresa.
+
+
+En aquest apartat tractarem els motius estratègics pels quals les empreses ac-
+tuals prenen una organització basada en projectes. I ens referirem tant a pro-
+jectes interns com a externs, que de fet delimitarem o definirem més endavant
+en aquest apartat. Un cop siguem conscients d’aquests motius, podrem des-
+criure els avantatges concrets associats a la gestió per projectes.
+
+
+
+
+2.1. Motius estratègics de la gestió per projectes
+
+
+Darrerament moltes organitzacions estan utilitzant o tendeixen a utilitzar una
+                                                                                      Producció recurrent
+estratègia de negoci basada en projectes. Fins i tot aquelles companyies que es
+                                                                                       Per producció recurrent ente-
+dediquen a producció recurrent es troben amb la necessitat d’orientar-se cap           nem una fabricació massiva
+a projectes de tant en tant.                                                           d’un producte, amb una cade-
+                                                                                       na de muntatge clàssica orien-
+                                                                                       tada a produir, a construir,
+                                                                                       grans remeses del mateix pro-
+Això succeeix principalment en èpoques de canvis o transicions en la compa-            ducte durant un llarg període
+                                                                                       de temps.
+nyia, com poden ser aquells períodes en què es volen implantar novetats, com
+per exemple, introduir una nova línia de producció o implementar un nou
+programa de formació del personal. En aquests casos han d’afrontar proble-
+mes o maneres de fer que es basen en la gestió de projectes.
+© FUOC • PID_00151479                                             7                              Bit 15
+
+
+
+
+    Podríem dir que les companyies necessiten els projectes per a ser capa-
+    ces de desenvolupar-se, per a ser flexibles en respondre a les necessitats
+    del mercat, per a dur a terme canvis estructurals d’organització, per a
+    augmentar en dimensions, per a conquerir nous mercats, etc.
+
+
+
+Per aquests motius moltes organitzacions estan canviant la seva estratègia de
+negoci cap a la gestió per projectes.
+
+
+    Sectors en els quals s’imposa la gestió per projectes
+
+    La metodologia gestió per projectes ha estat utilitzada en enginyeria, construcció, sector
+    aeroespacial i defensa des de fa anys, i actualment també es poden trobar organitzacions
+    que entren en aquesta filosofia en sectors tan diversos com:
+
+    •   farmacèutic, mèdic
+    •   telecomunicacions
+    •   desenvolupament de programari
+    •   desenvolupament de sistemes
+    •   energia
+    •   producció
+    •   organitzacions de serveis
+    •   etc.
+
+
+Els principals avantatges d’aquesta orientació del negoci són, entre d’altres, el
+fet que potencia aspectes com els següents:
+
+
+• la flexibilitat en l’organització,
+• la responsabilitat de gestió descentralitzada,
+• la visió general dels problemes, o
+• la implantació de processos orientats a la resolució de problemes, orientats
+    a assolir objectius.
+
+
+A continuació farem una breu descripció d’una classificació ben bàsica que es
+pot fer de tipus de projectes: interns o externs a l’empresa.
+
+
+
+2.2. Projectes interns i externs
+
+
+En una empresa es poden trobar dos tipus de projecte: interns i externs.
+
+
+
+    Un projecte intern és aquell en què l’activitat que s’ha de dur a terme
+    té com a parts interessades persones o departaments dins de la mateixa
+    empresa.
+
+
+
+
+Un exemple de projecte intern és la implantació d’un sistema de formació del
+personal.
+© FUOC • PID_00151479                                              8                            Bit 15
+
+
+
+    Exemples de projectes interns
+
+    Alguns exemples de projectes interns poden ser els següents:
+
+    • Estudis de recerca de nous productes amb prestacions millorades, com són per exem-
+      ple activitats dutes a terme pels departaments de recerca i desenvolupament (R+D)
+      d’algunes empreses tecnològiques.
+
+    • Ampliació de l’espai físic d’una planta de fabricació.
+
+    • Instal·lació de nova maquinària per noves línies de producció o renovació de línies ob-
+      soletes.
+
+    • Cursos de formació interna impartits pel propi personal amb més experiència.
+
+    La llista podria ser molt llarga, i dependria també del sector concret de negoci.
+
+
+Normalment en un projecte intern no s’espera obtenir un benefici econòmic
+directe, sinó que s’esperen ampliar les capacitats o habilitats de la companyia
+i/o del seu personal.
+
+
+Com a projectes externs, podem trobar tots aquells que originen entitats ex-
+ternes a l’empresa, habitualment clients que demanen o s’interessen per les ac-
+tivitats i capacitats de la companyia.
+
+
+
+    Un projecte extern és l’exemple clàssic en el qual hi ha un client ben
+    diferenciat que compra el producte o servei.
+
+
+
+
+En aquest cas, normalment el cost econòmic també està cobert pel client i, en
+general, cal dur a terme una estimació de costos i esforç prèvia per tal de ne-
+gociar adequadament les condicions econòmiques, tècniques i temporals del
+projecte amb el client. En els projectes interns també cal fer aquest exercici,
+però amb una diferència fonamental, i és que cal tenir en compte quines són
+les fonts de finançament del projecte.
+
+
+
+2.3. Avantatges associats a la gestió per projectes
+
+
+És important remarcar que la gestió per projectes, tant en activitats internes
+com externes, té una conseqüència (potser indirecta) important: la gestió, que
+s’havia considerat antigament com una sèrie de metodologies basades en eines
+matemàtiques i/o de control (control de pressupostos, de calendari, etc.), ara
+guanya també en les seves característiques més “humanes”. La gestió de pro-
+jectes té en compte que bona part dels participants o parts interessades en el
+projecte són directament els individus.
+
+
+L’ús de la gestió de projectes, tant per a projectes externs com interns, ha mo-
+tivat el desenvolupament de noves estratègies i eines de caràcter més qualita-
+tiu (en lloc de quantitatiu com és el control de costos).
+© FUOC • PID_00151479                                      9                            Bit 15
+
+
+
+Per exemple, és difícil desenvolupar prediccions de benefici per a un projecte
+intern que consisteix en un curs de formació dins la companyia o, encara més
+difícil, predir els beneficis econòmics de dur a terme un programa de reestruc-
+turació del personal (que té un cost inicial important). Podríem utilitzar nú-
+meros per a quantificar-ho, però s’haurien de basar en hipòtesis potser febles
+o difícils de verificar. En lloc d’això, la gestió de projectes comença ja utilitzant
+moltes orientacions qualitatives, com ara criteris de valoració de l’èxit del pro-
+jecte. Això es veurà més endavant en aquesta assignatura, on s’entrarà de ple
+en l’estudi de la gestió de projectes.
+
+
+
+    La gestió de projectes està sortint a poc a poc de l’àmbit d’una disciplina
+    estrictament tècnica, que només s’ocupa de variables com el cost, el
+    temps i la qualitat del resultat (tres aspectes molt importants, com veu-
+    rem), per a passar a ocupar-se d’un ventall d’aspectes més amplis i tam-
+    bé essencials.
+© FUOC • PID_00151479                                    10                                                        Bit 15
+
+
+
+3. Estructures organitzatives
+
+
+
+
+En l’apartat anterior hem raonat motius pels quals les empreses s’organitzen
+al voltant de projectes. Aquest fet té els avantatges que ja hem vist. En aquest
+apartat obrim una mica més la nostra anàlisi per tal de convertir-la en una anà-
+lisi més comparativa. Així, concretarem quin organigrama pot adoptar una or-
+ganització basada en projectes i que vulgui ser alhora eficaç i àgil.
+
+
+El fet que la gestió per projectes proporciona un seguit d’avantatges impor-
+                                                                                   Vegeu també
+tants no vol dir que una organització estructurada al voltant d’un sol o de
+                                                                                    Els avantatges de la gestió de
+pocs projectes sigui la millor opció.                                               projectes es tracten en l’apar-
+                                                                                    tat 1.
+
+Cal veure, doncs, com s’ha d’implementar una gestió per projectes prou fle-
+xible per a absorbir possibles canvis. L’agilitat i el temps de reacció són ter-
+mes essencials en les empreses actuals.
+
+
+Tingueu en compte que els recursos humans d’una empresa són preferible-
+                                                                                   Recordeu
+ment permanents, mentre que els projectes no ho són.
+                                                                                    Recordeu que la definició de
+                                                                                    projecte inclou l’expressió “[...]
+Els equips de projecte es formen només per a la durada del projecte. Això sig-      un esforç temporal [...]”.
+
+nifica que hem de ser capaços de reunir els recursos correctes al voltant del
+projecte, per a una durada de temps prevista, i després cal que els utilitzem en
+altres projectes amb una transició el més ràpida i eficaç possible.
+
+
+En aquest punt us pot sorgir la pregunta següent: “però aleshores, d’on vé-
+nen els recursos del projecte?”. Per a intentar resoldre aquesta pregunta, pri-
+mer farem una ullada als tres tipus d’organitzacions que s’han desenvolupat
+al llarg de la història: organitzacions funcionals, organitzacions basades en
+un projecte (o pocs projectes) i organitzacions matricials. Després, en els sub-
+apartats següents, veureu amb detall cadascuna d’aquestes tres possibilitats
+organitzatives que les empreses han utilitzat o estan utilitzant.
+
+
+Habitualment es considera que hi ha tres maneres d’organitzar el desenvo-
+lupament d’una feina. Gairebé totes les empreses o organitzacions es podrien
+enquadrar en un d’aquests tres tipus, o bé són una combinació de dos d’ells,
+o bé una combinació de tots tres.
+
+
+
+    Els tres tipus d’organitzacions són:
+
+    •   Organització basada en un (o pocs) projecte(s)
+    •   Organització funcional
+    •   Organització matricial
+© FUOC • PID_00151479                                  11                                                        Bit 15
+
+
+
+L’organització basada en un projecte i l’organització funcional han estat uti-
+litzades durant centenars, potser milers, d’anys, mentre que l’organització
+matricial és un desenvolupament relativament recent. En els següents suba-
+partats tractarem amb detall cada tipus d’organització.
+
+
+
+
+3.1. Organització basada en un (o pocs) projecte(s)
+
+
+En l’organització centrada en un (o pocs) projecte(s), mostrada en la figura 1,
+el cap del projecte té la màxima autoritat. En la figura veiem que d’ell depenen
+els caps de departament (o divisió) i els caps de servei, els quals tenen al seu
+càrrec els especialistes i els caps operacionals.
+
+
+     Figura 1. Organització per a un projecte
+
+
+                                Director de projecte
+
+
+
+
+El cap de projecte és qui pren les decisions del projecte i no està sotmès a cap
+nivell de revisió, excepte potser el de direcció general o consell d’administra-
+ció, que només estaran interessats en figures d’alt nivell com el pressupost
+general del projecte, l’estat d’allò que hem de lliurar o el calendari a grans
+trets.
+
+
+Aquests projectes normalment són molt grans i es duen a terme en llocs llu-
+                                                                                   Exemples de projectes
+nyans respecte a la localitat de l’empresa.
+                                                                                    La construcció de preses o de
+                                                                                    plantes nuclears en països del
+                                                                                    Tercer Món serien exemples de
+L’organització d’aquest tipus probablement es va desenvolupar per necessitat.       projectes en què normalment
+                                                                                    s’aplicaria una organització ba-
+En un projecte gran, i remot, la dificultat en les comunicacions fa necessari el    sada en un (o pocs) projec-
+                                                                                    te(s).
+fet de tenir una sola persona amb l’autoritat de prendre decisions. Aquesta per-
+sona és el cap de projecte.
+© FUOC • PID_00151479                                           12                                                           Bit 15
+
+
+
+Quan s’utilitza aquesta organització per a pocs projectes, s’observen habitual-
+                                                                                               Vegeu també
+ment algunes característiques: l’organització, tot i ser gran, té un únic punt
+                                                                                                Veureu que en altres tipus d’or-
+d’atenció que tothom coneix. En l’exemple de la planta nuclear, tothom en-                      ganitzacions, el cap de projec-
+tén que l’objectiu del projecte és generar un cert nombre de megawatts d’elec-                  te té potser menys autoritat (o
+                                                                                                poder de decisió) ja que queda
+tricitat en una data concreta. L’equip de treball no es distreu fàcilment                       repartida amb caps funcionals.
+d’aquest objectiu, és a dir, no és interferit per altres projectes de l’empresa.
+Com que l’objectiu és clar i el cap de projecte és proper, generalment accessi-
+ble i pot prendre decisions, l’equip de projecte té en general una bona moti-
+vació.
+
+
+    La comunicació en projectes remots
+
+
+    Fins i tot avui en dia, amb la facilitat evident en les comunicacions, pot ser complicat
+    comunicar-se per a conèixer què està passant a la selva on es desenvolupa el projecte de
+    construcció d’una central nuclear, per exemple.
+
+
+Val a dir, però, que aquestes organitzacions són ineficients. Atesa la llunyania
+                                                                                               Ineficiència temporal
+de l’equip de projecte, quan calen nous recursos humans s’han d’obtenir ex-
+                                                                                                En el cas de projectes llunyans,
+clusivament per a l’ús d’un projecte. No es poden compartir entre projectes, ja                 si, per exemple, cal un tècnic
+que el temps de desplaçament físic entre projectes és massa gran.                               de muntatge que treballi un
+                                                                                                20% setmanal en el projecte,
+                                                                                                l’altre 80% del temps es desa-
+                                                                                                profita.
+I finalment, el problema principal amb aquest tipus d’organització és què es
+fa amb l’equip de projecte quan el projecte s’acaba. Llevat que just en aquell
+instant comenci un projecte molt similar, probablement part de l’equip no es
+podrà incorporar en el moment precís a altres projectes.
+
+
+Per tant, tot i que podria semblar que aquesta organització és bona en molts
+sentits, en realitat no ho és del tot. Es pot dir que és bona per a dur a terme un
+sol projecte, però no és la millor en una empresa orientada a diversos projec-
+tes, en la qual els projectes formin la major part de les activitats de negoci a
+llarg termini.
+
+
+
+
+3.2. Organització funcional
+
+
+L’organització funcional, il·lustrada en la figura 2, s’ha estat utilitzant des de
+fa molt de temps, fins i tot abans de la revolució industrial, i era el tipus pre-
+ferit per companyies comercials al principi i mitjan segle XX. Com veieu en la
+figura, el director de la companyia té la màxima autoritat i d’ell depenen els
+caps de departament (o divisió) i els caps de servei, els quals tenen al seu càrrec
+els especialistes i els caps operacionals.
+© FUOC • PID_00151479                                      13                                                     Bit 15
+
+
+
+     Figura 2. Organització funcional
+
+
+
+
+L’organització funcional s’estructura entorn de les competències, habilitats o
+                                                                                     Exemple d’organització
+coneixements dels seus membres. Es creen departaments dintre de l’empresa,           funcional
+
+i en cadascun d’aquests departaments s’agrupen persones amb habilitats simi-          En una empresa d’enginyeria
+                                                                                      es pot crear un departament
+lars o amb coneixements en el mateix camp.                                            d’enginyeria mecànica, un al-
+                                                                                      tre d’enginyeria elèctrica, un
+                                                                                      altre d’enginyeria de progra-
+                                                                                      mari, etc.; cadascun d’ells amb
+Aquest tipus d’organitzacions és molt eficient en l’ús dels recursos humans. Els      un cap funcional.
+membres d’un departament comparteixen habilitats o coneixements, i el seu
+cap és probablement una persona també amb aquests coneixements. Per tant,
+aquest cap sabrà gestionar molt bé temes com les tasques concretes de treball
+entre els membres del departament, o potser també quina formació tècnica re-
+quereixen. L’assignació de feina es farà tenint en compte qui és el millor mem-
+bre del departament per a cada tasca d’acord amb els seus coneixements
+específics i, per tant, la càrrega de treball es podrà distribuir eficientment.
+
+
+L’organització funcional és també molt estable. Donat un cert treball que ha
+fet bé abans, el repetirà de manera eficient, rigorosa i predicible. De fet, però,
+aquesta estabilitat és el seu problema: no funciona bé amb novetats, no és
+prou flexible als canvis. L’estabilitat esdevé rigidesa.
+
+
+Mentre l’organització continua fent el treball que sap fer sense gaires diferèn-
+cies, funciona amb una eficiència alta. Quan la companyia intenta innovar o
+crear productes nous i diferents per a nous clients, aleshores es creen proble-
+mes, ja que l’estructura no està dissenyada per a absorbir aquests canvis. Què
+cal fer, obrir nous departaments amb noves capacitats? Ja que no hi ha cap
+funció prevista per a canvis, qui se n’ocuparà?, el director general? Aquests són
+els principals problemes pràctics de l’organització funcional.
+© FUOC • PID_00151479                                    14                          Bit 15
+
+
+
+Però encara n’hi ha un altre: aquesta organització està molt poc orientada al
+client. De fet, l’organització és eficient en un cert tipus de feines, però no té
+en compte si els clients estan demanant sempre aquesta feina o si els seus de-
+sitjos, necessitats, estan canviant.
+
+
+La necessitat creixent en les organitzacions d’implementar projectes amb èxit,
+i a més mantenir-se àgil enfront d’un mercat canviant, va ser una de les prin-
+cipals raons per les quals moltes empreses amb organització funcional van in-
+troduir flexibilitat en la seva estructura. Moltes vegades això es va dur a terme
+mitjançant la introducció d’etapes intermèdies, que van dur a plantejar final-
+ment una nova forma d’organització: l’organització matricial.
+
+
+
+
+3.3. Organització matricial
+
+
+L’organització matricial, il·lustrada en la figura 3, és una barreja entre l’orga-
+nització basada en un o pocs projectes i l’organització funcional. En la figura
+veieu que del director general depenen el director de projectes, el director
+d’enginyeria, el director de producció i els gestors de serveis. Això és equiva-
+lent al que succeïa en l’organització funcional. Però en aquest cas hi afegim
+una segona dimensió (d’aquí ve la denominació de matriu), en què trobem els
+projectes, cadascun d’ells dirigit per un cap de projecte.
+
+
+     Figura 3. Organització matricial
+
+
+
+
+La idea és que permeti a la gestió de projectes funcionar de la millor manera
+possible. Amb aquesta organització s’intenta tenir el millor de les dues anteri-
+ors, sense els aspectes negatius de cadascuna.
+© FUOC • PID_00151479                                    15                                                      Bit 15
+
+
+
+
+    En una organització matricial s’intenta tenir una organització amb un
+    cap de projecte amb autoritat i accessible fàcilment, i alhora una orga-
+    nització amb molta flexibilitat i orientada al client.
+
+
+
+L’organització matricial hauria de poder agrupar les habilitats correctes en un
+cert període temporal (el de la durada del projecte). Els recursos humans són
+compartits entre projectes.
+
+
+En aquesta organització tenim un grup de caps de projecte i també un grup de
+caps funcionals. Els caps de projecte gestionen la majoria de la feina de l’orga-
+nització, que es fa en forma de projectes. Mentrestant, els caps funcionals són
+els caps de la gent que treballa en els projectes.
+
+
+Quan un projecte nou comença, el cap de projecte presenta els plans del pro-
+jecte als caps funcionals i conjuntament decideixen quines persones són les
+més apropiades per a la feina que cal fer. Aquestes persones són assignades a
+l’equip de projecte en el moment precís. Cada cap funcional, doncs, ha d’aten-
+dre les peticions de recursos dels diferents caps de projecte.
+
+
+Els recursos són assignats als projectes només temporalment, però cada re-
+curs en concret sempre depèn estructuralment del seu cap funcional. El cap
+funcional té la responsabilitat de proporcionar una formació adequada als
+membres de la seva àrea, i també gestiona temes salarials i altres funcions ad-
+ministratives.
+
+
+Aquesta organització és, doncs, la més completa a l’hora d’afrontar múltiples
+                                                                                    Vegeu també
+projectes amb un escenari de canvis constants. Amb aquesta estructura es po-
+                                                                                     Els avantatges de la gestió per
+den assolir els avantatges de la gestió per projectes.                               projectes es descriuen en
+                                                                                     l’apartat 2 d’aquest mòdul.
+
+A continuació tractem breument la relació entre aquesta organització matrici-
+al i les diferents àrees d’un negoci.
+
+
+
+3.3.1. L’organització matricial i les àrees de negoci
+
+
+Es pot dir que aquesta dualitat en l’organització matricial encaixa molt bé en
+la manera actual de fer negocis. Si penseu en un negoci típic, podem dir que
+conté bàsicament dues grans àrees (vegeu la taula):
+
+
+• La primera és la part d’operacions, que realitza les activitats del dia a dia,
+    com poden ser producció, aprovisionament o facturació. Són àrees sense
+    canvis importants i seguirien un cicle de més llarg termini (o més lent).
+
+
+• La segona àrea és la part de projectes, que se centra en la visió futura de
+    l’empresa i inclou recerca i desenvolupament, programes de màrqueting i
+© FUOC • PID_00151479                                              16                                                     Bit 15
+
+
+
+    millores en els processos de negoci. Tots aquests són exemples de projectes
+    interns que duen a terme les organitzacions actuals.
+
+
+Àrees de negoci dividides en elements de projecte i operacionals
+
+                   Operacions                                      Projectes
+
+ • Producció                                     • Desenvolupament tecnològic
+ • Aprovisionament                               • Desenvolupament de producte
+ • Distribució                                   • Desenvolupament de processos
+ • Facturació                                    • Llançament de productes/serveis
+ • Suport tècnic                                 • Enginyeria de processos de negoci
+                                                 • Desenvolupament de noves capacitats
+
+
+
+En termes molt generals, els productes, serveis i processos es creen en la part
+de projectes del negoci. És important facilitar una transferència eficient des
+d’una banda cap a l’altra o, idealment, no tenir transferències ja que les dues
+parts estan molt ben integrades.
+
+
+Tot això ens duu al concepte d’organització matricial ben balancejada.
+
+
+
+3.3.2. Balanceig en l’organització matricial
+
+
+Un desavantatge que no hem comentat és que les organitzacions matricials
+són difícils de gestionar. Una de les dificultats és el balanceig entre el nivell
+d’autoritat dels caps funcionals i dels caps de projecte:
+
+
+1) Si el cap funcional és qui té més pes, l’organització es mantindria, essenci-
+                                                                                         Vegeu també
+alment, com una organització funcional i no esdevindria mai una veritable or-
+                                                                                          Recordeu els desavantatges
+ganització matricial.                                                                     de l’organització funcional
+                                                                                          tractats en el subapartat 3.2
+                                                                                          d’aquest mòdul.
+2) Si, per contra, el cap de projecte té massa autoritat, s’utilitzaran massa per-
+sones de l’organització funcional en la vessant de projectes.
+
+
+En el primer cas, els caps de projecte haurien de demanar als caps funcionals
+que es facin les tasques i tota la feina es faria dins l’organització funcional sota
+la direcció del cap funcional. L’equip de projecte rebria la petició de tasques
+per realitzar del seu cap funcional, qui també controlaria el temps de finalit-
+zació de les tasques i la seva qualitat, alhora que podria valorar la feina de cada
+treballador. En aquest cas, el cap de projecte esdevé una figura amb poc pes i
+simplement seria un observador extern d’allò que està passant.
+
+
+En el segon cas, aquell en què el cap de projecte esdevé més important que el
+cap funcional, els caps de projecte prendrien el control de la feina de tota l’or-
+ganització, de manera que totes les tasques es farien sota l’àmbit d’algun pro-
+jecte. Qualsevol tasca de qualsevol persona de l’organització, tot i ser potser
+una tasca recurrent i comuna, es faria projecte per projecte.
+© FUOC • PID_00151479                                            17                              Bit 15
+
+
+
+Equilibrar l’organització és realment menys difícil del que podria semblar. Pot-
+ser la manera més efectiva és veure la durada de les tasques realitzades per cada
+treballador, a més de si aquestes tasques són comunes entre els projectes o no.
+
+
+    Exemple de com s’equilibra una organització
+
+    Si, per exemple, un treballador té assignada una tasca de projecte per a les sis setmanes
+    següents, podem moure aquesta persona perquè treballi juntament amb l’equip de pro-
+    jecte, on s’estarà durant aquestes sis setmanes.
+
+    En canvi, aquelles tasques amb durades de poques hores probablement són tasques re-
+    currents, comunes a molts o tots els projectes i, per tant, poden ser controlades molt mi-
+    llor per un cap funcional.
+
+
+
+    En resum, per tal que l’organització matricial funcioni de la millor ma-
+    nera, aportant els avantatges que s’han comentat anteriorment, cal que
+    es gestioni d’una manera adequada i eficaç, prenent cura del balanceig
+    entre àrees funcionals i de projecte.
+

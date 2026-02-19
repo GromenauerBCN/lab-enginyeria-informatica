@@ -1,13 +1,27 @@
-
+# -*- coding: utf-8 -*-
 from pathlib import Path
 from typing import List
 import json
+import re
+
 from providers.model_router import get_model
+
 
 def _carrega_template() -> str:
     return (Path(__file__).parent / 'prompts' / 'template-exercici.md').read_text(encoding='utf-8')
 
-def _format_exercici(tpl: str, num: int, titol: str, objectius: list, snapshot: str, maquines: list, enunciat: str, checks: list, bonus: str) -> str:
+
+def _format_exercici(
+    tpl: str,
+    num: int,
+    titol: str,
+    objectius: list,
+    snapshot: str,
+    maquines: list,
+    enunciat: str,
+    checks: list,
+    bonus: str,
+) -> str:
     out = tpl
     out = out.replace('{{NUM}}', str(num))
     out = out.replace('{{TITOL}}', titol)
@@ -21,56 +35,57 @@ def _format_exercici(tpl: str, num: int, titol: str, objectius: list, snapshot: 
     out = out.replace('{{bonus}}', bonus)
     return out
 
-def _prompt(corpus: str, semestre: str, mes_nom: str, estat_lab: dict) -> str:
-    return f"""
-Ets un generador d'exercicis per a un laboratori corporatiu (VMware, Windows Server 2025, Debian 13 sense GUI, Windows 11) amb domini AD `lab.local`.
-Objectiu: Proposa 2-3 exercicis per al semestre {semestre}, mes {mes_nom}, alineats amb les assignatures i certificacions d'aquest semestre, utilitzant els apunts següents i l'estat real del LAB.
 
-### Apunts consolidats (extracte)
-{corpus[:4000]}
+def _quotes_from_corpus(corpus: str, n: int = 2, max_len: int = 140) -> list[str]:
+    """Extreu n cites curtes del corpus (frases de 30..max_len caràcters)."""
+    sents = re.split(r'(?<=[\.\!\?])\s+|\n+', corpus.strip())
+    out: list[str] = []
+    for s in sents:
+        s = s.strip()
+        if 30 <= len(s) <= max_len:
+            out.append(s)
+        if len(out) == n:
+            break
+    if len(out) < n:
+        base = corpus.strip().replace('\n', ' ')
+        if base:
+            out.append(base[:max_len].strip())
+        if len(out) < n and len(base) > max_len:
+            out.append(base[max_len:max_len*2].strip())
+    return out[:n]
 
-### Estat del LAB (resumit)
-{json.dumps(estat_lab, ensure_ascii=False)[:4000]}
 
-### Requisits d'estil
-- Idioma: Català
-- Granularitat: pas a pas, amb comandes exactes quan cal
-- Debian: sense GUI
-- Windows: bones pràctiques d'empresa, GPO, AD, DNS
-- Inclou *Validació* i *Extres*
-- Assumeix que hi ha snapshot previ si es demana
+def _fallback_exercici(corpus: str, semestre: str, mes_nom: str, idx: int) -> str:
+    """Exercici estable si el model respon amb 'Sense context...' o massa curt."""
+    cites = _quotes_from_corpus(corpus, n=2, max_len=140)
 
-### Sortida esperada
-Crea 2 o 3 exercicis breus, cadascun amb:
-- Títol
-- Objectius (2 punts)
-- Requisits (snapshot, màquines)
-- Enunciat amb passos concrets
-- Validació (2 checks)
-- Extres (opcional)
-"""
+    enunciat = """
+### Passos
+1) A **DEBIANLAB**, crea el projecte:
+   - Directori: `~/lab-prog/src`
+   - Fitxer: `~/lab-prog/src/hello.c` amb el clàssic *Hello, World!* (tal com apareix als apunts).
+2) Compila a Debian:
+   - `mkdir -p ~/lab-prog/bin`
+   - `gcc -O2 -Wall -o ~/lab-prog/bin/hello ~/lab-prog/src/hello.c`
+3) Publica l’artefacte al **SERVERLAB** via SMB:
+   - Munta la compartició: `sudo mount -t cifs //serverlab.lab.local/dropbox /mnt -o username=LAB\\manel-admin`
+   - Copia: `cp ~/lab-prog/bin/hello /mnt/hello-debian.bin`
+4) A **CLIENTLAB (Windows)**, verifica **DNS** i recull l’artefacte:
+   - PowerShell: `Resolve-DnsName serverlab.lab.local`
+   - Mapa la unitat: `New-PSDrive -Name Z -PSProvider FileSystem -Root \\serverlab.lab.local\\dropbox -Persist`
+   - Comprova: `Test-Path Z:\\hello-debian.bin`
+5) Evidències:
+   - Captures de `gcc` i del fitxer a `Z:\\`
+   - Sortida de `Resolve-DnsName`
 
-def genera_exercicis(corpus: str, semestre: str, mes_nom: str, estat_lab: dict) -> List[str]:
-    model = get_model()
-    prompt = _prompt(corpus, semestre, mes_nom, estat_lab)
-    resposta = model.generate(prompt)
-    parts = [p.strip() for p in resposta.split('
-
-# ') if p.strip()]
-    if len(parts) < 2:
-        parts = [resposta]
-    tpl = _carrega_template()
-    fitxers = []
-    for i, bloc in enumerate(parts[:3], start=1):
-        titol = f"Exercici {i} ({semestre} {mes_nom})"
-        text = _format_exercici(
-            tpl, i, titol,
-            ["Aprendre i aplicar", "Operativitzar al LAB"],
-            "pre-exercicis",
-            ["SERVERLAB", "CLIENTLAB", "DEBIANLAB"],
-            bloc,
-            ["Proves funcionals", "Registre d'evidències"],
-            "Documenta temps i problemes trobats."
-        )
-        fitxers.append(text)
-    return fitxers
+### Comandes (copiar i enganxar)
+```bash
+# Debian
+mkdir -p ~/lab-prog/src ~/lab-prog/bin
+cat > ~/lab-prog/src/hello.c <<'EOF'
+#include <stdio.h>
+int main(){ printf("Hello, World!\n"); return 0; }
+EOF
+gcc -O2 -Wall -o ~/lab-prog/bin/hello ~/lab-prog/src/hello.c
+sudo mount -t cifs //serverlab.lab.local/dropbox /mnt -o username=LAB\\manel-admin
+cp ~/lab-prog/bin/hello /mnt/hello-debian.bin

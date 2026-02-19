@@ -1,0 +1,7 @@
+.env
+30-agent/.env
+30-agent/.env.example
+30-agent/.venv-agent
+30-agent/config
+30-agent/logs
+30-agent/__pycache__

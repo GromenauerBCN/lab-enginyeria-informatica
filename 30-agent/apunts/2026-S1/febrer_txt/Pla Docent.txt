@@ -1,0 +1,593 @@
+Pla Docent                                       https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+
+                 Universitat Oberta
+                 de Catalunya
+
+
+
+
+          Pla Docent
+          A_20252_05.554_1|
+          Fonaments de programació
+          Semestre 2025 - 2
+                                                                                       
+                                                                                       
+
+          Professor/a responsable      Friman Sánchez Castaño, Maria Jesús Marco Galindo,
+                                       Jordi Blasco Planesas
+
+          Professorat coŀaborador      Ramon Vilanova Arbós, Nuria Montolío Catalán,
+                                       Vicent Moncho Mas
+
+
+          Idiomes de docència          Català
+
+
+             Crèdits                 Dates:                         Model            
+                                                                      avaluació:
+                                      18-02-2026
+                       6                   -                                  AC
+                                        01-07-
+                                         2026
+
+
+
+          Informació de l'assignatura
+
+
+1 de 18                                                                                19/2/26 18:43
+Pla Docent                                                      https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+
+          Descripció
+          Aquesta assignatura és el punt d'entrada a la programació. És una assignatura introductòria, en la
+          qual aprendreu els fonaments del disseny algorísmic o pseudocodi i la programació en C.
+
+
+
+          L'assignatura en el conjunt del pla d'estudis
+          En aquesta assignatura s'aprèn la utilització de C com a llenguatge de programació, i assolireu
+          coneixement necessari per fer altres assignatures del grau:
+
+               • Pràctiques de Programació
+
+               • Disseny i Programació Orientada a Objectes
+
+               • Treball en equip a la xarxa
+
+
+
+          Camps professionals en què es projecta
+          Si us dediqueu al desenvolupament de programari, aquesta serà una assignatura clau en la vostra
+          formació.
+
+
+
+          Coneixements previs
+          L'assignatura no pressuposa cap coneixement previ de programació ni de cap altra assignatura
+          d'aquests estudis. En qualsevol cas, és convenient tenir alguns coneixements fonamentals de
+          matemàtiques.
+
+
+
+
+          Resultats d'aprenentatge
+          Coneixements, habilitats i competències
+          Competències dins del grau
+
+               •
+
+
+               •
+
+
+2 de 18                                                                                                     19/2/26 18:43
+Pla Docent   https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+
+3 de 18                                            19/2/26 18:43
+Pla Docent                                                     https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+
+                 Capacitat de dissenyar i construir aplicacions informàtiques mitjançant tècniques de
+                 desenvolupament, integració i reutilització.
+
+                 Coneixements bàsics sobre l'ús i programació dels ordinadors, sistemes operatius i
+                 programes informàtics amb aplicació a l'enginyeria.
+
+          Objectius de l'assignatura
+
+          L'objectiu general de l'assignatura és aprendre a dissenyar algorismes i programes que
+          compleixin uns criteris bàsics de qualitat per a resoldre problemes de baixa complexitat. Aquest
+          objectiu general es concreta en els següents objectius concrets:
+
+
+
+
+4 de 18                                                                                                 19/2/26 18:43
+Pla Docent                                                     https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+                 Conèixer i assimilar els conceptes fonamentals de l'algorítmica mitjançant
+                 l'aprenentatge i comprensió de la sintaxi i semàntica d'una notació algorítmica.
+
+                 Posar en pràctica els conceptes i tècniques de programació perquè, a partir de
+                 l'enunciat d'un problema, es pugui dissenyar una solució algorísmica i implementar
+                 el seu corresponent programa que el resolgui.
+
+                 Usar la modularitat, que permet resoldre problemes descomponent-los en
+                 subproblemes més senzills, i els esquemes algorítmics per a construir algorismes a
+                 partir de solucions ja conegudes.
+
+                 Adquirir pràctica en l'aplicació dels conceptes anteriors en un entorn real de
+                 desenvolupament de programes, i aconseguir un coneixement no sols conceptual
+                 sinó també pràctic de com escriure un programa, compilar-lo, muntar-lo i executar-
+                 lo.
+
+          En el cas del grau d'Enginyeria de Tecnologies i Serveis de Telecomunicació, d'acord amb el nou
+          decret d'organització dels ensenyaments universitaris (RD 822/2021), l'assignatura pretén assolir
+          els següents resultats d'aprenentatge:
+
+          Coneixements:
+
+                 Demostrar coneixements bàsics sobre l'ús i programació dels ordinadors, sistemes
+                 operatius, bases de dades i programes informàtics amb aplicació en enginyeria.
+
+                 Utilitzar els fonaments de la programació en xarxes, sistemes i serveis de
+                 telecomunicació.
+
+          Habilitats:
+
+                 Utilitzar aplicacions de comunicació i informàtiques (oﬁmàtiques, bases de dades,
+                 càlcul avançat, gestió de projectes, visualització, etc.) per a donar suport al
+                 desenvolupament i explotació de xarxes, serveis i aplicacions de telecomunicació i
+                 electrònica.
+
+          Competències:
+
+                 Disposar de les habilitats d'aprenentatge necessàries per a emprendre estudis
+                 posteriors amb un alt grau d'autonomia.
+
+                 Aprendre nous mètodes i tecnologies a partir del coneixement de matèries bàsiques
+                 i tecnologies que li doti d'una gran versatilitat per a adaptar-se a noves situacions.
+
+
+
+
+5 de 18                                                                                                   19/2/26 18:43
+Pla Docent                                                       https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+          Aquests resultats d'aprenentatge estan vinculats a les competències de l'ORDRE CIN/352/2009
+          que regula la professió de l'enginyer tècnic de telecomunicacions que es llisten a continuació:
+
+                 Coneixements bàsics sobre l'ús i programació dels ordinadors, sistemes operatius,
+                 bases de dades i programes informàtics amb aplicació en enginyeria.
+
+                 Coneixement i utilització dels fonaments de la programació en xarxes, sistemes i
+                 serveis de telecomunicació.
+
+                 Capacitat d'utilitzar aplicacions de comunicació i informàtiques (oﬁmàtiques, bases
+                 de dades, càlcul avançat, gestió de projectes, visualització, etc.) per a donar suport al
+                 desenvolupament i explotació de xarxes, serveis i aplicacions de telecomunicació i
+                 electrònica.
+
+                 Que els estudiants hagin desenvolupat aquelles habilitats d'aprenentatge
+                 necessàries per a emprendre estudis posteriors amb un alt grau d'autonomia.
+
+                 Coneixement de matèries bàsiques i tecnologies, que li capaciti per a l'aprenentatge
+                 de nous mètodes i tecnologies, així com que li doti d'una gran versatilitat per a
+                 adaptar-se a noves situacions.
+
+
+
+
+          Continguts
+          Continguts
+          Introduirem el concepte de llenguatge algorísmic o pseudocodi com una eina formal per dissenyar
+          algoritmes, que poden ser traduïts a qualsevol llenguatge de programació (en el nostre cas, C).
+
+               • Introducció a l’algorísmica i la programació
+
+               • Tipus bàsics de dades
+
+               • Estructures de control: seqüencial, alternativa i iterativa
+
+               • Tipus estructurats de dades: taules i tuples
+
+               • Esquemes algorísmics: recorregut i cerca
+
+               • Modularitat
+
+               • Recursivitat
+
+
+
+
+6 de 18                                                                                                      19/2/26 18:43
+Pla Docent                                                     https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+
+          Metodologia
+          Metodologia
+          Per poder assolir els objectius proposats, durant tot el semestre anirem combinant l'estudi de la
+          teoria de l'algorísmica (disseny d'algorismes) amb la pràctica de programació en C (codiﬁcació de
+          programes).
+
+          En aquesta assignatura, molt més que en d'altres, l'assimilació dels conceptes i mètodes que li són
+          propis depèn en gran manera de la realització continuada dels exercicis proposats i de practicar
+          molt. Per aquest motiu, és molt important que cada setmana feu els exercicis de les unitats i que
+          practiqueu amb els aspectes concrets del llenguatge i de l'entorn de programació.
+
+          Cada setmana us proposarem una activitat diferent, de tipus prova d'avaluació contínua (PAC) o
+          pràctica (PR). A la mateixa activitat trobareu enllaçats els recursos necessaris per a resoldre-
+          la. L'aprenentatge de la programació és eminentment pràctic i necessita un procés continuat i
+          incremental. L'avaluació continuada (les PAC i les PR) serveix per a fer aquest aprenentatge
+          incremental.
+
+
+
+
+          Avaluació
+          Informació sobre l’avaluació a la UOC
+
+
+
+
+7 de 18                                                                                                 19/2/26 18:43
+Pla Docent   https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+
+8 de 18                                            19/2/26 18:43
+Pla Docent   https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+
+9 de 18                                            19/2/26 18:43
+Pla Docent   https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+
+10 de 18                                           19/2/26 18:43
+Pla Docent                                                         https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+
+           L'avaluació a la UOC té caràcter formatiu. S'estructura al voltant de diferents activitats, exàmens o
+           proves avaluatives, contínues o ﬁnals, que tenen com a objectiu acreditar els coneixements i les
+           habilitats que s'han adquirit en el procés formatiu. Les activitats, els exàmens o les proves
+           d'avaluació poden tenir format escrit i/o audiovisual, contenir preguntes aleatòries, o constar de
+           proves orals síncrones o asíncrones, entre altres possibles modalitats, d'acord amb el que
+           decideixi cada equip docent.
+
+           Per veriﬁcar la identitat de l'estudiant i l'autoria de les activitats, els exàmens o les proves
+           d'avaluació, la UOC es reserva la potestat d'aplicar diferents sistemes de reconeixement de la
+           identitat i de veriﬁcació de l'autoria. Amb aquest objectiu, la UOC pot dur a terme enregistrament
+           audiovisual o emprar mètodes o tècniques de supervisió en línia durant l'execució de qualsevol
+           activitat acadèmica.
+
+           Així mateix, la UOC pot exigir a l'estudiant l'ús de dispositius electrònics (micròfons, càmeres o
+           altres eines) o programari especíﬁc durant l'avaluació. És responsabilitat de l'estudiant assegurar
+           que aquests dispositius i, si és el cas, el programari estiguin degudament instaŀats i funcionin
+           correctament.
+
+           Integritat acadèmica en els processos d'avaluació
+
+           El procés d'avaluació es fonamenta en el treball personal de l'estudiant i pressuposa l'autenticitat
+           de l'autoria i l'originalitat de les activitats acadèmiques. El web Integritat acadèmica i plagi de la
+           UOC conté informació sobre aquest tema.
+
+           La manca d'autenticitat en l'autoria o d'originalitat de les activitats o proves d'avaluació; la còpia o
+           el plagi; la suplantació d'identitat; l'acceptació o l'obtenció de qualsevol activitat acadèmica a canvi
+           o no d'una contraprestació; la coŀaboració, l'encobriment o l'afavoriment de la còpia, o l'ús de
+           material, programari o dispositius no autoritzats en el pla docent o l'enunciat de l'activitat
+           acadèmica, incloent-hi la inteŀigència artiﬁcial i la traducció automàtica, entre altres eines, són
+           conductes irregulars en l'avaluació que poden tenir conseqüències acadèmiques i, si escau,
+           disciplinàries greus.
+
+11 de 18                                                                                                      19/2/26 18:43
+Pla Docent                                                         https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+
+           Aquestes conductes irregulars poden comportar el suspens (D/0) en les activitats avaluables
+           deﬁnides en el pla docent, incloses les proves ﬁnals, o en la qualiﬁcació ﬁnal de l'assignatura, sigui
+           perquè s'han fet servir materials, programari o dispositius no autoritzats durant les proves (com
+           l'ús d'inteŀigència artiﬁcial no permesa, xarxes socials o cercadors d'informació a internet),
+           perquè s'han copiat fragments de text d'una font externa (internet, anotacions, llibres, articles,
+           treballs o proves d'altres estudiants, etc.) sense la citació corresponent, perquè s'ha recorregut a
+           la compravenda d'activitats acadèmiques, o perquè s'ha dut a terme qualsevol altra conducta
+           irregular.
+
+           Així mateix, i d'acord amb la Normativa acadèmica de la UOC, les conductes irregulars en
+           l'avaluació també poden donar lloc a la incoació d'un procediment disciplinari i a l'aplicació, si
+           escau, de la sanció que correspongui, de conformitat amb el que s'estableix a la Normativa de
+           convivència de la UOC.
+
+
+
+           En el marc del procés d'avaluació, la UOC es reserva la potestat de:
+
+           ● Soŀicitar a l'estudiant que acrediti la seva identitat, segons el que s'estableix a la normativa
+           acadèmica.
+           ● Soŀicitar a l'estudiant que acrediti l'autoria del seu treball al llarg de tot el procés d'avaluació,
+           tant en l'avaluació contínua com en l'avaluació ﬁnal, per mitjà d'una entrevista oral síncrona, que
+           pot ser objecte d'enregistrament audiovisual, o pels mitjans que estableixi la Universitat. Aquests
+           mitjans tenen l'objectiu de veriﬁcar els coneixements i les competències que garanteixin l'autoria
+           de l'estudiant. Si no és possible garantir que l'estudiant és l'autor de la prova, aquesta pot ser
+           qualiﬁcada amb una D, en el cas de l'avaluació contínua, o amb un suspens, en el cas de l'avaluació
+           ﬁnal.
+
+           Inteŀigència artiﬁcial en el marc de l'avaluació
+
+           La UOC reconeix el valor i el potencial de la inteŀigència artiﬁcial (IA) en l'àmbit educatiu, alhora
+           que posa de manifest els riscos que comporta si no s'utilitza de manera ètica, crítica i responsable.
+           En aquest sentit, en cada activitat d'avaluació s'informarà l'estudiant sobre les eines i els recursos
+           d'IA que es poden usar i en quines condicions. Per part seva, l'estudiant es compromet a seguir les
+           indicacions de la UOC a l'hora de dur a terme les activitats d'avaluació i de citar les eines fetes
+           servir; concretament, a identiﬁcar els textos o les imatges generats per sistemes d'IA, que no
+           podrà presentar com si fossin propis.
+
+           Respecte a poder emprar o no la IA per resoldre una activitat, l'enunciat de les activitats
+
+
+
+12 de 18                                                                                                        19/2/26 18:43
+Pla Docent                                                        https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+           d'avaluació indica les limitacions en l'ús d'aquestes eines. Cal tenir en compte que usar-les
+           inadequadament, com ara en activitats en les quals no estan permeses o no citar-les en les
+           activitats en les quals sí que ho estan, es pot considerar una conducta irregular en l'avaluació. En
+           cas de dubte, es recomana que abans de lliurar l'activitat es faci arribar una consulta al professorat
+           coŀaborador de l'aula.
+
+
+
+
+           Model d'avaluació
+           L'assignatura només es pot aprovar amb el seguiment i la superació de l'avaluació contínua (AC).
+           La qualiﬁcació ﬁnal de l'assignatura és la nota obtinguda a l'AC.
+
+
+
+             Opció per superar l'assignatura: AC
+
+
+             Nota ﬁnal d'assignatura: AC
+
+
+           Avaluació continuada
+           L'avaluació continuada (AC) consisteix en sis proves d'Avaluació Continuada (PAC) i quatre
+           pràctiques (PR).
+
+           La nota ﬁnal de curs es calcularà com es mostra a continuació:
+
+           Nota ﬁnal = 30% (Nota ﬁnal de les PAC) + 70% (Nota ﬁnal de les pràctiques)
+
+           Proves d'avaluació continuada (PAC)
+           En general, cada PAC constarà de dues parts: un qüestionari sobre conceptes de disseny
+           algorísmic i un petit exercici de programació en C.
+
+           Per tal que us avaluem la PAC és imprescindible haver fet l'exercici de programació en C (en cas
+           que en tingui).
+
+           Cada PAC contribuirà de la següent manera a la nota ﬁnal de les PAC:
+
+                  PAC 1 a 5: 18 % cadascuna
+
+                  PAC 6: 10 %
+
+
+
+
+13 de 18                                                                                                    19/2/26 18:43
+Pla Docent                                                         https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+           És necessari obtenir com a mínim un 40% a la nota ﬁnal de les PAC per poder aprovar
+           l'assignatura.
+
+           Pràctiques (PR)
+           A partir d'un enunciat que planteja un problema concret basat en un context pràctic, caldrà
+           dissenyar un algorisme que el resolgui i després codiﬁcar-lo en un programa C.
+
+           El pes de cada PR a la nota ﬁnal de PR és el següent:
+
+                  PR 1: 10%
+
+                  PR 2: 10%
+
+                  PR 3: 25%
+
+                  PR 4: 55%
+
+           És obligatori lliurar totes les pràctiques i obtenir com a mínim un 50% a la nota ﬁnal de pràctiques
+           per poder aprovar l'assignatura.
+
+           En cas que es lliuri una activitat (PAC o PR) fora de termini, es puntuarà amb una D (0) a menys
+           que sigui per causa de força major (problemes greus de salut, intervencions quirúrgiques,
+           etc.). En aquests casos, cal que justiﬁqueu apropiadament la situació al professorat responsable
+           de l'assignatura i que li demaneu que ho notiﬁqui al professor/a coŀaborador/a de la vostra aula.
+
+           Recordeu
+           Per superar l'assignatura cal que:
+
+                  Lliureu totes les pràctiques (no es considera entregada una activitat que no mostra
+                  un esforç per resoldre-la).
+
+                  Totes les activitats que lliureu (PAC o PR) demostrin clarament que és feina original
+                  vostra, sense evidència de plagi ni de conducta irregular.
+
+                  Obtingueu una nota ﬁnal de les PAC igual o per sobre de 40%.
+
+                  Obtingueu una nota ﬁnal de les pràctiques igual o per sobre de 50%.
+
+                  Obtingueu una nota ﬁnal de l’assignatura igual o per sobre de 50%.
+
+
+
+           Avaluació ﬁnal
+           No hi ha cap prova d'avaluació ﬁnal.
+
+
+14 de 18                                                                                                   19/2/26 18:43
+Pla Docent                                                       https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+           La nota ﬁnal de l'assignatura es calcula com s'explica a l'apartat Avaluació Continuada.
+
+           Només tindreu una nota ﬁnal de No presentat si lliureu com a màxim tres PAC i cap de les PR.
+
+
+
+           Feedback
+           De cadascuna de les activitats d'avaluació del curs (PAC i Pràctiques), a més de les solucions
+           publicades a l'aula, rebreu un feedback individual en què es comenten els errors comesos i es
+           donen indicacions de millora.
+
+           Aquest feedback es rebrà mitjançant el mateix aplicatiu de lliurament en la data de publicació de
+           les qualiﬁcacions de cada activitat.
+
+
+
+
+           Dates de les activitats
+
+              Nom de l'activitat                                      Data d'inici           Data de
+                                                                                           lliurament
+              PAC 1 - Qüestionari                                     26/02/2026           04/03/2026
+
+
+
+
+              PAC 1 - Programa C                                      26/02/2026           04/03/2026
+
+
+
+
+              PAC 2 - Qüestionari                                     05/03/2026            11/03/2026
+
+
+
+
+15 de 18                                                                                                    19/2/26 18:43
+Pla Docent                         https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+             PAC 2 - Programa C        05/03/2026          11/03/2026
+
+
+
+
+             PAC 3 - Qüestionari        12/03/2026         18/03/2026
+
+
+
+
+             PAC 3 - Programa C         12/03/2026         18/03/2026
+
+
+
+
+             PAC 4 - Qüestionari       02/04/2026          15/04/2026
+
+
+
+
+             PAC 4 - Programa C        02/04/2026          15/04/2026
+
+
+
+
+             PAC 5 - Qüestionari       30/04/2026          06/05/2026
+
+
+
+
+             PAC 5 - Programa C        30/04/2026          06/05/2026
+
+
+
+16 de 18                                                                 19/2/26 18:43
+Pla Docent                         https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+
+             PAC 6 - Qüestionari        11/06/2026         17/06/2026
+
+
+
+
+             PR 1 - Algorisme          19/03/2026          01/04/2026
+
+
+
+
+             PR 1 - Programa C         19/03/2026          01/04/2026
+
+
+
+
+             PR 2 - Algorisme          16/04/2026          29/04/2026
+
+
+
+
+             PR 2 - Programa C         16/04/2026          29/04/2026
+
+
+
+
+             PR 3 - Algorisme          07/05/2026          20/05/2026
+
+
+
+
+17 de 18                                                                 19/2/26 18:43
+Pla Docent                       https://apps.uoc.edu/PlaDocent/PlaDocent?Context=...
+
+
+
+
+             PR 3 - Programa C       07/05/2026          20/05/2026
+
+
+
+
+             PR 4 - Algorisme         21/05/2026         10/06/2026
+
+
+
+
+             PR 4 - Programa C        21/05/2026         10/06/2026
+
+
+
+
+18 de 18                                                               19/2/26 18:43
+

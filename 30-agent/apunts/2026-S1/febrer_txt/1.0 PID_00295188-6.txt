@@ -1,0 +1,300 @@
+Repte 1:
+Tipificació i
+anàlisi d’una
+organització
+Guia d’aprenentatge
+PID_00295188
+
+
+
+
+Josep Sánchez García
+© FUOC • PID_00295188                                                                                                                    Repte 1: Tipificació i anàlisi d’una organització
+
+
+
+
+Josep Sánchez García
+
+Llicenciat en Ciències Econòmiques
+i Empresarials (UNED), llicenciat en
+Investigació i Tècniques de Mercat
+(UOC), màster en Educació i TIC
+(UOC) i postgrau en Direcció Estra-
+tègica i Desenvolupament de Re-
+cursos Humans (UOC). Professor
+d'assignatures relacionades amb
+l'economia i l'empresa des de l'any
+1994.
+
+
+
+
+L'encàrrec i la creació d'aquest recurs d'aprenentatge UOC han estat coordinats
+pel professor: Josep Cobarsí Morales
+
+
+
+
+Segona edició: febrer 2023
+© d’aquesta edició, Fundació Universitat Oberta de Catalunya (FUOC)
+Av. Tibidabo, 39-43, 08035 Barcelona
+Autoria: Josep Sánchez García
+Producció: FUOC
+Tots els drets reservats
+
+
+
+
+Cap part d'aquesta publicació, incloent-hi el disseny general i la coberta, no pot ser copiada, reproduïda,
+emmagatzemada o transmesa de cap manera ni per cap mitjà, tant si és elèctric com mecànic, òptic,
+de gravació, de fotocòpia o per altres mètodes, sense l'autorització prèvia per escrit del titular dels drets.
+
+Passats tres anys des de la data de publicació de la primera edició d'aquest material, es considerarà publicat sota llicència Creative
+Commons (https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca).
+© FUOC • PID_00295188                                                                                                 Repte 1: Tipificació i anàlisi d’una organització
+
+
+
+Índex
+
+
+
+
+1.   Presentació...........................................................................................      5
+
+
+2.   Competències.......................................................................................         6
+
+
+3.   Objectius...............................................................................................    7
+
+
+4.   Temari...................................................................................................   8
+
+
+5.   Bibliografia..........................................................................................      9
+
+
+6.   Altres recomanacions........................................................................                10
+© FUOC • PID_00295188                                    5                           Repte 1: Tipificació i anàlisi d’una organització
+
+
+
+1. Presentació
+
+
+
+
+En aquesta primera guia d’aprenentatge del curs es pretén introduir l’estudiant
+als principals conceptes bàsics de l’assignatura. S’analitza què són les organit-
+zacions i com funcionen. Partint d'una definició, les distingirem pels seus ob-
+jectius i propietat, en descriurem les possibilitats d'estructuració i posarem èm-
+fasi en la importància dels projectes com a forma d’organització del treball i
+en la importància de la funció directiva.
+
+
+En aquest mòdul, i en tota l'assignatura, es parla d'organitzacions en sentit am-
+pli (amb ànim de lucre i sense ànim de lucre, del sector públic i del sector pri-
+vat…) i no solament d'empreses (que són les organitzacions amb ànim de lucre
+dedicades a la venda d'un servei o producte). Així, quan en els continguts apa-
+regui el terme empresa es pot entendre el seu significat com a d'organització.
+
+
+Aquest és un mòdul molt descriptiu. Presenta conceptes que cal entendre i
+aprendre per poder establir la relació entre ells. No s’aprenen tècniques, sinó
+que es formalitzen moltes idees que possiblement ja es tenen interioritzades
+tàcitament per la pròpia experiència personal i/o professional.
+
+
+Així, doncs, els principals conceptes clau que aprendrem durant l’estudi
+d’aquest primer repte són els següents:
+
+
+•    Fonaments, tipus, objectius i estratègia de les organitzacions
+•    Àrees funcionals
+•    Estructures organitzatives
+•    Direcció d’organitzacions
+
+
+Tot aquest aparell conceptual ens permetrà plantejar-nos en aquest primer rep-
+te l’anàlisi bàsic de facetes i característiques d’una organització o organitzaci-
+ons.
+
+
+En resum, establirem la base conceptual de l’administració i gestió
+d’organitzacions, que ens permetrà afrontar amb solidesa els continguts dels
+reptes següents i consolidar els objectius d’aquesta assignatura.
+© FUOC • PID_00295188                                   6                          Repte 1: Tipificació i anàlisi d’una organització
+
+
+
+2. Competències
+
+
+
+
+Entre totes les competències de l’assignatura, les vinculades a aquest repte són
+les següents:
+
+
+•    C1. Coneixement adequat del concepte d'empresa, marcs institucional i
+     jurídic de l'empresa.
+
+
+•    C2. Capacitat per identificar les característiques dels diferents tipus
+     d'organitzacions.
+
+
+•    C3. Organització i gestió d'empreses.
+© FUOC • PID_00295188                                       7                       Repte 1: Tipificació i anàlisi d’una organització
+
+
+
+3. Objectius
+
+
+
+
+El domini de les competències ens serà útil per assolir els objectius i resultats
+següents esperats en aquest primer repte:
+
+
+1) Explicar els conceptes d’organització i empresa.
+
+
+2) Formular la missió, visió i objectius d’una organització.
+
+
+3) Identificar les diferents àrees funcionals de les organitzacions.
+
+
+4) Classificar les organitzacions en funció del tipus de sector i activitat.
+
+
+5) Conèixer els conceptes fonamentals de disseny organitzatiu i els models
+organitzatius bàsics.
+
+
+6) Distingir entre lideratge i direcció d’organitzacions.
+© FUOC • PID_00295188                                                 8                                  Repte 1: Tipificació i anàlisi d’una organització
+
+
+
+4. Temari
+
+
+
+
+El temari que es posa a disposició a fi de portar a terme el repte plantejat està
+estructurat en els recursos docents següents:
+
+
+•    «Fonaments, tipus, objectius i estratègia de les organitzacions» (1)
+•    «Àrees d’activitat dins l’empresa» (2)
+•    «Estructura de l’empresa» (3)
+•    «Projectes i estructures organitzatives» (4)
+•    «Direcció de l’empresa» (5)
+
+
+A continuació trobarem aquesta relació de recursos i la seva referència bibli-
+ogràfica resumida en la taula següent, on s’indica el títol del document i la
+quantitat de pàgines a llegir (ens referim a la quantitat neta de pàgines, exclo-
+ent si escau llistes de bibliografia i/o apèndixs):
+
+Taula 1. Relació de recursos i referències bibliogràfiques
+
+    Núm.                Categoria                                     Recurs d’aprenentatge                                               Pàg.
+
+       1        DESTACAT                     «Fonaments, tipus, objectius i estratègia de les organitzacions.»                     48
+                                             Per Josep Cobarsí i Marc Montemar
+
+       2                     A               «Àrees d’activitat dins l’empresa»                                                    20
+                                             Pàgines 7-12, 31-36, 51-54, 83-86, que corresponen respectivament als
+                                             apartats 1.2., 2.2., 3.2, 4.2 del material 01.500 Mòdul 3
+                                             Per María Concepción García Gómez,
+                                             María Ángeles Montoro Sánchez,
+                                             Ana María Romero Martínez
+
+       3                     A               «Estructura de l’empresa»                                                             27
+                                             Pàgines 71-97. Apartat 4 del material 01.500 Mòdul 2
+                                             Per María Concepción García Gómez,
+                                             María Ángeles Montoro Sánchez,
+                                             Ana María Romero Martínez
+
+       4                     A               «Projectes i estructures organitzatives»                                              15
+                                             Bit 15
+                                             Per Santiago Codolà Vilahur
+
+       5                     A               «Direcció de l’empresa»                                                               19
+                                             Pàgines 9-27. Apartat 1 del material 01.500 Mòdul 2.
+                                             Per María Concepción García Gómez,
+                                             María Ángeles Montoro Sánchez,
+                                             Ana María Romero Martínez
+
+
+
+A més, la resolució del repte pot comportar la localització i consulta de recursos
+de la Biblioteca de la UOC o de recursos de lliure accés a internet, per tal de
+trobar informació sobre una organització o organitzacions.
+© FUOC • PID_00295188                                             9                              Repte 1: Tipificació i anàlisi d’una organització
+
+
+
+5. Bibliografia
+
+
+
+
+Referències�bàsiques
+
+
+Podeu ampliar informació relacionada amb els temes d’aquest primer repte
+amb els llibres següents vinculats a l’assignatura, que trobareu disponibles a la
+Biblioteca de la UOC (no són lectures obligatòries).
+
+    [Gon] González Domínguez, Francisco José (2009). Creación de empresas : guía del empren-
+    dedor. Madrid: Pirámide. ISBN: 978-84-3682-011-9
+
+    [Per] Pérez Gorostegui, Eduardo (2017). Introducción. Curso de economía de la empresa.
+    Madrid: Editorial Universitaria Ramón Areces. ISBN: 978-84-9961-265-2
+
+
+Referències�complementàries
+
+
+El material de referència és el que us hem detallat prèviament per a aquest
+primer repte del curs, però si ho voleu, podeu ampliar coneixements llegint
+el document següent:
+
+    [Cob] Cobarsí-Morales, Josep (2011). Sistemas de información en la empresa, Editorial UOC.
+
+    [Rim] Rimbau Gelabert, Eva (2013). Resistència al canvi. Editorial UOC (PID_00181774).
+© FUOC • PID_00295188                                    10                          Repte 1: Tipificació i anàlisi d’una organització
+
+
+
+6. Altres recomanacions
+
+
+
+
+Per verificar que s’han interioritzat els conceptes bàsics d’aquest primer repte,
+es proposaran activitats de caràcter teòric i altres d’aplicació pràctica relacio-
+nades amb organitzacions reals, tant empresarials com no empresarials, per
+analitzar una selecció de característiques clau.
+
+
+En la resolució d’aquestes activitats, i especialment de les que hi hagi més opci-
+ons de resposta oberta, es valorarà significativament les aportacions personals
+de l’estudiant, de manera que les seves justificacions i arguments demostrin la
+solidesa requerida a cada resposta i quedi palesa de manera rellevant la conso-
+lidació dels seus aprenentatges. En tot cas, es tindran en compte les evidències
+de l’assoliment dels objectius i competències relacionades amb aquest repte.
+
+
+Per complementar la consolidació d’aquests conceptes, es proposarà un pri-
+mer debat en el qual els estudiants hauran d’exposar el seu punt de vista
+entorn d’una situació d’actualitat relacionada amb l’administració i gestió
+d’organitzacions.
+
